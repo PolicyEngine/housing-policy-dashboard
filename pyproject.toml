@@ -1,0 +1,31 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "rent-control"
+version = "0.1.0"
+description = "Tested data-processing pipeline for the UK rent control policy dashboard."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "numpy>=1.26",
+  "pandas>=2.2",
+]
+
+[project.optional-dependencies]
+simulation = [
+  "policyengine-uk>=2.75.2",
+]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.scripts]
+rent-control-build = "rent_control.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/rent_control"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
