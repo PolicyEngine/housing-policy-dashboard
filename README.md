@@ -2,7 +2,7 @@
 
 Interactive dashboard estimating the fiscal and distributional effects of UK rent control policies using [PolicyEngine UK](https://github.com/PolicyEngine/policyengine-uk) microsimulation.
 
-**Live dashboard**: https://rent-control.policyengine.org
+**Live dashboard**: https://rent-control-pi.vercel.app
 
 ## Policies modelled
 
