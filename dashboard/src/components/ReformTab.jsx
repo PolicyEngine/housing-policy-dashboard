@@ -93,6 +93,7 @@ export default function ReformTab({ data }) {
   const [selectedScenario, setSelectedScenario] = useState(
     scenarioOptions[0]?.id || "",
   );
+  const [impactMode, setImpactMode] = useState("abs");
 
   // Reset scenario when policy changes
   const handlePolicyChange = (policyId) => {
@@ -254,60 +255,133 @@ export default function ReformTab({ data }) {
         </div>
       )}
 
-      {/* Decile chart */}
+      {/* Decile chart + Winners and losers — side by side */}
       {decileData.length > 0 && (
-        <div className="section-card">
-          <SectionHeading
-            title="Average household impact by income decile"
-            description="Average annual net gain per household in each income decile (rent saved minus benefit lost)."
-          />
-          <div className="h-[380px] w-full">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={decileData}>
-                <CartesianGrid strokeDasharray="3 3" stroke={PALETTE.grid} />
-                <XAxis
-                  dataKey="decile"
-                  tick={AXIS_STYLE}
-                  tickLine={false}
-                  label={{
-                    value: "Income decile",
-                    position: "insideBottom",
-                    offset: -12,
-                    style: AXIS_STYLE,
-                  }}
-                />
-                <YAxis
-                  ticks={decileTicks}
-                  domain={getTickDomain(decileTicks)}
-                  tick={AXIS_STYLE}
-                  tickLine={false}
-                  axisLine={false}
-                  tickFormatter={(v) => formatCurrency(v)}
-                />
-                <ReferenceLine y={0} stroke={colors.gray[400]} strokeWidth={1} />
-                <Tooltip
-                  content={
-                    <CustomTooltip
-                      formatter={(value) => `${formatCurrency(value)}/yr`}
-                    />
-                  }
-                />
-                <Bar
-                  dataKey="avg_net_gain"
-                  name="Net gain"
-                  radius={[6, 6, 0, 0]}
-                >
-                  {decileData.map((row, i) => (
-                    <Cell
-                      key={`ng-${i}`}
-                      fill={row.avg_net_gain >= 0 ? PALETTE.gain : PALETTE.loss}
-                    />
-                  ))}
-                </Bar>
-              </BarChart>
-            </ResponsiveContainer>
+        <div className="grid gap-8 xl:grid-cols-2">
+          <div className="section-card">
+            <div className="flex items-start justify-between">
+              <SectionHeading
+                title="Average renter impact by income decile"
+                description={impactMode === "abs" ? "Average annual net gain per renter household (rent saved minus benefit lost)." : "Average net gain as a share of renter household income."}
+              />
+              <div className="flex rounded-md border border-slate-200 text-xs font-medium overflow-hidden shrink-0 ml-4">
+                <button
+                  className={`px-3 py-1.5 ${impactMode === "abs" ? "bg-primary-600 text-white" : "text-slate-600 hover:bg-slate-50"}`}
+                  onClick={() => setImpactMode("abs")}
+                >£</button>
+                <button
+                  className={`px-3 py-1.5 ${impactMode === "pct" ? "bg-primary-600 text-white" : "text-slate-600 hover:bg-slate-50"}`}
+                  onClick={() => setImpactMode("pct")}
+                >%</button>
+              </div>
+            </div>
+            <div className="h-[380px] w-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={decileData}>
+                  <CartesianGrid strokeDasharray="3 3" stroke={PALETTE.grid} />
+                  <XAxis
+                    dataKey="decile"
+                    tick={AXIS_STYLE}
+                    tickLine={false}
+                    label={{
+                      value: "Income decile",
+                      position: "insideBottom",
+                      offset: -12,
+                      style: AXIS_STYLE,
+                    }}
+                  />
+                  <YAxis
+                    ticks={impactMode === "abs" ? decileTicks : undefined}
+                    domain={impactMode === "abs" ? getTickDomain(decileTicks) : undefined}
+                    tick={AXIS_STYLE}
+                    tickLine={false}
+                    axisLine={false}
+                    tickFormatter={impactMode === "abs" ? (v) => formatCurrency(v) : (v) => `${v}%`}
+                  />
+                  <ReferenceLine y={0} stroke={colors.gray[400]} strokeWidth={1} />
+                  <Tooltip
+                    content={
+                      <CustomTooltip
+                        formatter={impactMode === "abs" ? (value) => `${formatCurrency(value)}/yr` : (value) => `${Number(value).toFixed(2)}%`}
+                      />
+                    }
+                  />
+                  <Bar
+                    dataKey={impactMode === "abs" ? "avg_net_gain" : "avg_net_gain_pct"}
+                    name="Net gain"
+                    radius={[6, 6, 0, 0]}
+                  >
+                    {decileData.map((row, i) => (
+                      <Cell
+                        key={`ng-${i}`}
+                        fill={(impactMode === "abs" ? row.avg_net_gain : row.avg_net_gain_pct) >= 0 ? PALETTE.gain : PALETTE.loss}
+                      />
+                    ))}
+                  </Bar>
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+            <ChartLogo />
           </div>
-          <ChartLogo />
+
+          <div className="section-card">
+            <SectionHeading
+              title="Winners and losers"
+              description="Share of renters that are better off, worse off, or unaffected in each income decile."
+            />
+            <div className="h-[380px] w-full">
+              <ResponsiveContainer width="100%" height="100%">
+                <BarChart data={decileData} margin={{ top: 10, right: 12, left: 4, bottom: 24 }}>
+                  <CartesianGrid strokeDasharray="3 3" stroke={PALETTE.grid} />
+                  <XAxis
+                    dataKey="decile"
+                    tick={AXIS_STYLE}
+                    tickLine={false}
+                    label={{
+                      value: "Income decile",
+                      position: "insideBottom",
+                      offset: -12,
+                      style: AXIS_STYLE,
+                    }}
+                  />
+                  <YAxis
+                    tick={AXIS_STYLE}
+                    tickLine={false}
+                    axisLine={false}
+                    domain={[0, 100]}
+                    tickFormatter={(v) => `${v}%`}
+                  />
+                  <Tooltip
+                    content={
+                      <CustomTooltip
+                        formatter={(value) => `${Number(value).toFixed(1)}%`}
+                      />
+                    }
+                  />
+                  <Legend wrapperStyle={{ fontSize: 12, paddingTop: 4 }} iconSize={10} />
+                  <Bar
+                    dataKey="pct_winners"
+                    name="Better off"
+                    stackId="wl"
+                    fill={PALETTE.gain}
+                  />
+                  <Bar
+                    dataKey="pct_unchanged"
+                    name="No change"
+                    stackId="wl"
+                    fill={colors.gray[300]}
+                  />
+                  <Bar
+                    dataKey="pct_losers"
+                    name="Worse off"
+                    stackId="wl"
+                    fill={PALETTE.loss}
+                  />
+                </BarChart>
+              </ResponsiveContainer>
+            </div>
+            <ChartLogo />
+          </div>
         </div>
       )}
     </div>

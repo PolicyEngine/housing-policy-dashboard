@@ -49,17 +49,19 @@ function CustomTooltip({ active, payload, label, formatter }) {
 function InfoTooltip({ text }) {
   const [show, setShow] = useState(false);
   return (
-    <span className="relative inline-block ml-1.5">
+    <span
+      className="relative inline-block ml-1.5"
+      onMouseEnter={() => setShow(true)}
+      onMouseLeave={() => setShow(false)}
+    >
       <button
-        className="inline-flex h-4 w-4 items-center justify-center rounded-full border border-slate-300 text-[10px] font-bold text-slate-400 hover:border-slate-400 hover:text-slate-600"
-        onMouseEnter={() => setShow(true)}
-        onMouseLeave={() => setShow(false)}
+        className="inline-flex h-5 w-5 items-center justify-center rounded-full border border-slate-300 text-[11px] font-bold text-slate-400 hover:border-slate-400 hover:text-slate-600 cursor-help"
         onClick={() => setShow((s) => !s)}
       >
         i
       </button>
       {show && (
-        <div className="absolute bottom-full left-1/2 z-50 mb-2 w-72 -translate-x-1/2 rounded-lg border border-slate-200 bg-white p-3 text-xs text-slate-600 shadow-lg">
+        <div className="absolute bottom-full left-1/2 z-50 mb-2 w-80 -translate-x-1/2 rounded-lg border border-slate-200 bg-white p-3 text-xs leading-relaxed text-slate-600 shadow-lg">
           {text}
         </div>
       )}
@@ -92,7 +94,6 @@ export default function BaselineTab({ data }) {
   const tenureDist = baseline.tenure_distribution || [];
   const distImpact = baseline.distributional_impact || { hb: [], uc_housing: [] };
   const [rentBurdenMode, setRentBurdenMode] = useState("pct");
-  const [receiptMode, setReceiptMode] = useState("uc");
   const [tenureBenMode, setTenureBenMode] = useState("uc");
   const [distMode, setDistMode] = useState("uc");
 
@@ -352,45 +353,8 @@ export default function BaselineTab({ data }) {
         />
       </div>
 
-      {/* % receiving benefits + benefit spending by tenure — side by side */}
+      {/* Benefit spending by tenure */}
       <div className="grid gap-8 xl:grid-cols-2">
-        <div className="section-card">
-          <div className="flex items-start justify-between">
-            <SectionHeading
-              title={`% receiving ${receiptMode === "hb" ? "Housing Benefit" : "UC housing element"} by decile`}
-              description={`Share of households receiving ${receiptMode === "hb" ? "Housing Benefit (legacy, mostly pensioners)" : "Universal Credit"} by income decile.`}
-            />
-            <BenefitToggle mode={receiptMode} setMode={setReceiptMode} />
-          </div>
-          <div className="h-[360px] w-full">
-            <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={byDecile}>
-                <CartesianGrid strokeDasharray="3 3" stroke={colors.border.light} />
-                <XAxis
-                  dataKey="decile"
-                  tick={AXIS_STYLE}
-                  tickLine={false}
-                  label={{ value: "Income decile", position: "insideBottom", offset: -12, style: AXIS_STYLE }}
-                />
-                <YAxis
-                  tick={AXIS_STYLE}
-                  tickLine={false}
-                  axisLine={false}
-                  tickFormatter={(v) => `${v}%`}
-                />
-                <Tooltip content={<CustomTooltip formatter={(v) => `${Number(v).toFixed(1)}%`} />} />
-                <Bar
-                  dataKey={receiptMode === "hb" ? "pct_receiving_hb" : "pct_receiving_uc_housing"}
-                  name={receiptMode === "hb" ? "Housing Benefit" : "UC housing element"}
-                  fill={colors.primary[600]}
-                  radius={[6, 6, 0, 0]}
-                />
-              </BarChart>
-            </ResponsiveContainer>
-          </div>
-          <ChartLogo />
-        </div>
-
         <div className="section-card">
           <div className="flex items-start justify-between">
             <SectionHeading
@@ -422,10 +386,7 @@ export default function BaselineTab({ data }) {
           </div>
           <ChartLogo />
         </div>
-      </div>
 
-      {/* Distributional impact of HB/UC by decile (half-width) */}
-      <div className="grid gap-8 xl:grid-cols-2">
         <div className="section-card">
           <div className="flex items-start justify-between">
             <SectionHeading

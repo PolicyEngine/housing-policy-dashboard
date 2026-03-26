@@ -308,12 +308,19 @@ def build_reform_by_decile(
 
     rent_saved = bl.rent.values - rf.rent.values
     benefit_lost = bl.hh_income.values - rf.hh_income.values
+    net_gain = rent_saved - benefit_lost
+
+    renter_mask = bl.rent.values > 0
 
     rows = []
     for d in range(1, 11):
-        d_mask = (decile == d) & target_mask
-        dw = w * d_mask
-        total_w = MicroSeries(d_mask.astype(float), weights=w).sum()
+        d_mask = (decile == d)
+        d_target = d_mask & target_mask
+        d_renters = d_mask & renter_mask
+        dw = w * d_target
+        # Renters in this decile (for averages and winner/loser %)
+        n_renters = MicroSeries(d_renters.astype(float), weights=w).sum()
+        total_w = MicroSeries(d_target.astype(float), weights=w).sum()
 
         if total_w == 0:
             rows.append({
@@ -324,15 +331,34 @@ def build_reform_by_decile(
                 "avg_rent_saved": 0,
                 "avg_benefit_lost": 0,
                 "avg_net_gain": 0,
+                "pct_winners": 0,
+                "pct_losers": 0,
+                "pct_unchanged": 100,
             })
             continue
 
-        rs = MicroSeries(rent_saved, weights=dw)
-        bl_s = MicroSeries(benefit_lost, weights=dw)
+        # Averages among renters in this decile
+        rw = w * d_renters
+        rs = MicroSeries(rent_saved, weights=rw)
+        bl_s = MicroSeries(benefit_lost, weights=rw)
 
-        rent_saved_mn = rs.sum() / 1e6
-        benefit_lost_mn = bl_s.sum() / 1e6
+        rent_saved_mn = MicroSeries(rent_saved, weights=dw).sum() / 1e6
+        benefit_lost_mn = MicroSeries(benefit_lost, weights=dw).sum() / 1e6
         net_gain_mn = rent_saved_mn - benefit_lost_mn
+
+        # Winners/losers among renters in this decile
+        pct_winners = round(
+            MicroSeries((net_gain > 0).astype(float) * d_renters, weights=w).sum()
+            / max(n_renters, 1) * 100, 1
+        )
+        pct_losers = round(
+            MicroSeries((net_gain < 0).astype(float) * d_renters, weights=w).sum()
+            / max(n_renters, 1) * 100, 1
+        )
+        pct_unchanged = round(100 - pct_winners - pct_losers, 1)
+
+        avg_inc_renters = MicroSeries(bl.hh_income.values, weights=rw).mean()
+        avg_net = rs.mean() - bl_s.mean()
 
         rows.append({
             "decile": d,
@@ -341,7 +367,11 @@ def build_reform_by_decile(
             "net_gain_mn": round(net_gain_mn, 1),
             "avg_rent_saved": round(rs.mean()),
             "avg_benefit_lost": round(bl_s.mean()),
-            "avg_net_gain": round(rs.mean() - bl_s.mean()),
+            "avg_net_gain": round(avg_net),
+            "avg_net_gain_pct": round(avg_net / max(avg_inc_renters, 1) * 100, 2),
+            "pct_winners": pct_winners,
+            "pct_losers": pct_losers,
+            "pct_unchanged": pct_unchanged,
         })
     return rows
 

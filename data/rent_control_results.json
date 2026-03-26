@@ -476,90 +476,130 @@
               "rent_saved_mn": 349.0,
               "benefit_lost_mn": 30.8,
               "net_gain_mn": 318.2,
-              "avg_rent_saved": 428,
-              "avg_benefit_lost": 38,
-              "avg_net_gain": 390
+              "avg_rent_saved": 195,
+              "avg_benefit_lost": 17,
+              "avg_net_gain": 178,
+              "avg_net_gain_pct": 0.89,
+              "pct_winners": 33.8,
+              "pct_losers": 1.5,
+              "pct_unchanged": 64.7
             },
             {
               "decile": 2,
               "rent_saved_mn": 436.0,
               "benefit_lost_mn": 46.8,
               "net_gain_mn": 389.2,
-              "avg_rent_saved": 561,
-              "avg_benefit_lost": 60,
-              "avg_net_gain": 501
+              "avg_rent_saved": 253,
+              "avg_benefit_lost": 27,
+              "avg_net_gain": 226,
+              "avg_net_gain_pct": 0.73,
+              "pct_winners": 40.6,
+              "pct_losers": 2.0,
+              "pct_unchanged": 57.4
             },
             {
               "decile": 3,
               "rent_saved_mn": 399.9,
               "benefit_lost_mn": 61.2,
               "net_gain_mn": 338.8,
-              "avg_rent_saved": 516,
-              "avg_benefit_lost": 79,
-              "avg_net_gain": 437
+              "avg_rent_saved": 253,
+              "avg_benefit_lost": 39,
+              "avg_net_gain": 214,
+              "avg_net_gain_pct": 0.61,
+              "pct_winners": 39.3,
+              "pct_losers": 3.7,
+              "pct_unchanged": 57.0
             },
             {
               "decile": 4,
               "rent_saved_mn": 476.3,
               "benefit_lost_mn": 84.3,
               "net_gain_mn": 392.0,
-              "avg_rent_saved": 622,
-              "avg_benefit_lost": 110,
-              "avg_net_gain": 512
+              "avg_rent_saved": 315,
+              "avg_benefit_lost": 56,
+              "avg_net_gain": 259,
+              "avg_net_gain_pct": 0.65,
+              "pct_winners": 45.9,
+              "pct_losers": 2.8,
+              "pct_unchanged": 51.3
             },
             {
               "decile": 5,
               "rent_saved_mn": 374.9,
               "benefit_lost_mn": 57.7,
               "net_gain_mn": 317.2,
-              "avg_rent_saved": 618,
-              "avg_benefit_lost": 95,
-              "avg_net_gain": 523
+              "avg_rent_saved": 302,
+              "avg_benefit_lost": 47,
+              "avg_net_gain": 256,
+              "avg_net_gain_pct": 0.59,
+              "pct_winners": 46.4,
+              "pct_losers": 1.6,
+              "pct_unchanged": 52.0
             },
             {
               "decile": 6,
               "rent_saved_mn": 461.4,
               "benefit_lost_mn": 20.0,
               "net_gain_mn": 441.4,
-              "avg_rent_saved": 604,
-              "avg_benefit_lost": 26,
-              "avg_net_gain": 577
+              "avg_rent_saved": 432,
+              "avg_benefit_lost": 19,
+              "avg_net_gain": 413,
+              "avg_net_gain_pct": 0.88,
+              "pct_winners": 62.8,
+              "pct_losers": 1.4,
+              "pct_unchanged": 35.8
             },
             {
               "decile": 7,
               "rent_saved_mn": 657.3,
               "benefit_lost_mn": 27.7,
               "net_gain_mn": 629.6,
-              "avg_rent_saved": 709,
-              "avg_benefit_lost": 30,
-              "avg_net_gain": 679
+              "avg_rent_saved": 439,
+              "avg_benefit_lost": 19,
+              "avg_net_gain": 420,
+              "avg_net_gain_pct": 0.83,
+              "pct_winners": 58.9,
+              "pct_losers": 2.4,
+              "pct_unchanged": 38.7
             },
             {
               "decile": 8,
               "rent_saved_mn": 499.0,
               "benefit_lost_mn": 11.6,
               "net_gain_mn": 487.4,
-              "avg_rent_saved": 741,
-              "avg_benefit_lost": 17,
-              "avg_net_gain": 724
+              "avg_rent_saved": 492,
+              "avg_benefit_lost": 11,
+              "avg_net_gain": 480,
+              "avg_net_gain_pct": 0.69,
+              "pct_winners": 65.8,
+              "pct_losers": 0.2,
+              "pct_unchanged": 34.0
             },
             {
               "decile": 9,
               "rent_saved_mn": 602.2,
               "benefit_lost_mn": 1.3,
               "net_gain_mn": 600.9,
-              "avg_rent_saved": 857,
+              "avg_rent_saved": 720,
               "avg_benefit_lost": 2,
-              "avg_net_gain": 856
+              "avg_net_gain": 718,
+              "avg_net_gain_pct": 0.98,
+              "pct_winners": 82.8,
+              "pct_losers": 0.1,
+              "pct_unchanged": 17.1
             },
             {
               "decile": 10,
               "rent_saved_mn": 576.5,
               "benefit_lost_mn": 2.0,
               "net_gain_mn": 574.5,
-              "avg_rent_saved": 1154,
-              "avg_benefit_lost": 4,
-              "avg_net_gain": 1151
+              "avg_rent_saved": 917,
+              "avg_benefit_lost": 3,
+              "avg_net_gain": 913,
+              "avg_net_gain_pct": 0.82,
+              "pct_winners": 78.4,
+              "pct_losers": 0.2,
+              "pct_unchanged": 21.4
             }
           ]
         },
@@ -581,90 +621,130 @@
               "rent_saved_mn": 698.0,
               "benefit_lost_mn": 66.0,
               "net_gain_mn": 632.0,
-              "avg_rent_saved": 856,
-              "avg_benefit_lost": 81,
-              "avg_net_gain": 776
+              "avg_rent_saved": 390,
+              "avg_benefit_lost": 37,
+              "avg_net_gain": 353,
+              "avg_net_gain_pct": 1.77,
+              "pct_winners": 33.1,
+              "pct_losers": 1.0,
+              "pct_unchanged": 65.9
             },
             {
               "decile": 2,
               "rent_saved_mn": 872.0,
               "benefit_lost_mn": 97.9,
               "net_gain_mn": 774.2,
-              "avg_rent_saved": 1122,
-              "avg_benefit_lost": 126,
-              "avg_net_gain": 996
+              "avg_rent_saved": 505,
+              "avg_benefit_lost": 57,
+              "avg_net_gain": 449,
+              "avg_net_gain_pct": 1.45,
+              "pct_winners": 40.3,
+              "pct_losers": 2.0,
+              "pct_unchanged": 57.7
             },
             {
               "decile": 3,
               "rent_saved_mn": 799.9,
               "benefit_lost_mn": 139.2,
               "net_gain_mn": 660.6,
-              "avg_rent_saved": 1032,
-              "avg_benefit_lost": 180,
-              "avg_net_gain": 853
+              "avg_rent_saved": 505,
+              "avg_benefit_lost": 88,
+              "avg_net_gain": 417,
+              "avg_net_gain_pct": 1.19,
+              "pct_winners": 39.3,
+              "pct_losers": 2.8,
+              "pct_unchanged": 57.9
             },
             {
               "decile": 4,
               "rent_saved_mn": 952.6,
               "benefit_lost_mn": 229.0,
               "net_gain_mn": 723.6,
-              "avg_rent_saved": 1244,
-              "avg_benefit_lost": 299,
-              "avg_net_gain": 945
+              "avg_rent_saved": 629,
+              "avg_benefit_lost": 151,
+              "avg_net_gain": 478,
+              "avg_net_gain_pct": 1.19,
+              "pct_winners": 45.6,
+              "pct_losers": 3.2,
+              "pct_unchanged": 51.2
             },
             {
               "decile": 5,
               "rent_saved_mn": 749.7,
               "benefit_lost_mn": 134.8,
               "net_gain_mn": 614.9,
-              "avg_rent_saved": 1237,
-              "avg_benefit_lost": 222,
-              "avg_net_gain": 1014
+              "avg_rent_saved": 605,
+              "avg_benefit_lost": 109,
+              "avg_net_gain": 496,
+              "avg_net_gain_pct": 1.14,
+              "pct_winners": 44.6,
+              "pct_losers": 1.3,
+              "pct_unchanged": 54.1
             },
             {
               "decile": 6,
               "rent_saved_mn": 922.9,
               "benefit_lost_mn": 68.3,
               "net_gain_mn": 854.5,
-              "avg_rent_saved": 1207,
-              "avg_benefit_lost": 89,
-              "avg_net_gain": 1118
+              "avg_rent_saved": 864,
+              "avg_benefit_lost": 64,
+              "avg_net_gain": 800,
+              "avg_net_gain_pct": 1.71,
+              "pct_winners": 62.8,
+              "pct_losers": 1.4,
+              "pct_unchanged": 35.8
             },
             {
               "decile": 7,
               "rent_saved_mn": 1314.6,
               "benefit_lost_mn": 56.2,
               "net_gain_mn": 1258.4,
-              "avg_rent_saved": 1418,
-              "avg_benefit_lost": 61,
-              "avg_net_gain": 1358
+              "avg_rent_saved": 878,
+              "avg_benefit_lost": 38,
+              "avg_net_gain": 840,
+              "avg_net_gain_pct": 1.66,
+              "pct_winners": 58.2,
+              "pct_losers": 3.2,
+              "pct_unchanged": 38.6
             },
             {
               "decile": 8,
               "rent_saved_mn": 998.0,
               "benefit_lost_mn": 72.7,
               "net_gain_mn": 925.3,
-              "avg_rent_saved": 1482,
-              "avg_benefit_lost": 108,
-              "avg_net_gain": 1374
+              "avg_rent_saved": 983,
+              "avg_benefit_lost": 72,
+              "avg_net_gain": 912,
+              "avg_net_gain_pct": 1.31,
+              "pct_winners": 66.0,
+              "pct_losers": 0.0,
+              "pct_unchanged": 34.0
             },
             {
               "decile": 9,
               "rent_saved_mn": 1204.4,
               "benefit_lost_mn": 2.7,
               "net_gain_mn": 1201.8,
-              "avg_rent_saved": 1715,
-              "avg_benefit_lost": 4,
-              "avg_net_gain": 1711
+              "avg_rent_saved": 1439,
+              "avg_benefit_lost": 3,
+              "avg_net_gain": 1436,
+              "avg_net_gain_pct": 1.95,
+              "pct_winners": 82.9,
+              "pct_losers": 0.0,
+              "pct_unchanged": 17.1
             },
             {
               "decile": 10,
               "rent_saved_mn": 1153.1,
               "benefit_lost_mn": 4.0,
               "net_gain_mn": 1149.1,
-              "avg_rent_saved": 2309,
-              "avg_benefit_lost": 8,
-              "avg_net_gain": 2301
+              "avg_rent_saved": 1833,
+              "avg_benefit_lost": 6,
+              "avg_net_gain": 1827,
+              "avg_net_gain_pct": 1.63,
+              "pct_winners": 78.4,
+              "pct_losers": 0.2,
+              "pct_unchanged": 21.4
             }
           ]
         },
@@ -686,90 +766,130 @@
               "rent_saved_mn": 1047.0,
               "benefit_lost_mn": 110.9,
               "net_gain_mn": 936.1,
-              "avg_rent_saved": 1285,
-              "avg_benefit_lost": 136,
-              "avg_net_gain": 1149
+              "avg_rent_saved": 584,
+              "avg_benefit_lost": 62,
+              "avg_net_gain": 522,
+              "avg_net_gain_pct": 2.62,
+              "pct_winners": 32.5,
+              "pct_losers": 1.5,
+              "pct_unchanged": 66.0
             },
             {
               "decile": 2,
               "rent_saved_mn": 1308.1,
               "benefit_lost_mn": 151.5,
               "net_gain_mn": 1156.5,
-              "avg_rent_saved": 1684,
-              "avg_benefit_lost": 195,
-              "avg_net_gain": 1489
+              "avg_rent_saved": 758,
+              "avg_benefit_lost": 88,
+              "avg_net_gain": 670,
+              "avg_net_gain_pct": 2.17,
+              "pct_winners": 39.7,
+              "pct_losers": 2.3,
+              "pct_unchanged": 58.0
             },
             {
               "decile": 3,
               "rent_saved_mn": 1199.8,
               "benefit_lost_mn": 230.2,
               "net_gain_mn": 969.6,
-              "avg_rent_saved": 1548,
-              "avg_benefit_lost": 297,
-              "avg_net_gain": 1251
+              "avg_rent_saved": 758,
+              "avg_benefit_lost": 145,
+              "avg_net_gain": 612,
+              "avg_net_gain_pct": 1.75,
+              "pct_winners": 39.0,
+              "pct_losers": 4.3,
+              "pct_unchanged": 56.7
             },
             {
               "decile": 4,
               "rent_saved_mn": 1428.9,
               "benefit_lost_mn": 388.8,
               "net_gain_mn": 1040.2,
-              "avg_rent_saved": 1866,
-              "avg_benefit_lost": 508,
-              "avg_net_gain": 1358
+              "avg_rent_saved": 944,
+              "avg_benefit_lost": 257,
+              "avg_net_gain": 687,
+              "avg_net_gain_pct": 1.71,
+              "pct_winners": 47.9,
+              "pct_losers": 0.8,
+              "pct_unchanged": 51.3
             },
             {
               "decile": 5,
               "rent_saved_mn": 1124.6,
               "benefit_lost_mn": 219.3,
               "net_gain_mn": 905.2,
-              "avg_rent_saved": 1855,
-              "avg_benefit_lost": 362,
-              "avg_net_gain": 1493
+              "avg_rent_saved": 907,
+              "avg_benefit_lost": 177,
+              "avg_net_gain": 730,
+              "avg_net_gain_pct": 1.67,
+              "pct_winners": 46.6,
+              "pct_losers": 1.1,
+              "pct_unchanged": 52.3
             },
             {
               "decile": 6,
               "rent_saved_mn": 1384.3,
               "benefit_lost_mn": 128.6,
               "net_gain_mn": 1255.7,
-              "avg_rent_saved": 1811,
-              "avg_benefit_lost": 168,
-              "avg_net_gain": 1643
+              "avg_rent_saved": 1296,
+              "avg_benefit_lost": 120,
+              "avg_net_gain": 1175,
+              "avg_net_gain_pct": 2.52,
+              "pct_winners": 62.0,
+              "pct_losers": 1.3,
+              "pct_unchanged": 36.7
             },
             {
               "decile": 7,
               "rent_saved_mn": 1971.9,
               "benefit_lost_mn": 86.4,
               "net_gain_mn": 1885.5,
-              "avg_rent_saved": 2128,
-              "avg_benefit_lost": 93,
-              "avg_net_gain": 2034
+              "avg_rent_saved": 1317,
+              "avg_benefit_lost": 58,
+              "avg_net_gain": 1259,
+              "avg_net_gain_pct": 2.49,
+              "pct_winners": 58.1,
+              "pct_losers": 3.3,
+              "pct_unchanged": 38.6
             },
             {
               "decile": 8,
               "rent_saved_mn": 1497.1,
               "benefit_lost_mn": 133.8,
               "net_gain_mn": 1363.3,
-              "avg_rent_saved": 2222,
-              "avg_benefit_lost": 199,
-              "avg_net_gain": 2024
+              "avg_rent_saved": 1475,
+              "avg_benefit_lost": 132,
+              "avg_net_gain": 1343,
+              "avg_net_gain_pct": 1.93,
+              "pct_winners": 66.0,
+              "pct_losers": 0.0,
+              "pct_unchanged": 34.0
             },
             {
               "decile": 9,
               "rent_saved_mn": 1806.6,
               "benefit_lost_mn": 4.8,
               "net_gain_mn": 1801.9,
-              "avg_rent_saved": 2572,
-              "avg_benefit_lost": 7,
-              "avg_net_gain": 2565
+              "avg_rent_saved": 2159,
+              "avg_benefit_lost": 6,
+              "avg_net_gain": 2154,
+              "avg_net_gain_pct": 2.93,
+              "pct_winners": 82.9,
+              "pct_losers": 0.3,
+              "pct_unchanged": 16.8
             },
             {
               "decile": 10,
               "rent_saved_mn": 1729.6,
               "benefit_lost_mn": 6.0,
               "net_gain_mn": 1723.6,
-              "avg_rent_saved": 3463,
-              "avg_benefit_lost": 12,
-              "avg_net_gain": 3451
+              "avg_rent_saved": 2750,
+              "avg_benefit_lost": 10,
+              "avg_net_gain": 2740,
+              "avg_net_gain_pct": 2.45,
+              "pct_winners": 78.4,
+              "pct_losers": 0.2,
+              "pct_unchanged": 21.4
             }
           ]
         },
@@ -791,90 +911,130 @@
               "rent_saved_mn": 1396.0,
               "benefit_lost_mn": 169.3,
               "net_gain_mn": 1226.7,
-              "avg_rent_saved": 1713,
-              "avg_benefit_lost": 208,
-              "avg_net_gain": 1505
+              "avg_rent_saved": 779,
+              "avg_benefit_lost": 94,
+              "avg_net_gain": 685,
+              "avg_net_gain_pct": 3.44,
+              "pct_winners": 33.6,
+              "pct_losers": 1.4,
+              "pct_unchanged": 65.0
             },
             {
               "decile": 2,
               "rent_saved_mn": 1744.1,
               "benefit_lost_mn": 209.4,
               "net_gain_mn": 1534.6,
-              "avg_rent_saved": 2245,
-              "avg_benefit_lost": 270,
-              "avg_net_gain": 1975
+              "avg_rent_saved": 1011,
+              "avg_benefit_lost": 121,
+              "avg_net_gain": 889,
+              "avg_net_gain_pct": 2.88,
+              "pct_winners": 39.6,
+              "pct_losers": 1.6,
+              "pct_unchanged": 58.8
             },
             {
               "decile": 3,
               "rent_saved_mn": 1599.7,
               "benefit_lost_mn": 341.1,
               "net_gain_mn": 1258.6,
-              "avg_rent_saved": 2064,
-              "avg_benefit_lost": 440,
-              "avg_net_gain": 1624
+              "avg_rent_saved": 1010,
+              "avg_benefit_lost": 215,
+              "avg_net_gain": 795,
+              "avg_net_gain_pct": 2.27,
+              "pct_winners": 39.2,
+              "pct_losers": 4.1,
+              "pct_unchanged": 56.7
             },
             {
               "decile": 4,
               "rent_saved_mn": 1905.3,
               "benefit_lost_mn": 558.4,
               "net_gain_mn": 1346.9,
-              "avg_rent_saved": 2488,
-              "avg_benefit_lost": 729,
-              "avg_net_gain": 1759
+              "avg_rent_saved": 1258,
+              "avg_benefit_lost": 369,
+              "avg_net_gain": 890,
+              "avg_net_gain_pct": 2.22,
+              "pct_winners": 46.5,
+              "pct_losers": 0.6,
+              "pct_unchanged": 52.9
             },
             {
               "decile": 5,
               "rent_saved_mn": 1499.4,
               "benefit_lost_mn": 319.6,
               "net_gain_mn": 1179.8,
-              "avg_rent_saved": 2473,
-              "avg_benefit_lost": 527,
-              "avg_net_gain": 1946
+              "avg_rent_saved": 1210,
+              "avg_benefit_lost": 258,
+              "avg_net_gain": 952,
+              "avg_net_gain_pct": 2.18,
+              "pct_winners": 45.0,
+              "pct_losers": 0.9,
+              "pct_unchanged": 54.1
             },
             {
               "decile": 6,
               "rent_saved_mn": 1845.8,
               "benefit_lost_mn": 195.2,
               "net_gain_mn": 1650.6,
-              "avg_rent_saved": 2415,
-              "avg_benefit_lost": 255,
-              "avg_net_gain": 2159
+              "avg_rent_saved": 1728,
+              "avg_benefit_lost": 183,
+              "avg_net_gain": 1545,
+              "avg_net_gain_pct": 3.31,
+              "pct_winners": 62.8,
+              "pct_losers": 1.4,
+              "pct_unchanged": 35.8
             },
             {
               "decile": 7,
               "rent_saved_mn": 2629.3,
               "benefit_lost_mn": 117.8,
               "net_gain_mn": 2511.5,
-              "avg_rent_saved": 2837,
-              "avg_benefit_lost": 127,
-              "avg_net_gain": 2710
+              "avg_rent_saved": 1755,
+              "avg_benefit_lost": 79,
+              "avg_net_gain": 1677,
+              "avg_net_gain_pct": 3.32,
+              "pct_winners": 58.9,
+              "pct_losers": 1.4,
+              "pct_unchanged": 39.7
             },
             {
               "decile": 8,
               "rent_saved_mn": 1996.1,
               "benefit_lost_mn": 194.8,
               "net_gain_mn": 1801.3,
-              "avg_rent_saved": 2963,
-              "avg_benefit_lost": 289,
-              "avg_net_gain": 2674
+              "avg_rent_saved": 1967,
+              "avg_benefit_lost": 192,
+              "avg_net_gain": 1775,
+              "avg_net_gain_pct": 2.55,
+              "pct_winners": 65.8,
+              "pct_losers": 0.2,
+              "pct_unchanged": 34.0
             },
             {
               "decile": 9,
               "rent_saved_mn": 2408.8,
               "benefit_lost_mn": 10.8,
               "net_gain_mn": 2398.1,
-              "avg_rent_saved": 3430,
-              "avg_benefit_lost": 15,
-              "avg_net_gain": 3414
+              "avg_rent_saved": 2879,
+              "avg_benefit_lost": 13,
+              "avg_net_gain": 2866,
+              "avg_net_gain_pct": 3.89,
+              "pct_winners": 82.9,
+              "pct_losers": 0.3,
+              "pct_unchanged": 16.8
             },
             {
               "decile": 10,
               "rent_saved_mn": 2306.1,
               "benefit_lost_mn": 9.2,
               "net_gain_mn": 2296.9,
-              "avg_rent_saved": 4618,
-              "avg_benefit_lost": 18,
-              "avg_net_gain": 4599
+              "avg_rent_saved": 3666,
+              "avg_benefit_lost": 15,
+              "avg_net_gain": 3652,
+              "avg_net_gain_pct": 3.26,
+              "pct_winners": 78.6,
+              "pct_losers": 0.0,
+              "pct_unchanged": 21.4
             }
           ]
         }
@@ -906,8 +1066,12 @@
               "benefit_lost_mn": -41.6,
               "net_gain_mn": 41.6,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -51,
-              "avg_net_gain": 51
+              "avg_benefit_lost": -23,
+              "avg_net_gain": 23,
+              "avg_net_gain_pct": 0.12,
+              "pct_winners": 17.6,
+              "pct_losers": 0.2,
+              "pct_unchanged": 82.2
             },
             {
               "decile": 2,
@@ -915,8 +1079,12 @@
               "benefit_lost_mn": -54.7,
               "net_gain_mn": 54.7,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -70,
-              "avg_net_gain": 70
+              "avg_benefit_lost": -32,
+              "avg_net_gain": 32,
+              "avg_net_gain_pct": 0.1,
+              "pct_winners": 18.9,
+              "pct_losers": 0.0,
+              "pct_unchanged": 81.1
             },
             {
               "decile": 3,
@@ -924,8 +1092,12 @@
               "benefit_lost_mn": -56.5,
               "net_gain_mn": 56.5,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -73,
-              "avg_net_gain": 73
+              "avg_benefit_lost": -36,
+              "avg_net_gain": 36,
+              "avg_net_gain_pct": 0.1,
+              "pct_winners": 18.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 81.6
             },
             {
               "decile": 4,
@@ -933,8 +1105,12 @@
               "benefit_lost_mn": -92.7,
               "net_gain_mn": 92.7,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -121,
-              "avg_net_gain": 121
+              "avg_benefit_lost": -61,
+              "avg_net_gain": 61,
+              "avg_net_gain_pct": 0.15,
+              "pct_winners": 21.3,
+              "pct_losers": 0.0,
+              "pct_unchanged": 78.7
             },
             {
               "decile": 5,
@@ -942,8 +1118,12 @@
               "benefit_lost_mn": -43.4,
               "net_gain_mn": 43.4,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -72,
-              "avg_net_gain": 72
+              "avg_benefit_lost": -35,
+              "avg_net_gain": 35,
+              "avg_net_gain_pct": 0.08,
+              "pct_winners": 14.6,
+              "pct_losers": 0.0,
+              "pct_unchanged": 85.4
             },
             {
               "decile": 6,
@@ -951,8 +1131,12 @@
               "benefit_lost_mn": -42.3,
               "net_gain_mn": 42.3,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -55,
-              "avg_net_gain": 55
+              "avg_benefit_lost": -40,
+              "avg_net_gain": 40,
+              "avg_net_gain_pct": 0.08,
+              "pct_winners": 13.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 86.6
             },
             {
               "decile": 7,
@@ -960,8 +1144,12 @@
               "benefit_lost_mn": -21.1,
               "net_gain_mn": 21.1,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -23,
-              "avg_net_gain": 23
+              "avg_benefit_lost": -14,
+              "avg_net_gain": 14,
+              "avg_net_gain_pct": 0.03,
+              "pct_winners": 8.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 91.6
             },
             {
               "decile": 8,
@@ -969,8 +1157,12 @@
               "benefit_lost_mn": -32.0,
               "net_gain_mn": 32.0,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -47,
-              "avg_net_gain": 47
+              "avg_benefit_lost": -31,
+              "avg_net_gain": 31,
+              "avg_net_gain_pct": 0.05,
+              "pct_winners": 6.9,
+              "pct_losers": 0.0,
+              "pct_unchanged": 93.1
             },
             {
               "decile": 9,
@@ -979,7 +1171,11 @@
               "net_gain_mn": 2.4,
               "avg_rent_saved": 0,
               "avg_benefit_lost": -3,
-              "avg_net_gain": 3
+              "avg_net_gain": 3,
+              "avg_net_gain_pct": 0.0,
+              "pct_winners": 1.6,
+              "pct_losers": 0.0,
+              "pct_unchanged": 98.4
             },
             {
               "decile": 10,
@@ -987,8 +1183,12 @@
               "benefit_lost_mn": -8.6,
               "net_gain_mn": 8.6,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -17,
-              "avg_net_gain": 17
+              "avg_benefit_lost": -14,
+              "avg_net_gain": 14,
+              "avg_net_gain_pct": 0.01,
+              "pct_winners": 2.2,
+              "pct_losers": 0.0,
+              "pct_unchanged": 97.8
             }
           ]
         },
@@ -1011,8 +1211,12 @@
               "benefit_lost_mn": -158.5,
               "net_gain_mn": 158.5,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -194,
-              "avg_net_gain": 194
+              "avg_benefit_lost": -88,
+              "avg_net_gain": 88,
+              "avg_net_gain_pct": 0.44,
+              "pct_winners": 17.7,
+              "pct_losers": 0.0,
+              "pct_unchanged": 82.3
             },
             {
               "decile": 2,
@@ -1020,8 +1224,12 @@
               "benefit_lost_mn": -213.7,
               "net_gain_mn": 213.7,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -275,
-              "avg_net_gain": 275
+              "avg_benefit_lost": -124,
+              "avg_net_gain": 124,
+              "avg_net_gain_pct": 0.4,
+              "pct_winners": 19.0,
+              "pct_losers": 0.0,
+              "pct_unchanged": 81.0
             },
             {
               "decile": 3,
@@ -1029,8 +1237,12 @@
               "benefit_lost_mn": -242.5,
               "net_gain_mn": 242.5,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -313,
-              "avg_net_gain": 313
+              "avg_benefit_lost": -153,
+              "avg_net_gain": 153,
+              "avg_net_gain_pct": 0.44,
+              "pct_winners": 18.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 81.6
             },
             {
               "decile": 4,
@@ -1038,8 +1250,12 @@
               "benefit_lost_mn": -283.6,
               "net_gain_mn": 283.6,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -370,
-              "avg_net_gain": 370
+              "avg_benefit_lost": -187,
+              "avg_net_gain": 187,
+              "avg_net_gain_pct": 0.47,
+              "pct_winners": 21.5,
+              "pct_losers": 0.0,
+              "pct_unchanged": 78.5
             },
             {
               "decile": 5,
@@ -1047,8 +1263,12 @@
               "benefit_lost_mn": -177.1,
               "net_gain_mn": 177.1,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -292,
-              "avg_net_gain": 292
+              "avg_benefit_lost": -143,
+              "avg_net_gain": 143,
+              "avg_net_gain_pct": 0.33,
+              "pct_winners": 14.8,
+              "pct_losers": 0.0,
+              "pct_unchanged": 85.2
             },
             {
               "decile": 6,
@@ -1056,8 +1276,12 @@
               "benefit_lost_mn": -169.8,
               "net_gain_mn": 169.8,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -222,
-              "avg_net_gain": 222
+              "avg_benefit_lost": -159,
+              "avg_net_gain": 159,
+              "avg_net_gain_pct": 0.34,
+              "pct_winners": 13.6,
+              "pct_losers": 0.1,
+              "pct_unchanged": 86.3
             },
             {
               "decile": 7,
@@ -1065,8 +1289,12 @@
               "benefit_lost_mn": -94.5,
               "net_gain_mn": 94.5,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -102,
-              "avg_net_gain": 102
+              "avg_benefit_lost": -63,
+              "avg_net_gain": 63,
+              "avg_net_gain_pct": 0.12,
+              "pct_winners": 9.0,
+              "pct_losers": 0.0,
+              "pct_unchanged": 91.0
             },
             {
               "decile": 8,
@@ -1074,8 +1302,12 @@
               "benefit_lost_mn": -84.9,
               "net_gain_mn": 84.9,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -126,
-              "avg_net_gain": 126
+              "avg_benefit_lost": -84,
+              "avg_net_gain": 84,
+              "avg_net_gain_pct": 0.12,
+              "pct_winners": 7.1,
+              "pct_losers": 0.0,
+              "pct_unchanged": 92.9
             },
             {
               "decile": 9,
@@ -1083,8 +1315,12 @@
               "benefit_lost_mn": -9.4,
               "net_gain_mn": 9.4,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -13,
-              "avg_net_gain": 13
+              "avg_benefit_lost": -11,
+              "avg_net_gain": 11,
+              "avg_net_gain_pct": 0.02,
+              "pct_winners": 1.6,
+              "pct_losers": 0.0,
+              "pct_unchanged": 98.4
             },
             {
               "decile": 10,
@@ -1092,8 +1328,12 @@
               "benefit_lost_mn": -50.6,
               "net_gain_mn": 50.6,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -101,
-              "avg_net_gain": 101
+              "avg_benefit_lost": -80,
+              "avg_net_gain": 80,
+              "avg_net_gain_pct": 0.07,
+              "pct_winners": 2.2,
+              "pct_losers": 0.0,
+              "pct_unchanged": 97.8
             }
           ]
         }
@@ -1150,8 +1390,12 @@
               "benefit_lost_mn": -197.5,
               "net_gain_mn": 197.5,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -242,
-              "avg_net_gain": 242
+              "avg_benefit_lost": -110,
+              "avg_net_gain": 110,
+              "avg_net_gain_pct": 0.55,
+              "pct_winners": 4.1,
+              "pct_losers": 0.0,
+              "pct_unchanged": 95.9
             },
             {
               "decile": 2,
@@ -1159,8 +1403,12 @@
               "benefit_lost_mn": -1.5,
               "net_gain_mn": 1.5,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -2,
-              "avg_net_gain": 2
+              "avg_benefit_lost": -1,
+              "avg_net_gain": 1,
+              "avg_net_gain_pct": 0.0,
+              "pct_winners": 0.1,
+              "pct_losers": 0.0,
+              "pct_unchanged": 99.9
             },
             {
               "decile": 3,
@@ -1168,8 +1416,12 @@
               "benefit_lost_mn": -12.1,
               "net_gain_mn": 12.1,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -16,
-              "avg_net_gain": 16
+              "avg_benefit_lost": -8,
+              "avg_net_gain": 8,
+              "avg_net_gain_pct": 0.02,
+              "pct_winners": 0.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 99.6
             },
             {
               "decile": 4,
@@ -1177,8 +1429,12 @@
               "benefit_lost_mn": -3.7,
               "net_gain_mn": 3.7,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -5,
-              "avg_net_gain": 5
+              "avg_benefit_lost": -2,
+              "avg_net_gain": 2,
+              "avg_net_gain_pct": 0.01,
+              "pct_winners": 0.3,
+              "pct_losers": 0.0,
+              "pct_unchanged": 99.7
             },
             {
               "decile": 5,
@@ -1186,8 +1442,12 @@
               "benefit_lost_mn": -3.7,
               "net_gain_mn": 3.7,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -6,
-              "avg_net_gain": 6
+              "avg_benefit_lost": -3,
+              "avg_net_gain": 3,
+              "avg_net_gain_pct": 0.01,
+              "pct_winners": 0.1,
+              "pct_losers": 0.0,
+              "pct_unchanged": 99.9
             },
             {
               "decile": 6,
@@ -1196,7 +1456,11 @@
               "net_gain_mn": 0.0,
               "avg_rent_saved": 0,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 0
+              "avg_net_gain": 0,
+              "avg_net_gain_pct": 0.0,
+              "pct_winners": 0.0,
+              "pct_losers": 0.0,
+              "pct_unchanged": 100.0
             },
             {
               "decile": 7,
@@ -1205,7 +1469,11 @@
               "net_gain_mn": 0.0,
               "avg_rent_saved": 0,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 0
+              "avg_net_gain": 0,
+              "avg_net_gain_pct": 0.0,
+              "pct_winners": 0.0,
+              "pct_losers": 0.0,
+              "pct_unchanged": 100.0
             },
             {
               "decile": 8,
@@ -1214,7 +1482,11 @@
               "net_gain_mn": 0.0,
               "avg_rent_saved": 0,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 0
+              "avg_net_gain": 0,
+              "avg_net_gain_pct": 0.0,
+              "pct_winners": 0.0,
+              "pct_losers": 0.0,
+              "pct_unchanged": 100.0
             },
             {
               "decile": 9,
@@ -1222,8 +1494,12 @@
               "benefit_lost_mn": -5.8,
               "net_gain_mn": 5.8,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -8,
-              "avg_net_gain": 8
+              "avg_benefit_lost": -7,
+              "avg_net_gain": 7,
+              "avg_net_gain_pct": 0.01,
+              "pct_winners": 0.9,
+              "pct_losers": 0.0,
+              "pct_unchanged": 99.1
             },
             {
               "decile": 10,
@@ -1232,7 +1508,11 @@
               "net_gain_mn": 0.0,
               "avg_rent_saved": 0,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 0
+              "avg_net_gain": 0,
+              "avg_net_gain_pct": 0.0,
+              "pct_winners": 0.0,
+              "pct_losers": 0.0,
+              "pct_unchanged": 100.0
             }
           ]
         },
@@ -1255,8 +1535,12 @@
               "benefit_lost_mn": -403.4,
               "net_gain_mn": 403.4,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -495,
-              "avg_net_gain": 495
+              "avg_benefit_lost": -225,
+              "avg_net_gain": 225,
+              "avg_net_gain_pct": 1.13,
+              "pct_winners": 10.6,
+              "pct_losers": 0.0,
+              "pct_unchanged": 89.4
             },
             {
               "decile": 2,
@@ -1264,8 +1548,12 @@
               "benefit_lost_mn": -164.3,
               "net_gain_mn": 164.3,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -211,
-              "avg_net_gain": 211
+              "avg_benefit_lost": -95,
+              "avg_net_gain": 95,
+              "avg_net_gain_pct": 0.31,
+              "pct_winners": 2.5,
+              "pct_losers": 0.0,
+              "pct_unchanged": 97.5
             },
             {
               "decile": 3,
@@ -1273,8 +1561,12 @@
               "benefit_lost_mn": -15.2,
               "net_gain_mn": 15.2,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -20,
-              "avg_net_gain": 20
+              "avg_benefit_lost": -10,
+              "avg_net_gain": 10,
+              "avg_net_gain_pct": 0.03,
+              "pct_winners": 0.6,
+              "pct_losers": 0.0,
+              "pct_unchanged": 99.4
             },
             {
               "decile": 4,
@@ -1282,8 +1574,12 @@
               "benefit_lost_mn": -44.5,
               "net_gain_mn": 44.5,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -58,
-              "avg_net_gain": 58
+              "avg_benefit_lost": -29,
+              "avg_net_gain": 29,
+              "avg_net_gain_pct": 0.07,
+              "pct_winners": 1.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 98.6
             },
             {
               "decile": 5,
@@ -1291,8 +1587,12 @@
               "benefit_lost_mn": -3.7,
               "net_gain_mn": 3.7,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -6,
-              "avg_net_gain": 6
+              "avg_benefit_lost": -3,
+              "avg_net_gain": 3,
+              "avg_net_gain_pct": 0.01,
+              "pct_winners": 0.1,
+              "pct_losers": 0.0,
+              "pct_unchanged": 99.9
             },
             {
               "decile": 6,
@@ -1301,7 +1601,11 @@
               "net_gain_mn": 0.3,
               "avg_rent_saved": 0,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 0
+              "avg_net_gain": 0,
+              "avg_net_gain_pct": 0.0,
+              "pct_winners": 0.0,
+              "pct_losers": 0.0,
+              "pct_unchanged": 100.0
             },
             {
               "decile": 7,
@@ -1309,8 +1613,12 @@
               "benefit_lost_mn": -0.6,
               "net_gain_mn": 0.6,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -1,
-              "avg_net_gain": 1
+              "avg_benefit_lost": 0,
+              "avg_net_gain": 0,
+              "avg_net_gain_pct": 0.0,
+              "pct_winners": 0.0,
+              "pct_losers": 0.0,
+              "pct_unchanged": 100.0
             },
             {
               "decile": 8,
@@ -1319,7 +1627,11 @@
               "net_gain_mn": 0.0,
               "avg_rent_saved": 0,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 0
+              "avg_net_gain": 0,
+              "avg_net_gain_pct": 0.0,
+              "pct_winners": 0.0,
+              "pct_losers": 0.0,
+              "pct_unchanged": 100.0
             },
             {
               "decile": 9,
@@ -1327,8 +1639,12 @@
               "benefit_lost_mn": -5.8,
               "net_gain_mn": 5.8,
               "avg_rent_saved": 0,
-              "avg_benefit_lost": -8,
-              "avg_net_gain": 8
+              "avg_benefit_lost": -7,
+              "avg_net_gain": 7,
+              "avg_net_gain_pct": 0.01,
+              "pct_winners": 0.9,
+              "pct_losers": 0.0,
+              "pct_unchanged": 99.1
             },
             {
               "decile": 10,
@@ -1337,7 +1653,11 @@
               "net_gain_mn": 0.0,
               "avg_rent_saved": 0,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 0
+              "avg_net_gain": 0,
+              "avg_net_gain_pct": 0.0,
+              "pct_winners": 0.0,
+              "pct_losers": 0.0,
+              "pct_unchanged": 100.0
             }
           ]
         }
@@ -1387,90 +1707,130 @@
               "rent_saved_mn": 376.0,
               "benefit_lost_mn": 208.7,
               "net_gain_mn": 167.3,
-              "avg_rent_saved": 349,
-              "avg_benefit_lost": 194,
-              "avg_net_gain": 155
+              "avg_rent_saved": 210,
+              "avg_benefit_lost": 116,
+              "avg_net_gain": 93,
+              "avg_net_gain_pct": 0.47,
+              "pct_winners": 35.3,
+              "pct_losers": 15.9,
+              "pct_unchanged": 48.8
             },
             {
               "decile": 2,
               "rent_saved_mn": 374.5,
               "benefit_lost_mn": 219.3,
               "net_gain_mn": 155.2,
-              "avg_rent_saved": 382,
-              "avg_benefit_lost": 224,
-              "avg_net_gain": 158
+              "avg_rent_saved": 217,
+              "avg_benefit_lost": 127,
+              "avg_net_gain": 90,
+              "avg_net_gain_pct": 0.29,
+              "pct_winners": 34.4,
+              "pct_losers": 15.5,
+              "pct_unchanged": 50.1
             },
             {
               "decile": 3,
               "rent_saved_mn": 325.6,
               "benefit_lost_mn": 264.3,
               "net_gain_mn": 61.3,
-              "avg_rent_saved": 371,
-              "avg_benefit_lost": 302,
-              "avg_net_gain": 70
+              "avg_rent_saved": 206,
+              "avg_benefit_lost": 167,
+              "avg_net_gain": 39,
+              "avg_net_gain_pct": 0.11,
+              "pct_winners": 26.9,
+              "pct_losers": 16.0,
+              "pct_unchanged": 57.1
             },
             {
               "decile": 4,
               "rent_saved_mn": 289.0,
               "benefit_lost_mn": 221.7,
               "net_gain_mn": 67.3,
-              "avg_rent_saved": 397,
-              "avg_benefit_lost": 305,
-              "avg_net_gain": 92
+              "avg_rent_saved": 191,
+              "avg_benefit_lost": 146,
+              "avg_net_gain": 44,
+              "avg_net_gain_pct": 0.11,
+              "pct_winners": 25.2,
+              "pct_losers": 20.0,
+              "pct_unchanged": 54.8
             },
             {
               "decile": 5,
               "rent_saved_mn": 248.2,
               "benefit_lost_mn": 200.1,
               "net_gain_mn": 48.1,
-              "avg_rent_saved": 394,
-              "avg_benefit_lost": 318,
-              "avg_net_gain": 76
+              "avg_rent_saved": 200,
+              "avg_benefit_lost": 161,
+              "avg_net_gain": 39,
+              "avg_net_gain_pct": 0.09,
+              "pct_winners": 23.2,
+              "pct_losers": 23.7,
+              "pct_unchanged": 53.1
             },
             {
               "decile": 6,
               "rent_saved_mn": 144.8,
               "benefit_lost_mn": 109.6,
               "net_gain_mn": 35.2,
-              "avg_rent_saved": 406,
-              "avg_benefit_lost": 307,
-              "avg_net_gain": 99
+              "avg_rent_saved": 136,
+              "avg_benefit_lost": 103,
+              "avg_net_gain": 33,
+              "avg_net_gain_pct": 0.07,
+              "pct_winners": 20.9,
+              "pct_losers": 6.4,
+              "pct_unchanged": 72.7
             },
             {
               "decile": 7,
               "rent_saved_mn": 290.1,
               "benefit_lost_mn": 251.4,
               "net_gain_mn": 38.7,
-              "avg_rent_saved": 519,
-              "avg_benefit_lost": 450,
-              "avg_net_gain": 69
+              "avg_rent_saved": 194,
+              "avg_benefit_lost": 168,
+              "avg_net_gain": 26,
+              "avg_net_gain_pct": 0.05,
+              "pct_winners": 17.1,
+              "pct_losers": 7.8,
+              "pct_unchanged": 75.1
             },
             {
               "decile": 8,
               "rent_saved_mn": 172.2,
               "benefit_lost_mn": 138.0,
               "net_gain_mn": 34.2,
-              "avg_rent_saved": 541,
-              "avg_benefit_lost": 434,
-              "avg_net_gain": 107
+              "avg_rent_saved": 170,
+              "avg_benefit_lost": 136,
+              "avg_net_gain": 34,
+              "avg_net_gain_pct": 0.05,
+              "pct_winners": 14.3,
+              "pct_losers": 8.2,
+              "pct_unchanged": 77.5
             },
             {
               "decile": 9,
               "rent_saved_mn": 83.6,
               "benefit_lost_mn": 72.6,
               "net_gain_mn": 10.9,
-              "avg_rent_saved": 628,
-              "avg_benefit_lost": 546,
-              "avg_net_gain": 82
+              "avg_rent_saved": 100,
+              "avg_benefit_lost": 87,
+              "avg_net_gain": 13,
+              "avg_net_gain_pct": 0.02,
+              "pct_winners": 7.8,
+              "pct_losers": 7.4,
+              "pct_unchanged": 84.8
             },
             {
               "decile": 10,
               "rent_saved_mn": 51.2,
               "benefit_lost_mn": 33.1,
               "net_gain_mn": 18.1,
-              "avg_rent_saved": 413,
-              "avg_benefit_lost": 267,
-              "avg_net_gain": 146
+              "avg_rent_saved": 81,
+              "avg_benefit_lost": 53,
+              "avg_net_gain": 29,
+              "avg_net_gain_pct": 0.03,
+              "pct_winners": 11.2,
+              "pct_losers": 8.5,
+              "pct_unchanged": 80.3
             }
           ]
         },
@@ -1492,90 +1852,130 @@
               "rent_saved_mn": 526.4,
               "benefit_lost_mn": 293.9,
               "net_gain_mn": 232.5,
-              "avg_rent_saved": 488,
-              "avg_benefit_lost": 273,
-              "avg_net_gain": 216
+              "avg_rent_saved": 294,
+              "avg_benefit_lost": 164,
+              "avg_net_gain": 130,
+              "avg_net_gain_pct": 0.65,
+              "pct_winners": 37.9,
+              "pct_losers": 15.0,
+              "pct_unchanged": 47.1
             },
             {
               "decile": 2,
               "rent_saved_mn": 524.3,
               "benefit_lost_mn": 305.5,
               "net_gain_mn": 218.8,
-              "avg_rent_saved": 535,
-              "avg_benefit_lost": 312,
-              "avg_net_gain": 223
+              "avg_rent_saved": 304,
+              "avg_benefit_lost": 177,
+              "avg_net_gain": 127,
+              "avg_net_gain_pct": 0.41,
+              "pct_winners": 39.0,
+              "pct_losers": 13.9,
+              "pct_unchanged": 47.1
             },
             {
               "decile": 3,
               "rent_saved_mn": 455.8,
               "benefit_lost_mn": 369.9,
               "net_gain_mn": 85.9,
-              "avg_rent_saved": 520,
-              "avg_benefit_lost": 422,
-              "avg_net_gain": 98
+              "avg_rent_saved": 288,
+              "avg_benefit_lost": 234,
+              "avg_net_gain": 54,
+              "avg_net_gain_pct": 0.15,
+              "pct_winners": 33.0,
+              "pct_losers": 15.5,
+              "pct_unchanged": 51.5
             },
             {
               "decile": 4,
               "rent_saved_mn": 404.6,
               "benefit_lost_mn": 310.3,
               "net_gain_mn": 94.3,
-              "avg_rent_saved": 556,
-              "avg_benefit_lost": 426,
-              "avg_net_gain": 130
+              "avg_rent_saved": 267,
+              "avg_benefit_lost": 205,
+              "avg_net_gain": 62,
+              "avg_net_gain_pct": 0.16,
+              "pct_winners": 20.9,
+              "pct_losers": 18.4,
+              "pct_unchanged": 60.7
             },
             {
               "decile": 5,
               "rent_saved_mn": 347.5,
               "benefit_lost_mn": 280.2,
               "net_gain_mn": 67.3,
-              "avg_rent_saved": 552,
-              "avg_benefit_lost": 445,
-              "avg_net_gain": 107
+              "avg_rent_saved": 280,
+              "avg_benefit_lost": 226,
+              "avg_net_gain": 54,
+              "avg_net_gain_pct": 0.12,
+              "pct_winners": 26.5,
+              "pct_losers": 17.5,
+              "pct_unchanged": 56.0
             },
             {
               "decile": 6,
               "rent_saved_mn": 202.7,
               "benefit_lost_mn": 153.4,
               "net_gain_mn": 49.3,
-              "avg_rent_saved": 568,
-              "avg_benefit_lost": 430,
-              "avg_net_gain": 138
+              "avg_rent_saved": 190,
+              "avg_benefit_lost": 144,
+              "avg_net_gain": 46,
+              "avg_net_gain_pct": 0.1,
+              "pct_winners": 20.8,
+              "pct_losers": 10.0,
+              "pct_unchanged": 69.2
             },
             {
               "decile": 7,
               "rent_saved_mn": 406.2,
               "benefit_lost_mn": 351.9,
               "net_gain_mn": 54.2,
-              "avg_rent_saved": 726,
-              "avg_benefit_lost": 629,
-              "avg_net_gain": 97
+              "avg_rent_saved": 271,
+              "avg_benefit_lost": 235,
+              "avg_net_gain": 36,
+              "avg_net_gain_pct": 0.07,
+              "pct_winners": 20.7,
+              "pct_losers": 14.0,
+              "pct_unchanged": 65.3
             },
             {
               "decile": 8,
               "rent_saved_mn": 241.0,
               "benefit_lost_mn": 193.2,
               "net_gain_mn": 47.9,
-              "avg_rent_saved": 757,
-              "avg_benefit_lost": 607,
-              "avg_net_gain": 150
+              "avg_rent_saved": 237,
+              "avg_benefit_lost": 190,
+              "avg_net_gain": 47,
+              "avg_net_gain_pct": 0.07,
+              "pct_winners": 16.2,
+              "pct_losers": 5.0,
+              "pct_unchanged": 78.8
             },
             {
               "decile": 9,
               "rent_saved_mn": 117.0,
               "benefit_lost_mn": 101.7,
               "net_gain_mn": 15.3,
-              "avg_rent_saved": 880,
-              "avg_benefit_lost": 765,
-              "avg_net_gain": 115
+              "avg_rent_saved": 140,
+              "avg_benefit_lost": 122,
+              "avg_net_gain": 18,
+              "avg_net_gain_pct": 0.02,
+              "pct_winners": 7.9,
+              "pct_losers": 3.9,
+              "pct_unchanged": 88.2
             },
             {
               "decile": 10,
               "rent_saved_mn": 71.7,
               "benefit_lost_mn": 46.3,
               "net_gain_mn": 25.4,
-              "avg_rent_saved": 578,
-              "avg_benefit_lost": 373,
-              "avg_net_gain": 205
+              "avg_rent_saved": 114,
+              "avg_benefit_lost": 74,
+              "avg_net_gain": 40,
+              "avg_net_gain_pct": 0.04,
+              "pct_winners": 8.4,
+              "pct_losers": 11.3,
+              "pct_unchanged": 80.3
             }
           ]
         },
@@ -1597,90 +1997,130 @@
               "rent_saved_mn": 752.0,
               "benefit_lost_mn": 422.3,
               "net_gain_mn": 329.7,
-              "avg_rent_saved": 697,
-              "avg_benefit_lost": 392,
-              "avg_net_gain": 306
+              "avg_rent_saved": 420,
+              "avg_benefit_lost": 236,
+              "avg_net_gain": 184,
+              "avg_net_gain_pct": 0.92,
+              "pct_winners": 37.8,
+              "pct_losers": 14.2,
+              "pct_unchanged": 48.0
             },
             {
               "decile": 2,
               "rent_saved_mn": 749.0,
               "benefit_lost_mn": 434.9,
               "net_gain_mn": 314.1,
-              "avg_rent_saved": 765,
-              "avg_benefit_lost": 444,
-              "avg_net_gain": 321
+              "avg_rent_saved": 434,
+              "avg_benefit_lost": 252,
+              "avg_net_gain": 182,
+              "avg_net_gain_pct": 0.59,
+              "pct_winners": 36.2,
+              "pct_losers": 15.3,
+              "pct_unchanged": 48.5
             },
             {
               "decile": 3,
               "rent_saved_mn": 651.1,
               "benefit_lost_mn": 528.3,
               "net_gain_mn": 122.8,
-              "avg_rent_saved": 743,
-              "avg_benefit_lost": 603,
-              "avg_net_gain": 140
+              "avg_rent_saved": 411,
+              "avg_benefit_lost": 334,
+              "avg_net_gain": 78,
+              "avg_net_gain_pct": 0.22,
+              "pct_winners": 28.1,
+              "pct_losers": 13.5,
+              "pct_unchanged": 58.4
             },
             {
               "decile": 4,
               "rent_saved_mn": 578.1,
               "benefit_lost_mn": 443.2,
               "net_gain_mn": 134.9,
-              "avg_rent_saved": 794,
-              "avg_benefit_lost": 609,
-              "avg_net_gain": 185
+              "avg_rent_saved": 382,
+              "avg_benefit_lost": 293,
+              "avg_net_gain": 89,
+              "avg_net_gain_pct": 0.22,
+              "pct_winners": 25.6,
+              "pct_losers": 18.7,
+              "pct_unchanged": 55.7
             },
             {
               "decile": 5,
               "rent_saved_mn": 496.4,
               "benefit_lost_mn": 399.9,
               "net_gain_mn": 96.5,
-              "avg_rent_saved": 789,
-              "avg_benefit_lost": 635,
-              "avg_net_gain": 153
+              "avg_rent_saved": 401,
+              "avg_benefit_lost": 323,
+              "avg_net_gain": 78,
+              "avg_net_gain_pct": 0.18,
+              "pct_winners": 25.5,
+              "pct_losers": 21.6,
+              "pct_unchanged": 52.9
             },
             {
               "decile": 6,
               "rent_saved_mn": 289.6,
               "benefit_lost_mn": 219.2,
               "net_gain_mn": 70.4,
-              "avg_rent_saved": 811,
-              "avg_benefit_lost": 614,
-              "avg_net_gain": 197
+              "avg_rent_saved": 271,
+              "avg_benefit_lost": 205,
+              "avg_net_gain": 66,
+              "avg_net_gain_pct": 0.14,
+              "pct_winners": 21.3,
+              "pct_losers": 9.7,
+              "pct_unchanged": 69.0
             },
             {
               "decile": 7,
               "rent_saved_mn": 580.3,
               "benefit_lost_mn": 502.7,
               "net_gain_mn": 77.5,
-              "avg_rent_saved": 1038,
-              "avg_benefit_lost": 899,
-              "avg_net_gain": 139
+              "avg_rent_saved": 387,
+              "avg_benefit_lost": 336,
+              "avg_net_gain": 52,
+              "avg_net_gain_pct": 0.1,
+              "pct_winners": 18.9,
+              "pct_losers": 6.5,
+              "pct_unchanged": 74.6
             },
             {
               "decile": 8,
               "rent_saved_mn": 344.3,
               "benefit_lost_mn": 275.9,
               "net_gain_mn": 68.4,
-              "avg_rent_saved": 1082,
-              "avg_benefit_lost": 867,
-              "avg_net_gain": 215
+              "avg_rent_saved": 339,
+              "avg_benefit_lost": 272,
+              "avg_net_gain": 67,
+              "avg_net_gain_pct": 0.1,
+              "pct_winners": 14.7,
+              "pct_losers": 14.3,
+              "pct_unchanged": 71.0
             },
             {
               "decile": 9,
               "rent_saved_mn": 167.1,
               "benefit_lost_mn": 145.2,
               "net_gain_mn": 21.9,
-              "avg_rent_saved": 1257,
-              "avg_benefit_lost": 1092,
-              "avg_net_gain": 165
+              "avg_rent_saved": 200,
+              "avg_benefit_lost": 174,
+              "avg_net_gain": 26,
+              "avg_net_gain_pct": 0.04,
+              "pct_winners": 5.6,
+              "pct_losers": 7.9,
+              "pct_unchanged": 86.5
             },
             {
               "decile": 10,
               "rent_saved_mn": 102.4,
               "benefit_lost_mn": 63.1,
               "net_gain_mn": 39.3,
-              "avg_rent_saved": 825,
-              "avg_benefit_lost": 509,
-              "avg_net_gain": 317
+              "avg_rent_saved": 163,
+              "avg_benefit_lost": 100,
+              "avg_net_gain": 62,
+              "avg_net_gain_pct": 0.06,
+              "pct_winners": 12.0,
+              "pct_losers": 7.6,
+              "pct_unchanged": 80.4
             }
           ]
         }
@@ -1724,90 +2164,130 @@
               "rent_saved_mn": 9.5,
               "benefit_lost_mn": 3.3,
               "net_gain_mn": 6.2,
-              "avg_rent_saved": 223,
-              "avg_benefit_lost": 77,
-              "avg_net_gain": 146
+              "avg_rent_saved": 5,
+              "avg_benefit_lost": 2,
+              "avg_net_gain": 3,
+              "avg_net_gain_pct": 0.02,
+              "pct_winners": 2.2,
+              "pct_losers": 0.0,
+              "pct_unchanged": 97.8
             },
             {
               "decile": 2,
               "rent_saved_mn": 14.1,
               "benefit_lost_mn": 2.7,
               "net_gain_mn": 11.4,
-              "avg_rent_saved": 228,
-              "avg_benefit_lost": 44,
-              "avg_net_gain": 185
+              "avg_rent_saved": 8,
+              "avg_benefit_lost": 2,
+              "avg_net_gain": 7,
+              "avg_net_gain_pct": 0.02,
+              "pct_winners": 2.4,
+              "pct_losers": 0.6,
+              "pct_unchanged": 97.0
             },
             {
               "decile": 3,
               "rent_saved_mn": 20.1,
               "benefit_lost_mn": 0.8,
               "net_gain_mn": 19.3,
-              "avg_rent_saved": 131,
-              "avg_benefit_lost": 5,
-              "avg_net_gain": 125
+              "avg_rent_saved": 13,
+              "avg_benefit_lost": 0,
+              "avg_net_gain": 12,
+              "avg_net_gain_pct": 0.03,
+              "pct_winners": 5.3,
+              "pct_losers": 0.2,
+              "pct_unchanged": 94.5
             },
             {
               "decile": 4,
               "rent_saved_mn": 18.9,
               "benefit_lost_mn": 7.0,
               "net_gain_mn": 12.0,
-              "avg_rent_saved": 240,
-              "avg_benefit_lost": 88,
-              "avg_net_gain": 152
+              "avg_rent_saved": 13,
+              "avg_benefit_lost": 5,
+              "avg_net_gain": 8,
+              "avg_net_gain_pct": 0.02,
+              "pct_winners": 4.9,
+              "pct_losers": 0.3,
+              "pct_unchanged": 94.8
             },
             {
               "decile": 5,
               "rent_saved_mn": 13.9,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 13.9,
-              "avg_rent_saved": 253,
+              "avg_rent_saved": 11,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 252
+              "avg_net_gain": 11,
+              "avg_net_gain_pct": 0.03,
+              "pct_winners": 4.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 95.6
             },
             {
               "decile": 6,
               "rent_saved_mn": 9.1,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 9.1,
-              "avg_rent_saved": 92,
+              "avg_rent_saved": 9,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 92
+              "avg_net_gain": 9,
+              "avg_net_gain_pct": 0.02,
+              "pct_winners": 2.7,
+              "pct_losers": 0.0,
+              "pct_unchanged": 97.3
             },
             {
               "decile": 7,
               "rent_saved_mn": 25.9,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 25.9,
-              "avg_rent_saved": 308,
+              "avg_rent_saved": 17,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 308
+              "avg_net_gain": 17,
+              "avg_net_gain_pct": 0.03,
+              "pct_winners": 5.6,
+              "pct_losers": 0.0,
+              "pct_unchanged": 94.4
             },
             {
               "decile": 8,
               "rent_saved_mn": 56.7,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 56.7,
-              "avg_rent_saved": 380,
+              "avg_rent_saved": 56,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 380
+              "avg_net_gain": 56,
+              "avg_net_gain_pct": 0.08,
+              "pct_winners": 14.7,
+              "pct_losers": 0.0,
+              "pct_unchanged": 85.3
             },
             {
               "decile": 9,
               "rent_saved_mn": 17.8,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 17.8,
-              "avg_rent_saved": 181,
+              "avg_rent_saved": 21,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 181
+              "avg_net_gain": 21,
+              "avg_net_gain_pct": 0.03,
+              "pct_winners": 11.5,
+              "pct_losers": 0.0,
+              "pct_unchanged": 88.5
             },
             {
               "decile": 10,
               "rent_saved_mn": 3.9,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 3.9,
-              "avg_rent_saved": 489,
+              "avg_rent_saved": 6,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 489
+              "avg_net_gain": 6,
+              "avg_net_gain_pct": 0.01,
+              "pct_winners": 1.2,
+              "pct_losers": 0.0,
+              "pct_unchanged": 98.8
             }
           ]
         },
@@ -1829,90 +2309,130 @@
               "rent_saved_mn": 15.9,
               "benefit_lost_mn": 5.5,
               "net_gain_mn": 10.4,
-              "avg_rent_saved": 372,
-              "avg_benefit_lost": 128,
-              "avg_net_gain": 244
+              "avg_rent_saved": 9,
+              "avg_benefit_lost": 3,
+              "avg_net_gain": 6,
+              "avg_net_gain_pct": 0.03,
+              "pct_winners": 2.2,
+              "pct_losers": 0.0,
+              "pct_unchanged": 97.8
             },
             {
               "decile": 2,
               "rent_saved_mn": 23.4,
               "benefit_lost_mn": 4.5,
               "net_gain_mn": 19.0,
-              "avg_rent_saved": 380,
-              "avg_benefit_lost": 73,
-              "avg_net_gain": 308
+              "avg_rent_saved": 14,
+              "avg_benefit_lost": 3,
+              "avg_net_gain": 11,
+              "avg_net_gain_pct": 0.04,
+              "pct_winners": 2.9,
+              "pct_losers": 0.0,
+              "pct_unchanged": 97.1
             },
             {
               "decile": 3,
               "rent_saved_mn": 33.5,
               "benefit_lost_mn": 1.7,
               "net_gain_mn": 31.9,
-              "avg_rent_saved": 218,
-              "avg_benefit_lost": 11,
-              "avg_net_gain": 207
+              "avg_rent_saved": 21,
+              "avg_benefit_lost": 1,
+              "avg_net_gain": 20,
+              "avg_net_gain_pct": 0.06,
+              "pct_winners": 5.3,
+              "pct_losers": 0.2,
+              "pct_unchanged": 94.5
             },
             {
               "decile": 4,
               "rent_saved_mn": 31.5,
               "benefit_lost_mn": 11.6,
               "net_gain_mn": 20.0,
-              "avg_rent_saved": 400,
-              "avg_benefit_lost": 147,
-              "avg_net_gain": 253
+              "avg_rent_saved": 21,
+              "avg_benefit_lost": 8,
+              "avg_net_gain": 13,
+              "avg_net_gain_pct": 0.03,
+              "pct_winners": 3.3,
+              "pct_losers": 1.8,
+              "pct_unchanged": 94.9
             },
             {
               "decile": 5,
               "rent_saved_mn": 23.2,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 23.2,
-              "avg_rent_saved": 421,
-              "avg_benefit_lost": 1,
-              "avg_net_gain": 421
+              "avg_rent_saved": 19,
+              "avg_benefit_lost": 0,
+              "avg_net_gain": 19,
+              "avg_net_gain_pct": 0.04,
+              "pct_winners": 4.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 95.6
             },
             {
               "decile": 6,
               "rent_saved_mn": 15.2,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 15.2,
-              "avg_rent_saved": 154,
+              "avg_rent_saved": 14,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 154
+              "avg_net_gain": 14,
+              "avg_net_gain_pct": 0.03,
+              "pct_winners": 2.7,
+              "pct_losers": 0.0,
+              "pct_unchanged": 97.3
             },
             {
               "decile": 7,
               "rent_saved_mn": 43.2,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 43.2,
-              "avg_rent_saved": 513,
+              "avg_rent_saved": 29,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 513
+              "avg_net_gain": 29,
+              "avg_net_gain_pct": 0.06,
+              "pct_winners": 5.6,
+              "pct_losers": 0.0,
+              "pct_unchanged": 94.4
             },
             {
               "decile": 8,
               "rent_saved_mn": 94.6,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 94.6,
-              "avg_rent_saved": 633,
+              "avg_rent_saved": 93,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 633
+              "avg_net_gain": 93,
+              "avg_net_gain_pct": 0.13,
+              "pct_winners": 14.7,
+              "pct_losers": 0.0,
+              "pct_unchanged": 85.3
             },
             {
               "decile": 9,
               "rent_saved_mn": 29.6,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 29.6,
-              "avg_rent_saved": 301,
+              "avg_rent_saved": 35,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 301
+              "avg_net_gain": 35,
+              "avg_net_gain_pct": 0.05,
+              "pct_winners": 11.5,
+              "pct_losers": 0.0,
+              "pct_unchanged": 88.5
             },
             {
               "decile": 10,
               "rent_saved_mn": 6.5,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 6.5,
-              "avg_rent_saved": 814,
+              "avg_rent_saved": 10,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 814
+              "avg_net_gain": 10,
+              "avg_net_gain_pct": 0.01,
+              "pct_winners": 1.2,
+              "pct_losers": 0.0,
+              "pct_unchanged": 98.8
             }
           ]
         },
@@ -1934,90 +2454,130 @@
               "rent_saved_mn": 31.7,
               "benefit_lost_mn": 10.9,
               "net_gain_mn": 20.8,
-              "avg_rent_saved": 745,
-              "avg_benefit_lost": 257,
-              "avg_net_gain": 488
+              "avg_rent_saved": 18,
+              "avg_benefit_lost": 6,
+              "avg_net_gain": 12,
+              "avg_net_gain_pct": 0.06,
+              "pct_winners": 2.2,
+              "pct_losers": 0.0,
+              "pct_unchanged": 97.8
             },
             {
               "decile": 2,
               "rent_saved_mn": 46.9,
               "benefit_lost_mn": 9.9,
               "net_gain_mn": 37.0,
-              "avg_rent_saved": 761,
-              "avg_benefit_lost": 160,
-              "avg_net_gain": 601
+              "avg_rent_saved": 27,
+              "avg_benefit_lost": 6,
+              "avg_net_gain": 21,
+              "avg_net_gain_pct": 0.07,
+              "pct_winners": 2.5,
+              "pct_losers": 0.7,
+              "pct_unchanged": 96.8
             },
             {
               "decile": 3,
               "rent_saved_mn": 67.1,
               "benefit_lost_mn": 5.2,
               "net_gain_mn": 61.9,
-              "avg_rent_saved": 435,
-              "avg_benefit_lost": 34,
-              "avg_net_gain": 402
+              "avg_rent_saved": 42,
+              "avg_benefit_lost": 3,
+              "avg_net_gain": 39,
+              "avg_net_gain_pct": 0.11,
+              "pct_winners": 5.3,
+              "pct_losers": 0.2,
+              "pct_unchanged": 94.5
             },
             {
               "decile": 4,
               "rent_saved_mn": 63.1,
               "benefit_lost_mn": 23.2,
               "net_gain_mn": 39.9,
-              "avg_rent_saved": 801,
-              "avg_benefit_lost": 294,
-              "avg_net_gain": 507
+              "avg_rent_saved": 42,
+              "avg_benefit_lost": 15,
+              "avg_net_gain": 26,
+              "avg_net_gain_pct": 0.07,
+              "pct_winners": 3.1,
+              "pct_losers": 2.1,
+              "pct_unchanged": 94.8
             },
             {
               "decile": 5,
               "rent_saved_mn": 46.4,
               "benefit_lost_mn": 0.1,
               "net_gain_mn": 46.4,
-              "avg_rent_saved": 843,
-              "avg_benefit_lost": 1,
-              "avg_net_gain": 841
+              "avg_rent_saved": 37,
+              "avg_benefit_lost": 0,
+              "avg_net_gain": 37,
+              "avg_net_gain_pct": 0.09,
+              "pct_winners": 4.4,
+              "pct_losers": 0.0,
+              "pct_unchanged": 95.6
             },
             {
               "decile": 6,
               "rent_saved_mn": 30.4,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 30.4,
-              "avg_rent_saved": 308,
+              "avg_rent_saved": 28,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 308
+              "avg_net_gain": 28,
+              "avg_net_gain_pct": 0.06,
+              "pct_winners": 2.7,
+              "pct_losers": 0.0,
+              "pct_unchanged": 97.3
             },
             {
               "decile": 7,
               "rent_saved_mn": 86.3,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 86.3,
-              "avg_rent_saved": 1027,
+              "avg_rent_saved": 58,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 1027
+              "avg_net_gain": 58,
+              "avg_net_gain_pct": 0.11,
+              "pct_winners": 5.6,
+              "pct_losers": 0.0,
+              "pct_unchanged": 94.4
             },
             {
               "decile": 8,
               "rent_saved_mn": 189.1,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 189.1,
-              "avg_rent_saved": 1265,
+              "avg_rent_saved": 186,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 1265
+              "avg_net_gain": 186,
+              "avg_net_gain_pct": 0.27,
+              "pct_winners": 14.7,
+              "pct_losers": 0.0,
+              "pct_unchanged": 85.3
             },
             {
               "decile": 9,
               "rent_saved_mn": 59.2,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 59.2,
-              "avg_rent_saved": 602,
+              "avg_rent_saved": 71,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 602
+              "avg_net_gain": 71,
+              "avg_net_gain_pct": 0.1,
+              "pct_winners": 11.5,
+              "pct_losers": 0.0,
+              "pct_unchanged": 88.5
             },
             {
               "decile": 10,
               "rent_saved_mn": 13.1,
               "benefit_lost_mn": 0.0,
               "net_gain_mn": 13.1,
-              "avg_rent_saved": 1629,
+              "avg_rent_saved": 21,
               "avg_benefit_lost": 0,
-              "avg_net_gain": 1629
+              "avg_net_gain": 21,
+              "avg_net_gain_pct": 0.02,
+              "pct_winners": 1.2,
+              "pct_losers": 0.0,
+              "pct_unchanged": 98.8
             }
           ]
         }
