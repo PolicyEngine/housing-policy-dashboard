@@ -103,6 +103,17 @@ def build_baseline_by_decile(df: MicroDataFrame) -> list[dict]:
             rows.append({"decile": d})
             continue
 
+        # Average rent among renters only (rent > 0) in this decile
+        renter_mask = mask & (df.rent.values > 0)
+        w_renters = df.weights * renter_mask
+        n_renters = MicroSeries(renter_mask.astype(float), weights=df.weights).sum()
+        avg_rent_renters = round(
+            MicroSeries(df.rent.values, weights=w_renters).mean()
+        ) if n_renters > 0 else 0
+        avg_inc_renters = round(
+            MicroSeries(df.hh_income.values, weights=w_renters).mean()
+        ) if n_renters > 0 else 0
+
         pct_hb = round(
             MicroSeries((df.hb_raw.values > 0).astype(float), weights=w).sum()
             / n_total * 100, 1
@@ -119,13 +130,13 @@ def build_baseline_by_decile(df: MicroDataFrame) -> list[dict]:
             "total_rent_bn": round(MicroSeries(df.rent.values * mask, weights=df.weights).sum() / 1e9, 1),
             "hb_bn": round(MicroSeries(df.hb.values * mask, weights=df.weights).sum() / 1e9, 1),
             "uc_housing_bn": round(MicroSeries(df.uc_housing.values * mask, weights=df.weights).sum() / 1e9, 1),
-            "avg_rent": round(rent_s.mean()),
+            "avg_rent": avg_rent_renters,
             "avg_hb": round(hb_s.mean()),
             "avg_uc_housing": round(uc_s.mean()),
             "pct_receiving_hb": pct_hb,
             "pct_receiving_uc_housing": pct_uc,
             "avg_income": round(avg_inc),
-            "rent_to_income_pct": round(rent_s.mean() / max(avg_inc, 1) * 100, 1),
+            "rent_to_income_pct": round(avg_rent_renters / max(avg_inc_renters, 1) * 100, 1) if n_renters > 0 else 0,
             "avg_housing_costs": round(hc_s.mean()),
             "housing_costs_to_income_pct": round(hc_s.mean() / max(avg_inc, 1) * 100, 1),
         }

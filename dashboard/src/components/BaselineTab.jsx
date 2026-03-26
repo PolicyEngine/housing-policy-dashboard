@@ -92,7 +92,9 @@ export default function BaselineTab({ data }) {
   const tenureDist = baseline.tenure_distribution || [];
   const distImpact = baseline.distributional_impact || { hb: [], uc_housing: [] };
   const [rentBurdenMode, setRentBurdenMode] = useState("pct");
-  const [benefitMode, setBenefitMode] = useState("uc");
+  const [receiptMode, setReceiptMode] = useState("uc");
+  const [tenureBenMode, setTenureBenMode] = useState("uc");
+  const [distMode, setDistMode] = useState("uc");
 
   const sortedTenureDist = useMemo(() => {
     return [...tenureDist].sort((a, b) => b.pct - a.pct);
@@ -102,7 +104,9 @@ export default function BaselineTab({ data }) {
     return [...byRegion].sort((a, b) => b.avg_rent - a.avg_rent);
   }, [byRegion]);
 
-  const benefitLabel = benefitMode === "hb" ? "Housing Benefit" : "UC housing element";
+  const sortedHhType = useMemo(() => {
+    return [...byHhType].sort((a, b) => b.avg_rent - a.avg_rent);
+  }, [byHhType]);
 
   return (
     <div className="space-y-10">
@@ -276,7 +280,7 @@ export default function BaselineTab({ data }) {
             />
             <div className="h-[360px] w-full">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={byHhType} layout="vertical" margin={{ left: 10, right: 30, top: 10, bottom: 10 }} barSize={28}>
+                <BarChart data={sortedHhType} layout="vertical" margin={{ left: 10, right: 30, top: 10, bottom: 10 }} barSize={28}>
                   <CartesianGrid strokeDasharray="3 3" stroke={colors.border.light} horizontal={false} />
                   <XAxis
                     type="number"
@@ -342,22 +346,22 @@ export default function BaselineTab({ data }) {
       {/* SECTION 2: HOUSING BENEFITS                                     */}
       {/* ================================================================ */}
       <div className="border-t border-slate-200 pt-10">
-        <div className="flex items-start justify-between">
-          <SectionHeading
-            title="Housing benefit spending"
-            description="This section shows government spending on Housing Benefit (legacy) and the UC housing element, and how it is distributed across income deciles and tenure types."
-          />
-          <BenefitToggle mode={benefitMode} setMode={setBenefitMode} />
-        </div>
+        <SectionHeading
+          title="Housing benefit spending"
+          description="This section shows government spending on Housing Benefit (legacy) and the UC housing element, and how it is distributed across income deciles and tenure types."
+        />
       </div>
 
       {/* % receiving benefits + benefit spending by tenure — side by side */}
       <div className="grid gap-8 xl:grid-cols-2">
         <div className="section-card">
-          <SectionHeading
-            title={`% receiving ${benefitLabel} by decile`}
-            description={`Share of households receiving ${benefitMode === "hb" ? "Housing Benefit (legacy, mostly pensioners)" : "Universal Credit"} by income decile.`}
-          />
+          <div className="flex items-start justify-between">
+            <SectionHeading
+              title={`% receiving ${receiptMode === "hb" ? "Housing Benefit" : "UC housing element"} by decile`}
+              description={`Share of households receiving ${receiptMode === "hb" ? "Housing Benefit (legacy, mostly pensioners)" : "Universal Credit"} by income decile.`}
+            />
+            <BenefitToggle mode={receiptMode} setMode={setReceiptMode} />
+          </div>
           <div className="h-[360px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={byDecile}>
@@ -376,8 +380,8 @@ export default function BaselineTab({ data }) {
                 />
                 <Tooltip content={<CustomTooltip formatter={(v) => `${Number(v).toFixed(1)}%`} />} />
                 <Bar
-                  dataKey={benefitMode === "hb" ? "pct_receiving_hb" : "pct_receiving_uc_housing"}
-                  name={benefitLabel}
+                  dataKey={receiptMode === "hb" ? "pct_receiving_hb" : "pct_receiving_uc_housing"}
+                  name={receiptMode === "hb" ? "Housing Benefit" : "UC housing element"}
                   fill={colors.primary[600]}
                   radius={[6, 6, 0, 0]}
                 />
@@ -388,10 +392,13 @@ export default function BaselineTab({ data }) {
         </div>
 
         <div className="section-card">
-          <SectionHeading
-            title={`${benefitLabel} spending by tenure`}
-            description={`Total ${benefitLabel} spending by renter tenure type.`}
-          />
+          <div className="flex items-start justify-between">
+            <SectionHeading
+              title={`${tenureBenMode === "hb" ? "Housing Benefit" : "UC housing element"} spending by tenure`}
+              description={`Total ${tenureBenMode === "hb" ? "Housing Benefit" : "UC housing element"} spending by renter tenure type.`}
+            />
+            <BenefitToggle mode={tenureBenMode} setMode={setTenureBenMode} />
+          </div>
           <div className="h-[360px] w-full">
             <ResponsiveContainer width="100%" height="100%">
               <BarChart data={byTenure}>
@@ -405,8 +412,8 @@ export default function BaselineTab({ data }) {
                 />
                 <Tooltip content={<CustomTooltip formatter={(v) => `£${Number(v).toFixed(1)}bn`} />} />
                 <Bar
-                  dataKey={benefitMode === "hb" ? "hb_bn" : "uc_housing_bn"}
-                  name={benefitLabel}
+                  dataKey={tenureBenMode === "hb" ? "hb_bn" : "uc_housing_bn"}
+                  name={tenureBenMode === "hb" ? "Housing Benefit" : "UC housing element"}
                   fill={colors.primary[600]}
                   radius={[6, 6, 0, 0]}
                 />
@@ -420,13 +427,16 @@ export default function BaselineTab({ data }) {
       {/* Distributional impact of HB/UC by decile (half-width) */}
       <div className="grid gap-8 xl:grid-cols-2">
         <div className="section-card">
-          <SectionHeading
-            title={`Distributional impact of ${benefitMode === "hb" ? "HB" : "UC housing"} by decile`}
-            description={`Relative change in household income from ${benefitLabel}. Deciles ranked by income excluding the benefit.`}
-          />
+          <div className="flex items-start justify-between">
+            <SectionHeading
+              title={`Distributional impact of ${distMode === "hb" ? "HB" : "UC housing"} by decile`}
+              description={`Relative change in household income from ${distMode === "hb" ? "Housing Benefit" : "UC housing element"}. Deciles ranked by income excluding the benefit.`}
+            />
+            <BenefitToggle mode={distMode} setMode={setDistMode} />
+          </div>
           <div className="h-[360px] w-full">
             <ResponsiveContainer width="100%" height="100%">
-              <BarChart data={benefitMode === "hb" ? distImpact.hb : distImpact.uc_housing}>
+              <BarChart data={distMode === "hb" ? distImpact.hb : distImpact.uc_housing}>
                 <CartesianGrid strokeDasharray="3 3" stroke={colors.border.light} />
                 <XAxis
                   dataKey="decile"
@@ -443,7 +453,7 @@ export default function BaselineTab({ data }) {
                 <Tooltip content={<CustomTooltip formatter={(v) => `+${Number(v).toFixed(1)}%`} />} />
                 <Bar
                   dataKey="pct_of_income"
-                  name={benefitLabel}
+                  name={distMode === "hb" ? "Housing Benefit" : "UC housing element"}
                   fill={colors.primary[600]}
                   radius={[6, 6, 0, 0]}
                 />

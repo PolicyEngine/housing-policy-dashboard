@@ -20,8 +20,6 @@
     "by_tenure": [
       {
         "tenure": "Council",
-        "n_households": 2774430,
-        "pct_households": 21.1,
         "total_rent_bn": 19.9,
         "avg_rent": 7187,
         "hb_bn": 2.9,
@@ -31,8 +29,6 @@
       },
       {
         "tenure": "Housing Association",
-        "n_households": 3029254,
-        "pct_households": 23.1,
         "total_rent_bn": 27.3,
         "avg_rent": 9014,
         "hb_bn": 2.2,
@@ -42,8 +38,6 @@
       },
       {
         "tenure": "Private",
-        "n_households": 7326718,
-        "pct_households": 55.8,
         "total_rent_bn": 96.9,
         "avg_rent": 13231,
         "hb_bn": 1.2,
@@ -58,13 +52,13 @@
         "total_rent_bn": 14.7,
         "hb_bn": 0.2,
         "uc_housing_bn": 6.6,
-        "avg_rent": 3817,
+        "avg_rent": 8190,
         "avg_hb": 50,
         "avg_uc_housing": 1705,
         "pct_receiving_hb": 1.8,
         "pct_receiving_uc_housing": 44.2,
         "avg_income": 19980,
-        "rent_to_income_pct": 19.1,
+        "rent_to_income_pct": 41.1,
         "avg_housing_costs": 5530,
         "housing_costs_to_income_pct": 27.7
       },
@@ -73,13 +67,13 @@
         "total_rent_bn": 16.2,
         "hb_bn": 0.7,
         "uc_housing_bn": 4.5,
-        "avg_rent": 5085,
+        "avg_rent": 9417,
         "avg_hb": 216,
         "avg_uc_housing": 1413,
         "pct_receiving_hb": 5.1,
         "pct_receiving_uc_housing": 34.5,
         "avg_income": 30747,
-        "rent_to_income_pct": 16.5,
+        "rent_to_income_pct": 30.5,
         "avg_housing_costs": 6694,
         "housing_costs_to_income_pct": 21.8
       },
@@ -88,13 +82,13 @@
         "total_rent_bn": 14.6,
         "hb_bn": 2.4,
         "uc_housing_bn": 3.8,
-        "avg_rent": 4676,
+        "avg_rent": 9198,
         "avg_hb": 769,
         "avg_uc_housing": 1232,
         "pct_receiving_hb": 13.4,
         "pct_receiving_uc_housing": 28.6,
         "avg_income": 36848,
-        "rent_to_income_pct": 12.7,
+        "rent_to_income_pct": 26.3,
         "avg_housing_costs": 7069,
         "housing_costs_to_income_pct": 19.2
       },
@@ -103,13 +97,13 @@
         "total_rent_bn": 15.4,
         "hb_bn": 0.8,
         "uc_housing_bn": 4.2,
-        "avg_rent": 5066,
+        "avg_rent": 10198,
         "avg_hb": 275,
         "avg_uc_housing": 1369,
         "pct_receiving_hb": 5.8,
         "pct_receiving_uc_housing": 28.0,
         "avg_income": 41518,
-        "rent_to_income_pct": 12.2,
+        "rent_to_income_pct": 25.4,
         "avg_housing_costs": 7670,
         "housing_costs_to_income_pct": 18.5
       },
@@ -118,13 +112,13 @@
         "total_rent_bn": 12.6,
         "hb_bn": 0.5,
         "uc_housing_bn": 3.6,
-        "avg_rent": 3976,
+        "avg_rent": 10128,
         "avg_hb": 159,
         "avg_uc_housing": 1151,
         "pct_receiving_hb": 4.8,
         "pct_receiving_uc_housing": 20.1,
         "avg_income": 43868,
-        "rent_to_income_pct": 9.1,
+        "rent_to_income_pct": 23.2,
         "avg_housing_costs": 6979,
         "housing_costs_to_income_pct": 15.9
       },
@@ -133,13 +127,13 @@
         "total_rent_bn": 12.3,
         "hb_bn": 0.5,
         "uc_housing_bn": 2.3,
-        "avg_rent": 4034,
+        "avg_rent": 11530,
         "avg_hb": 164,
         "avg_uc_housing": 767,
         "pct_receiving_hb": 3.5,
         "pct_receiving_uc_housing": 12.7,
         "avg_income": 51268,
-        "rent_to_income_pct": 7.9,
+        "rent_to_income_pct": 24.7,
         "avg_housing_costs": 7924,
         "housing_costs_to_income_pct": 15.5
       },
@@ -148,13 +142,13 @@
         "total_rent_bn": 19.1,
         "hb_bn": 0.6,
         "uc_housing_bn": 2.8,
-        "avg_rent": 5804,
+        "avg_rent": 12719,
         "avg_hb": 194,
         "avg_uc_housing": 848,
         "pct_receiving_hb": 6.6,
         "pct_receiving_uc_housing": 13.6,
         "avg_income": 54278,
-        "rent_to_income_pct": 10.7,
+        "rent_to_income_pct": 25.2,
         "avg_housing_costs": 10316,
         "housing_costs_to_income_pct": 19.0
       },
@@ -163,13 +157,13 @@
         "total_rent_bn": 13.6,
         "hb_bn": 0.3,
         "uc_housing_bn": 1.7,
-        "avg_rent": 4811,
+        "avg_rent": 13389,
         "avg_hb": 97,
         "avg_uc_housing": 617,
         "pct_receiving_hb": 2.7,
         "pct_receiving_uc_housing": 8.4,
         "avg_income": 69245,
-        "rent_to_income_pct": 6.9,
+        "rent_to_income_pct": 19.2,
         "avg_housing_costs": 9996,
         "housing_costs_to_income_pct": 14.4
       },
@@ -178,13 +172,13 @@
         "total_rent_bn": 13.8,
         "hb_bn": 0.2,
         "uc_housing_bn": 0.7,
-        "avg_rent": 4550,
+        "avg_rent": 16453,
         "avg_hb": 51,
         "avg_uc_housing": 227,
         "pct_receiving_hb": 1.3,
         "pct_receiving_uc_housing": 2.8,
         "avg_income": 75241,
-        "rent_to_income_pct": 6.0,
+        "rent_to_income_pct": 22.4,
         "avg_housing_costs": 11541,
         "housing_costs_to_income_pct": 15.3
       },
@@ -193,13 +187,13 @@
         "total_rent_bn": 12.7,
         "hb_bn": 0.2,
         "uc_housing_bn": 0.0,
-        "avg_rent": 4003,
+        "avg_rent": 20135,
         "avg_hb": 49,
         "avg_uc_housing": 12,
         "pct_receiving_hb": 2.4,
         "pct_receiving_uc_housing": 0.9,
         "avg_income": 126555,
-        "rent_to_income_pct": 3.2,
+        "rent_to_income_pct": 18.0,
         "avg_housing_costs": 14818,
         "housing_costs_to_income_pct": 11.7
       }
@@ -314,6 +308,38 @@
         "rent_to_income_pct": 12.3
       }
     ],
+    "by_hh_type": [
+      {
+        "hh_type": "Pensioner (single)",
+        "n_renters": 1504029,
+        "avg_rent": 9174
+      },
+      {
+        "hh_type": "Pensioner (couple)",
+        "n_renters": 653559,
+        "avg_rent": 8338
+      },
+      {
+        "hh_type": "Single",
+        "n_renters": 3523487,
+        "avg_rent": 9724
+      },
+      {
+        "hh_type": "Couple, no children",
+        "n_renters": 3266589,
+        "avg_rent": 13146
+      },
+      {
+        "hh_type": "Single parent",
+        "n_renters": 1939045,
+        "avg_rent": 10300
+      },
+      {
+        "hh_type": "Couple with children",
+        "n_renters": 2056275,
+        "avg_rent": 14050
+      }
+    ],
     "tenure_distribution": [
       {
         "tenure": "Private renter",
@@ -426,39 +452,7 @@
           "pct_of_income": 0.0
         }
       ]
-    },
-    "by_hh_type": [
-      {
-        "hh_type": "Pensioner (single)",
-        "n_renters": 1504029,
-        "avg_rent": 9174
-      },
-      {
-        "hh_type": "Pensioner (couple)",
-        "n_renters": 653559,
-        "avg_rent": 8338
-      },
-      {
-        "hh_type": "Single",
-        "n_renters": 3523487,
-        "avg_rent": 9724
-      },
-      {
-        "hh_type": "Couple, no children",
-        "n_renters": 3266589,
-        "avg_rent": 13146
-      },
-      {
-        "hh_type": "Single parent",
-        "n_renters": 1939045,
-        "avg_rent": 10300
-      },
-      {
-        "hh_type": "Couple with children",
-        "n_renters": 2056275,
-        "avg_rent": 14050
-      }
-    ]
+    }
   },
   "policies": {
     "blanket_rent_reduction": {
