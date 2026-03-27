@@ -347,12 +347,13 @@ def build_reform_by_decile(
         net_gain_mn = rent_saved_mn - benefit_lost_mn
 
         # Winners/losers among renters in this decile
+        # Use £1 tolerance to avoid float32 rounding artefacts
         pct_winners = round(
-            MicroSeries((net_gain > 0).astype(float) * d_renters, weights=w).sum()
+            MicroSeries((net_gain > 1).astype(float) * d_renters, weights=w).sum()
             / max(n_renters, 1) * 100, 1
         )
         pct_losers = round(
-            MicroSeries((net_gain < 0).astype(float) * d_renters, weights=w).sum()
+            MicroSeries((net_gain < -1).astype(float) * d_renters, weights=w).sum()
             / max(n_renters, 1) * 100, 1
         )
         pct_unchanged = round(100 - pct_winners - pct_losers, 1)
