@@ -245,47 +245,65 @@ export default function ReformTab({ data }) {
         <div className="note-eyebrow text-xs font-semibold uppercase tracking-[0.08em] mb-1">
           Supply-side caveat
         </div>
-        <div className="note-body text-sm leading-relaxed space-y-2">
+        <div className="note-body text-sm leading-relaxed">
           <p>
             The results in this tab are <strong>static</strong>, but
             behavioural responses could be incorporated using supply
-            elasticities. For example, England&apos;s long-run price elasticity
-            of new housing supply is estimated at around 0.4 on average,
-            though it varies sharply by
-            region (<a href="https://doi.org/10.1111/ecoj.12213" target="_blank" rel="noopener noreferrer">Hilber &amp; Vermeulen 2016</a>).
+            elasticities. Long-run fiscal effects may be negative once
+            displacement costs (temporary accommodation costs councils an
+            estimated ~£2.3bn/yr for ~117,000
+            households — <a href="https://www.local.gov.uk/about/news/price-tag-temporary-accommodation-councils-set-balloon-almost-ps4-billion-202930-without" target="_blank" rel="noopener noreferrer">LGA 2024</a>)
+            and reduced property tax receipts are accounted for.
+            The following table summarises the key empirical estimates from the literature that could parameterise a dynamic extension of this model.
           </p>
-              <p>The UK and international evidence consistently finds that rent controls:</p>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>
-                  <strong>Reduce rental supply</strong> — in San
-                  Francisco, controlled properties saw a 15% decline in rental
-                  supply (<a href="https://doi.org/10.1257/aer.20181289" target="_blank" rel="noopener noreferrer">Diamond, McQuade &amp; Qian 2019</a>). Scotland&apos;s 2022
-                  rent freeze coincided with rental stock reaching historic lows,
-                  with the Scottish Association of Landlords reporting roughly
-                  22,000 properties withdrawn from the sector.
-                </li>
-                <li>
-                  <strong>Depress neighbouring property values</strong> — rent
-                  control creates negative spillovers via deferred maintenance
-                  and reduced neighbourhood amenity. When Cambridge MA ended
-                  controls in 1995, nearby never-controlled properties rose
-                  ~13% in value, accounting for over half the total value gain
-                  from decontrol (<a href="https://doi.org/10.1086/675536" target="_blank" rel="noopener noreferrer">Autor, Palmer &amp; Pathak 2014</a>).
-                </li>
-                <li>
-                  <strong>Reduce tenant mobility</strong> — tenants in controlled
-                  units stay longer than optimal, reducing turnover and
-                  misallocating housing. Stockholm&apos;s rent-controlled housing
-                  queue averages around 9 years city-wide and up to 18 years in
-                  the inner city (<a href="https://bostad.stockholm.se/language/english/how-long-does-it-take/" target="_blank" rel="noopener noreferrer">Bostadsformedlingen 2023</a>).
-                </li>
-              </ul>
-              <p>
-                Long-run fiscal effects may be negative once displacement costs
-                (temporary accommodation costs councils an estimated ~£2.3bn/yr
-                for ~117,000 households — <a href="https://www.local.gov.uk/about/news/price-tag-temporary-accommodation-councils-set-balloon-almost-ps4-billion-202930-without" target="_blank" rel="noopener noreferrer">LGA 2024</a>)
-                and reduced property tax receipts are accounted for.
-              </p>
+          <div className="overflow-x-auto mt-3">
+            <table className="data-table">
+              <thead>
+                <tr>
+                  <th>Paper</th>
+                  <th>Category</th>
+                  <th>Key finding</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="https://doi.org/10.1111/ecoj.12213" target="_blank" rel="noopener noreferrer">Hilber &amp; Vermeulen (2016)</a></td>
+                  <td>Supply Elasticity</td>
+                  <td>Long-run price elasticity of new housing supply in England averages <strong>0.4</strong>, with sharp regional variation</td>
+                </tr>
+                <tr>
+                  <td><a href="https://doi.org/10.1111/j.1080-8620.2003.00060.x" target="_blank" rel="noopener noreferrer">Andrew &amp; Meen (2003)</a></td>
+                  <td>Tenure Elasticities</td>
+                  <td>Income elasticity of housing demand is <strong>1.27</strong> — a 10% rise in income increases housing consumption by 12.7%</td>
+                </tr>
+                <tr>
+                  <td><a href="https://doi.org/10.1016/j.jpubeco.2005.08.003" target="_blank" rel="noopener noreferrer">Gibbons &amp; Manning (2006)</a></td>
+                  <td>Tenure Elasticities</td>
+                  <td><strong>67%</strong> of Housing Benefit cuts were absorbed by landlords through lower rents, not passed to tenants</td>
+                </tr>
+                <tr>
+                  <td><a href="https://www.understandingsociety.ac.uk/" target="_blank" rel="noopener noreferrer">Understanding Society (UKHLS)</a></td>
+                  <td>Transition Probabilities</td>
+                  <td>Among movers, <strong>11%</strong> move from private rented to social housing and <strong>26%</strong> from social to private rented; 66-67% stay in the same tenure</td>
+                </tr>
+                <tr>
+                  <td><a href="https://doi.org/10.1257/aer.20181289" target="_blank" rel="noopener noreferrer">Diamond, McQuade &amp; Qian (2019)</a></td>
+                  <td>Rent Control Effects</td>
+                  <td>Rental supply fell <strong>15%</strong> in controlled properties; tenant mobility fell <strong>20%</strong> due to lock-in effects (San Francisco)</td>
+                </tr>
+                <tr>
+                  <td><a href="https://bostad.stockholm.se/language/english/how-long-does-it-take/" target="_blank" rel="noopener noreferrer">Bostadsformedlingen (2023)</a></td>
+                  <td>Rent Control Effects</td>
+                  <td>Average wait for rent-controlled housing is <strong>9 years</strong> city-wide and up to <strong>18 years</strong> in the inner city (Stockholm)</td>
+                </tr>
+                <tr>
+                  <td><a href="https://scottishlandlords.com/news-and-campaigns/news/landlord-portfolio-and-investment-survey-2025/" target="_blank" rel="noopener noreferrer">Scottish Association of Landlords</a></td>
+                  <td>Rent Control Effects</td>
+                  <td>Roughly <strong>22,000 properties</strong> withdrawn from the private rental sector following Scotland&apos;s 2022 rent freeze</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
 
