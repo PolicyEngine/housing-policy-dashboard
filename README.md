@@ -6,11 +6,11 @@ Interactive dashboard estimating the fiscal and distributional effects of UK hou
 
 ## Policies modelled
 
-1. **Blanket private rent reduction** (5%, 10%, 15%, 20%)
-2. **LHA unfreeze** (30th and 50th percentile)
-3. **Shared Accommodation Rate reform** (revert to 25, abolish at 18)
-4. **Social rent cap** (5%, 7%, 10% reduction)
-5. **Scotland CPI+1% private rent cap** (3%, 5%, 10% effective reduction)
+1. **Blanket rent reduction** — immediate 10% cut to all private rents
+2. **LHA unfreeze** — restore rates to 30th percentile of local market rents
+3. **SAR abolition** — abolish Shared Accommodation Rate from age 18
+4. **Social rent cap** — 5% cap on council and housing association rents
+5. **Rent control (CPI+1% cap)** — cap annual private rent increases at CPI+1% (5%, 10%, 15% below market scenarios)
 
 ## Quick start
 
