@@ -1,9 +1,9 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Rent controls policy dashboard | PolicyEngine",
+  title: "Housing policy dashboard | PolicyEngine",
   description:
-    "Interactive dashboard estimating the fiscal and distributional effects of rent control policies in the UK.",
+    "Interactive dashboard estimating the fiscal and distributional effects of housing policies in the UK.",
 };
 
 export default function RootLayout({ children }) {

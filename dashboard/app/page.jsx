@@ -65,7 +65,7 @@ function Dashboard() {
     <div className="app-shell min-h-screen">
       <header className="title-row">
         <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-4 md:px-8">
-          <h1>Rent controls policy dashboard</h1>
+          <h1>Housing policy dashboard</h1>
         </div>
       </header>
 
@@ -73,7 +73,7 @@ function Dashboard() {
         <div className="animate-[fadeIn_0.4s_ease-out]">
           <p className="mb-3 text-[1.05rem] leading-relaxed text-slate-600">
             This dashboard uses PolicyEngine&apos;s microsimulation model to
-            estimate the fiscal and distributional effects of UK rent control
+            estimate the fiscal and distributional effects of UK housing
             policies. The <strong>Reform</strong> tab shows government cost,
             household impact, and income distribution for each policy scenario.
             The <strong>Housing baseline</strong> tab presents current rent
@@ -118,11 +118,11 @@ function Dashboard() {
           <p>
             Replication code:{" "}
             <a
-              href="https://github.com/PolicyEngine/rent-control"
+              href="https://github.com/PolicyEngine/housing-policy-dashboard"
               target="_blank"
               rel="noreferrer"
             >
-              PolicyEngine/rent-control
+              PolicyEngine/housing-policy-dashboard
             </a>
             .
           </p>

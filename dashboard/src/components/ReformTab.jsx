@@ -148,7 +148,7 @@ export default function ReformTab({ data }) {
   return (
     <div className="space-y-8">
       <SectionHeading
-        title="Rent control policy analysis"
+        title="Housing policy analysis"
         description="Select a policy to see fiscal impact, distributional effects, and comparison with published estimates where available. All figures are static first-round estimates for a single year."
       />
 

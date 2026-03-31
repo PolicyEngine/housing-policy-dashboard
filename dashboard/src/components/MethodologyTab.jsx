@@ -9,7 +9,7 @@ export default function MethodologyTab({ data }) {
         <p className="mt-4 text-sm leading-7 text-slate-600">
           This dashboard uses PolicyEngine UK, a static microsimulation model
           built on the Family Resources Survey, to estimate the first-round
-          fiscal and distributional effects of four rent control policies. All
+          fiscal and distributional effects of four housing policies. All
           figures are for the {data.year} fiscal year. Each policy is modelled
           as a direct change to rents or benefit parameters; the model then
           recalculates housing benefit, Universal Credit housing costs, and
@@ -108,7 +108,7 @@ export default function MethodologyTab({ data }) {
           which the dashboard consumes at build time. All source code, data
           processing scripts, and configuration are available in the{" "}
           <a
-            href="https://github.com/PolicyEngine/rent-control"
+            href="https://github.com/PolicyEngine/housing-policy-dashboard"
             target="_blank"
             rel="noreferrer"
             className="text-blue-600 underline hover:text-blue-800"

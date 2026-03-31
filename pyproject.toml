@@ -3,9 +3,9 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "rent-control"
+name = "housing-policy-dashboard"
 version = "0.1.0"
-description = "Tested data-processing pipeline for the UK rent control policy dashboard."
+description = "Tested data-processing pipeline for the UK housing policy dashboard."
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
