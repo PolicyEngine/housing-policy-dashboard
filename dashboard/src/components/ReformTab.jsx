@@ -295,11 +295,6 @@ export default function ReformTab({ data }) {
                   <td>Rental supply fell <strong>15%</strong> in controlled properties; tenant mobility fell <strong>20%</strong> due to lock-in effects (San Francisco)</td>
                 </tr>
                 <tr>
-                  <td><a href="https://bostad.stockholm.se/language/english/how-long-does-it-take/" target="_blank" rel="noopener noreferrer">Bostadsformedlingen (2023)</a></td>
-                  <td>Rent Control Effects</td>
-                  <td>Average wait for rent-controlled housing is <strong>9 years</strong> city-wide and up to <strong>18 years</strong> in the inner city (Stockholm)</td>
-                </tr>
-                <tr>
                   <td><a href="https://scottishlandlords.com/news-and-campaigns/news/landlord-portfolio-and-investment-survey-2025/" target="_blank" rel="noopener noreferrer">Scottish Association of Landlords</a></td>
                   <td>Rent Control Effects</td>
                   <td>Roughly <strong>22,000 properties</strong> withdrawn from the private rental sector following Scotland&apos;s 2022 rent freeze</td>

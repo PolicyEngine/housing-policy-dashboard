@@ -70,7 +70,6 @@ Households displaced from PRS into social housing face constrained job search, p
 |---|---|---|
 | Temporary accommodation cost per household | LGA (2024) | **~£20,000/yr** |
 | Total temporary accommodation spending | LGA (2024) | **£2.3bn/yr** for 117,000 households |
-| Waiting list queue time (Stockholm benchmark) | Bostadsformedlingen (2023) | **9-18 years** |
 
 ### Computation flow
 
@@ -131,6 +130,5 @@ This is the first genuine private-sector rent control scenario. The blanket rent
 | Diamond, McQuade & Qian (2019) | Rent control effects | **15%** supply reduction, **20%** mobility reduction |
 | Battu, Ma & Phimister (2008) | Labour market & tenure | Social housing constrains job search for unemployed |
 | Boheim & Taylor (2002) | Labour market & tenure | Tenure type conditions residential mobility |
-| Bostadsformedlingen (2023) | Rent control effects | **9-18 year** queue for rent-controlled housing (Stockholm) |
 | Scottish Association of Landlords | Rent control effects | **22,000 properties** withdrawn after Scotland's 2022 rent freeze |
 | LGA (2024) | Fiscal costs | Temporary accommodation costs **£2.3bn/yr** for 117,000 households |
