@@ -1,0 +1,717 @@
+{
+  "target_year": 2029,
+  "headline": {
+    "households_in_scope_m": 6.11,
+    "aggregate_ahc_gain_gbp_bn": 2.79,
+    "mean_gain_per_household_gbp": 456
+  },
+  "decile_means": [
+    {
+      "decile": 1,
+      "mean_delta_ahc_gbp": 297.15
+    },
+    {
+      "decile": 2,
+      "mean_delta_ahc_gbp": 241.1
+    },
+    {
+      "decile": 3,
+      "mean_delta_ahc_gbp": 453.38
+    },
+    {
+      "decile": 4,
+      "mean_delta_ahc_gbp": 302.49
+    },
+    {
+      "decile": 5,
+      "mean_delta_ahc_gbp": 341.18
+    },
+    {
+      "decile": 6,
+      "mean_delta_ahc_gbp": 366.97
+    },
+    {
+      "decile": 7,
+      "mean_delta_ahc_gbp": 479.48
+    },
+    {
+      "decile": 8,
+      "mean_delta_ahc_gbp": 523.67
+    },
+    {
+      "decile": 9,
+      "mean_delta_ahc_gbp": 642.96
+    },
+    {
+      "decile": 10,
+      "mean_delta_ahc_gbp": 897.15
+    }
+  ],
+  "tables": {
+    "dispersion_uniform": [
+      {
+        "scenario": "(a) Uniform",
+        "description": "every tenancy +4%",
+        "avg_baseline": "4.0%",
+        "avg_capped": "2.0%",
+        "avg_reduction_pp": "2.0 pp"
+      },
+      {
+        "scenario": "(b) Narrow",
+        "description": "50% at +2%, 50% at +6%",
+        "avg_baseline": "4.0%",
+        "avg_capped": "2.0%",
+        "avg_reduction_pp": "2.0 pp"
+      },
+      {
+        "scenario": "(c) Wide",
+        "description": "50% flat (0%), 50% at +8%",
+        "avg_baseline": "4.0%",
+        "avg_capped": "1.0%",
+        "avg_reduction_pp": "3.0 pp"
+      }
+    ],
+    "dispersion_normal": [
+      {
+        "dispersion": "Tight (sd=1%)",
+        "avg_baseline": "3.34%",
+        "avg_capped": "1.96%",
+        "actual_reduction_pp": "1.38 pp",
+        "uniform_assumes_pp": "1.34 pp"
+      },
+      {
+        "dispersion": "Moderate (sd=3%)",
+        "avg_baseline": "3.34%",
+        "avg_capped": "1.35%",
+        "actual_reduction_pp": "1.98 pp",
+        "uniform_assumes_pp": "1.34 pp"
+      },
+      {
+        "dispersion": "Wide (sd=5%)",
+        "avg_baseline": "3.32%",
+        "avg_capped": "0.59%",
+        "actual_reduction_pp": "2.73 pp",
+        "uniform_assumes_pp": "1.34 pp"
+      },
+      {
+        "dispersion": "Very wide (sd=7%)",
+        "avg_baseline": "3.36%",
+        "avg_capped": "-0.17%",
+        "actual_reduction_pp": "3.52 pp",
+        "uniform_assumes_pp": "1.34 pp"
+      }
+    ],
+    "two_household_dispersion": [
+      {
+        "distribution": "Uniform \u2014 both face 4%",
+        "household": "Lower-rent (\u00a36k)",
+        "market_rise": "4.0%",
+        "baseline_rent": 6240,
+        "reform_rent": 6120,
+        "saving": 120
+      },
+      {
+        "distribution": "Uniform \u2014 both face 4%",
+        "household": "Higher-rent (\u00a330k)",
+        "market_rise": "4.0%",
+        "baseline_rent": 31200,
+        "reform_rent": 30600,
+        "saving": 600
+      },
+      {
+        "distribution": "Wide \u2014 lower 0%, higher 8%",
+        "household": "Lower-rent (\u00a36k)",
+        "market_rise": "0.0%",
+        "baseline_rent": 6000,
+        "reform_rent": 6000,
+        "saving": 0
+      },
+      {
+        "distribution": "Wide \u2014 lower 0%, higher 8%",
+        "household": "Higher-rent (\u00a330k)",
+        "market_rise": "8.0%",
+        "baseline_rent": 32400,
+        "reform_rent": 30600,
+        "saving": 1800
+      },
+      {
+        "distribution": "Wide \u2014 lower 8%, higher 0%",
+        "household": "Lower-rent (\u00a36k)",
+        "market_rise": "8.0%",
+        "baseline_rent": 6480,
+        "reform_rent": 6120,
+        "saving": 360
+      },
+      {
+        "distribution": "Wide \u2014 lower 8%, higher 0%",
+        "household": "Higher-rent (\u00a330k)",
+        "market_rise": "0.0%",
+        "baseline_rent": 30000,
+        "reform_rent": 30000,
+        "saving": 0
+      }
+    ],
+    "two_household_aggregate": [
+      {
+        "distribution": "Uniform \u2014 both face 4%",
+        "total_saving": 720,
+        "pct_combined_rent": "2.0%"
+      },
+      {
+        "distribution": "Wide \u2014 lower 0%, higher 8%",
+        "total_saving": 1800,
+        "pct_combined_rent": "5.0%"
+      },
+      {
+        "distribution": "Wide \u2014 lower 8%, higher 0%",
+        "total_saving": 360,
+        "pct_combined_rent": "1.0%"
+      }
+    ],
+    "rent_growth_rates": [
+      {
+        "year": 2022,
+        "cpi": "9.07%",
+        "blended": "3.47%",
+        "social": "5.00%",
+        "iphrp": "5.04%",
+        "private_pe": "5.04%"
+      },
+      {
+        "year": 2023,
+        "cpi": "7.30%",
+        "blended": "5.75%",
+        "social": "7.00%",
+        "iphrp": "8.10%",
+        "private_pe": "8.10%"
+      },
+      {
+        "year": 2024,
+        "cpi": "2.50%",
+        "blended": "7.16%",
+        "social": "8.30%",
+        "iphrp": "8.61%",
+        "private_pe": "8.61%"
+      },
+      {
+        "year": 2025,
+        "cpi": "3.40%",
+        "blended": "5.42%",
+        "social": "3.50%",
+        "iphrp": "\u2014",
+        "private_pe": "5.42%"
+      },
+      {
+        "year": 2026,
+        "cpi": "2.30%",
+        "blended": "3.34%",
+        "social": "4.40%",
+        "iphrp": "\u2014",
+        "private_pe": "3.34%"
+      },
+      {
+        "year": 2027,
+        "cpi": "2.00%",
+        "blended": "3.02%",
+        "social": "3.30%",
+        "iphrp": "\u2014",
+        "private_pe": "3.02%"
+      },
+      {
+        "year": 2028,
+        "cpi": "2.00%",
+        "blended": "2.30%",
+        "social": "3.00%",
+        "iphrp": "\u2014",
+        "private_pe": "2.30%"
+      },
+      {
+        "year": 2029,
+        "cpi": "2.00%",
+        "blended": "2.38%",
+        "social": "3.00%",
+        "iphrp": "\u2014",
+        "private_pe": "2.38%"
+      },
+      {
+        "year": 2030,
+        "cpi": "2.00%",
+        "blended": "2.58%",
+        "social": "3.00%",
+        "iphrp": "\u2014",
+        "private_pe": "2.58%"
+      }
+    ],
+    "alternative_aggregate_path": [
+      {
+        "year": 2022,
+        "cpi_lag": "4.00%",
+        "baseline_yoy": "5.04%",
+        "scenario_yoy": "5.04%",
+        "below_baseline": "\u2014"
+      },
+      {
+        "year": 2023,
+        "cpi_lag": "9.07%",
+        "baseline_yoy": "8.10%",
+        "scenario_yoy": "8.10%",
+        "below_baseline": "\u2014"
+      },
+      {
+        "year": 2024,
+        "cpi_lag": "7.30%",
+        "baseline_yoy": "8.61%",
+        "scenario_yoy": "8.61%",
+        "below_baseline": "\u2014"
+      },
+      {
+        "year": 2025,
+        "cpi_lag": "2.50%",
+        "baseline_yoy": "5.42%",
+        "scenario_yoy": "5.42%",
+        "below_baseline": "\u2014"
+      },
+      {
+        "year": 2026,
+        "cpi_lag": "3.40%",
+        "baseline_yoy": "3.34%",
+        "scenario_yoy": "2.00%",
+        "below_baseline": "yes"
+      },
+      {
+        "year": 2027,
+        "cpi_lag": "2.30%",
+        "baseline_yoy": "3.02%",
+        "scenario_yoy": "2.00%",
+        "below_baseline": "yes"
+      },
+      {
+        "year": 2028,
+        "cpi_lag": "2.00%",
+        "baseline_yoy": "2.30%",
+        "scenario_yoy": "2.00%",
+        "below_baseline": "yes"
+      },
+      {
+        "year": 2029,
+        "cpi_lag": "2.00%",
+        "baseline_yoy": "2.38%",
+        "scenario_yoy": "2.00%",
+        "below_baseline": "yes"
+      },
+      {
+        "year": 2030,
+        "cpi_lag": "2.00%",
+        "baseline_yoy": "2.58%",
+        "scenario_yoy": "2.00%",
+        "below_baseline": "yes"
+      }
+    ],
+    "cumulative_rent_index": [
+      {
+        "year": 2024,
+        "baseline_index": 100.0,
+        "scenario_index": 100.0,
+        "gap_vs_baseline": "0.00%"
+      },
+      {
+        "year": 2025,
+        "baseline_index": 105.42,
+        "scenario_index": 105.42,
+        "gap_vs_baseline": "0.00%"
+      },
+      {
+        "year": 2026,
+        "baseline_index": 108.94,
+        "scenario_index": 107.53,
+        "gap_vs_baseline": "-1.29%"
+      },
+      {
+        "year": 2027,
+        "baseline_index": 112.23,
+        "scenario_index": 109.68,
+        "gap_vs_baseline": "-2.27%"
+      },
+      {
+        "year": 2028,
+        "baseline_index": 114.81,
+        "scenario_index": 111.87,
+        "gap_vs_baseline": "-2.56%"
+      },
+      {
+        "year": 2029,
+        "baseline_index": 117.54,
+        "scenario_index": 114.11,
+        "gap_vs_baseline": "-2.92%"
+      },
+      {
+        "year": 2030,
+        "baseline_index": 120.58,
+        "scenario_index": 116.39,
+        "gap_vs_baseline": "-3.47%"
+      }
+    ],
+    "two_household_projection": [
+      {
+        "household": "Lower-rent (\u00a36k in 2024)",
+        "rent_2024": 6000,
+        "baseline_2029": 7053,
+        "scenario_2029": 6847,
+        "rent_reduction": 206,
+        "reduction_pct": "2.92%"
+      },
+      {
+        "household": "Higher-rent (\u00a330k in 2024)",
+        "rent_2024": 30000,
+        "baseline_2029": 35263,
+        "scenario_2029": 34233,
+        "rent_reduction": 1030,
+        "reduction_pct": "2.92%"
+      }
+    ]
+  },
+  "figures": {
+    "rent_index": {
+      "data": [
+        {
+          "type": "scatter",
+          "mode": "lines+markers",
+          "name": "Baseline (OBR forecast)",
+          "x": [
+            2024,
+            2025,
+            2026,
+            2027,
+            2028,
+            2029,
+            2030
+          ],
+          "y": [
+            100.0,
+            105.42,
+            108.94,
+            112.23,
+            114.81,
+            117.54,
+            120.58
+          ],
+          "line": {
+            "color": "#1e3a5f",
+            "width": 2.8,
+            "shape": "spline",
+            "smoothing": 0.4
+          },
+          "marker": {
+            "size": 7,
+            "color": "#1e3a5f",
+            "line": {
+              "width": 0
+            }
+          },
+          "hovertemplate": "<b>%{y:.2f}</b><extra>Baseline</extra>"
+        },
+        {
+          "type": "scatter",
+          "mode": "lines+markers",
+          "name": "Scenario (2% from 2026)",
+          "x": [
+            2024,
+            2025,
+            2026,
+            2027,
+            2028,
+            2029,
+            2030
+          ],
+          "y": [
+            100.0,
+            105.42,
+            107.53,
+            109.68,
+            111.87,
+            114.11,
+            116.39
+          ],
+          "line": {
+            "color": "#2C8E8E",
+            "width": 2.8,
+            "shape": "spline",
+            "smoothing": 0.4
+          },
+          "marker": {
+            "size": 7,
+            "color": "#2C8E8E",
+            "line": {
+              "width": 0
+            }
+          },
+          "hovertemplate": "<b>%{y:.2f}</b><extra>Scenario</extra>"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Private rent index \u2014 baseline vs alternative aggregate path",
+          "font": {
+            "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+            "size": 16,
+            "color": "#1f2937"
+          },
+          "x": 0.5,
+          "xanchor": "center",
+          "y": 0.96
+        },
+        "xaxis": {
+          "title": {
+            "text": "Year",
+            "font": {
+              "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+              "size": 13,
+              "color": "#1f2937"
+            },
+            "standoff": 12
+          },
+          "dtick": 1,
+          "showgrid": false,
+          "showline": true,
+          "linecolor": "#e5e7eb",
+          "ticks": "outside",
+          "tickcolor": "#e5e7eb",
+          "tickfont": {
+            "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+            "size": 12,
+            "color": "#1f2937"
+          }
+        },
+        "yaxis": {
+          "title": {
+            "text": "Rent index (2024 = 100)",
+            "font": {
+              "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+              "size": 13,
+              "color": "#1f2937"
+            },
+            "standoff": 12
+          },
+          "showgrid": true,
+          "gridcolor": "#f1f5f9",
+          "gridwidth": 1,
+          "zeroline": false,
+          "tickfont": {
+            "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+            "size": 12,
+            "color": "#1f2937"
+          }
+        },
+        "paper_bgcolor": "white",
+        "plot_bgcolor": "white",
+        "font": {
+          "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+          "color": "#1f2937"
+        },
+        "margin": {
+          "l": 70,
+          "r": 30,
+          "t": 70,
+          "b": 90
+        },
+        "legend": {
+          "orientation": "h",
+          "y": -0.18,
+          "x": 0.5,
+          "xanchor": "center",
+          "font": {
+            "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+            "size": 13,
+            "color": "#1f2937"
+          },
+          "bgcolor": "rgba(0,0,0,0)"
+        },
+        "hovermode": "x unified",
+        "hoverlabel": {
+          "bgcolor": "white",
+          "bordercolor": "#e5e7eb",
+          "font": {
+            "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+            "size": 12,
+            "color": "#1f2937"
+          }
+        },
+        "shapes": [
+          {
+            "type": "line",
+            "x0": 2026,
+            "x1": 2026,
+            "xref": "x",
+            "y0": 0,
+            "y1": 1,
+            "yref": "y domain",
+            "line": {
+              "color": "#9ca3af",
+              "dash": "dash",
+              "width": 1.5
+            },
+            "opacity": 0.7
+          }
+        ],
+        "annotations": [
+          {
+            "x": 2026,
+            "y": 1.02,
+            "xref": "x",
+            "yref": "y domain",
+            "xanchor": "right",
+            "yanchor": "bottom",
+            "text": "Scenario starts 2026",
+            "showarrow": false,
+            "font": {
+              "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+              "size": 11,
+              "color": "#6b7280"
+            }
+          }
+        ]
+      }
+    },
+    "decile_change_ahc": {
+      "data": [
+        {
+          "type": "bar",
+          "x": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "y": [
+            297.15,
+            241.1,
+            453.38,
+            302.49,
+            341.18,
+            366.97,
+            479.48,
+            523.67,
+            642.96,
+            897.15
+          ],
+          "marker": {
+            "color": "#2C8E8E",
+            "line": {
+              "color": "#1f6e6e",
+              "width": 0
+            }
+          },
+          "text": [
+            "\u00a3297",
+            "\u00a3241",
+            "\u00a3453",
+            "\u00a3302",
+            "\u00a3341",
+            "\u00a3367",
+            "\u00a3479",
+            "\u00a3524",
+            "\u00a3643",
+            "\u00a3897"
+          ],
+          "textposition": "outside",
+          "textfont": {
+            "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+            "size": 11,
+            "color": "#1f2937"
+          },
+          "cliponaxis": false,
+          "hovertemplate": "Decile %{x}<br><b>\u00a3%{y:,.0f}</b> per year<extra></extra>"
+        }
+      ],
+      "layout": {
+        "title": {
+          "text": "Mean change in AHC household net income, by gross-income decile",
+          "font": {
+            "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+            "size": 16,
+            "color": "#1f2937"
+          },
+          "x": 0.5,
+          "xanchor": "center",
+          "y": 0.96
+        },
+        "xaxis": {
+          "title": {
+            "text": "Gross household income decile (1 = lowest)",
+            "font": {
+              "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+              "size": 13,
+              "color": "#1f2937"
+            },
+            "standoff": 12
+          },
+          "dtick": 1,
+          "tickmode": "linear",
+          "tick0": 1,
+          "showgrid": false,
+          "showline": true,
+          "linecolor": "#e5e7eb",
+          "ticks": "outside",
+          "tickcolor": "#e5e7eb",
+          "tickfont": {
+            "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+            "size": 12,
+            "color": "#1f2937"
+          }
+        },
+        "yaxis": {
+          "title": {
+            "text": "Change in AHC net income (\u00a3/year)",
+            "font": {
+              "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+              "size": 13,
+              "color": "#1f2937"
+            },
+            "standoff": 12
+          },
+          "showgrid": true,
+          "gridcolor": "#f1f5f9",
+          "zeroline": true,
+          "zerolinecolor": "#e5e7eb",
+          "zerolinewidth": 1,
+          "tickprefix": "\u00a3",
+          "tickformat": ",",
+          "tickfont": {
+            "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+            "size": 12,
+            "color": "#1f2937"
+          }
+        },
+        "paper_bgcolor": "white",
+        "plot_bgcolor": "white",
+        "font": {
+          "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+          "color": "#1f2937"
+        },
+        "margin": {
+          "l": 70,
+          "r": 30,
+          "t": 70,
+          "b": 80
+        },
+        "bargap": 0.25,
+        "showlegend": false,
+        "hoverlabel": {
+          "bgcolor": "white",
+          "bordercolor": "#e5e7eb",
+          "font": {
+            "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
+            "size": 12,
+            "color": "#1f2937"
+          }
+        }
+      }
+    }
+  }
+}
