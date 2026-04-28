@@ -102,7 +102,7 @@
 </head>
 <body>
 
-<h1>Takeaway: PE cannot identify who benefits from a rent-growth cap</h1>
+<h1>Proportional rent reduction in PolicyEngine UK: scope, sizing, and dispersion sensitivity</h1>
 <p class="lede">The main PolicyEngine result is an equal proportional rent reduction across private renters in England; the critical sensitivity is how much random tenancy-level rent-growth dispersion changes the cap bite.</p>
 <p class="callout"><strong>Bottom line.</strong> With no tenancy-level dispersion, the aggregate analogue reduces current rents by only 0.82%. With random annual rent-growth dispersion of 3 percentage points, the same average baseline path produces about a 4.9% rent reduction. This still assumes no moves or turnover.</p>
 
@@ -111,11 +111,13 @@
 <h3>1.1 What this analysis does</h3>
 <p>The main analysis explores a narrow question: <em>if private rents in England were uniformly X% lower in 2029-30, how would AHC household net income shift across the income distribution?</em> We apply the same rent multiplier to each in-scope household, then evaluate the after-housing-cost (AHC) net income change in PolicyEngine UK. In-scope means private-renter households in England. The data is the enhanced FRS 2023-24, uprated to 2029-30 with OBR forecasts and the current PolicyEngine private-rent path.</p>
 
-<h3>1.2 Why a cross-section cannot identify cap incidence</h3>
-<p>The equal-rent-reduction result is <strong>not</strong> a microsimulation, approximation, or lower bound of a per-tenancy rent-growth cap. A cap operates per tenancy. Tenancy <em>i</em>'s saving in year <em>t</em> equals:</p>
-<div class="formula">saving<sub>i,t</sub> = rent<sub>i,t-1</sub> · max(g<sup>baseline</sup><sub>i,t</sub> − cap<sub>t</sub>, 0)</div>
-<p>The saving depends on three unobserved quantities: tenancy-level baseline rent growth absent the cap, tenancy duration and turnover, and the joint distribution of those with rent level and household income. Even if no household moves and no behaviour responds, the data cannot identify the cap's distributional incidence by income decile; the unobserved covariance between rent growth, rent level, tenancy length, and income could push the decile pattern in either direction. Read the Section 5 chart as the pattern of an equal proportional rent reduction, not as the distributional incidence of a cap policy.</p>
-<p>The toy heterogeneous rent-growth tables in Sections 2 and 3 are diagnostic examples only. Section 6 centers the random-dispersion result: even if heterogeneity is unrelated to income, clipping above-cap growth makes the aggregate effect much larger.</p>
+<details class="h3">
+  <summary>1.2 Why a cross-section cannot identify cap incidence</summary>
+  <p>The equal-rent-reduction result is <strong>not</strong> a microsimulation, approximation, or lower bound of a per-tenancy rent-growth cap. A cap operates per tenancy. Tenancy <em>i</em>'s saving in year <em>t</em> equals:</p>
+  <div class="formula">saving<sub>i,t</sub> = rent<sub>i,t-1</sub> · max(g<sup>baseline</sup><sub>i,t</sub> − cap<sub>t</sub>, 0)</div>
+  <p>The saving depends on three unobserved quantities: tenancy-level baseline rent growth absent the cap, tenancy duration and turnover, and the joint distribution of those with rent level and household income. Even if no household moves and no behaviour responds, the data cannot identify the cap's distributional incidence by income decile; the unobserved covariance between rent growth, rent level, tenancy length, and income could push the decile pattern in either direction. Read the Section 5 chart as the pattern of an equal proportional rent reduction, not as the distributional incidence of a cap policy.</p>
+  <p>The toy heterogeneous rent-growth tables in Sections 2 and 3 are diagnostic examples only. Section 6 centers the random-dispersion result: even if heterogeneity is unrelated to income, clipping above-cap growth makes the aggregate effect much larger.</p>
+</details>
 
 <h3>1.3 Note to NEF team</h3>
 <p>We do not draw a bridge from this scenario to the NEF rent-growth cap; the cap's per-household incidence is not identified from this data (see above). If NEF wishes to read an equal-rent-reduction scenario as informative about the cap, the bridge rests on assumptions about the unobserved tenancy-level distribution. We leave that bridge to NEF to draw against the team's own modelling assumptions.</p>
@@ -217,18 +219,20 @@ g_scenario(t) = min(g_baseline(t), CPI(t-1), 2%)        for t ≥ 2026</div>
 <div id="chart-decile" class="chart"></div>
 <p>The pattern rises across deciles because higher-income in-scope households tend to pay more rent in pounds, so a proportional reduction yields a larger reduction in pounds. <strong>This is not the distributional incidence of a cap policy</strong> (see Section 1).</p>
 
-<h2>6. Random no-moves dispersion sensitivity</h2>
-<p class="callout"><strong>Critical result.</strong> Random tenancy-level growth dispersion alone changes the aggregate cap bite substantially: the implied current-rent reduction rises from 0.82% with no dispersion to about 4.9% with 3pp annual dispersion, and about 8.0% with 5pp annual dispersion.</p>
-<p>For each dispersion value, we impute random 2026-29 tenancy-level baseline rent growth, then calibrate the imputed histories so aggregate private rent growth matches the current PolicyEngine path in every year. The cap is then applied tenancy by tenancy with no moves:</p>
-<div class="formula">rent_scenario<sub>i,t</sub> = rent_baseline<sub>i,t-1</sub> · (1 + min(g<sup>imputed</sup><sub>i,t</sub>, cap<sub>t</sub>))</div>
-<p>The sweep uses 50 seeded random draws at each dispersion level. The 10th-90th percentile band is narrow relative to the change across dispersion levels, so the key uncertainty is the amount of tenancy-level dispersion, not the random seed.</p>
-<p>This still does <strong>not</strong> capture moves, turnover, new lets, landlord behaviour, or household responses. Those mechanisms could change both aggregate and distributional effects; this sensitivity only shows the mechanical clipping effect among observed renters who stay put.</p>
+<details class="h2">
+  <summary>6. Random no-moves dispersion sensitivity</summary>
+  <p class="callout"><strong>Critical result.</strong> Random tenancy-level growth dispersion alone changes the aggregate cap bite substantially: the implied current-rent reduction rises from 0.82% with no dispersion to about 4.9% with 3pp annual dispersion, and about 8.0% with 5pp annual dispersion.</p>
+  <p>For each dispersion value, we impute random 2026-29 tenancy-level baseline rent growth, then calibrate the imputed histories so aggregate private rent growth matches the current PolicyEngine path in every year. The cap is then applied tenancy by tenancy with no moves:</p>
+  <div class="formula">rent_scenario<sub>i,t</sub> = rent_baseline<sub>i,t-1</sub> · (1 + min(g<sup>imputed</sup><sub>i,t</sub>, cap<sub>t</sub>))</div>
+  <p>The sweep uses 50 seeded random draws at each dispersion level. The 10th-90th percentile band is narrow relative to the change across dispersion levels, so the key uncertainty is the amount of tenancy-level dispersion, not the random seed.</p>
+  <p>This still does <strong>not</strong> capture moves, turnover, new lets, landlord behaviour, or household responses. Those mechanisms could change both aggregate and distributional effects; this sensitivity only shows the mechanical clipping effect among observed renters who stay put.</p>
 
-<p class="caption"><strong>Table 9.</strong> Aggregate cap bite under random tenancy-level growth dispersion. Each row is calibrated to the same average baseline private-rent path; only the random dispersion around that average changes.</p>
-<div class="table-wrap"><table class="tbl" id="t-random-dispersion"></table></div>
+  <p class="caption"><strong>Table 9.</strong> Aggregate cap bite under random tenancy-level growth dispersion. Each row is calibrated to the same average baseline private-rent path; only the random dispersion around that average changes.</p>
+  <div class="table-wrap"><table class="tbl" id="t-random-dispersion"></table></div>
 
-<p class="caption"><strong>Figure 3.</strong> Mean aggregate current-rent reduction by annual random growth dispersion. Error bars show the 10th-90th percentile across 50 random draws.</p>
-<div id="chart-random-dispersion" class="chart"></div>
+  <p class="caption"><strong>Figure 3.</strong> Mean aggregate current-rent reduction by annual random growth dispersion. Error bars show the 10th-90th percentile across 50 random draws.</p>
+  <div id="chart-random-dispersion" class="chart"></div>
+</details>
 
 <script>
   const fmtGBP = n => '£' + (n ?? 0).toLocaleString('en-GB', {maximumFractionDigits: 0});
