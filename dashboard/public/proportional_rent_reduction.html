@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rent-growth cap non-identification and equal-rent-reduction scenario</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.plot.ly/plotly-2.35.2.min.js" charset="utf-8"></script>
+  <style>
+    :root {
+      --teal: #2C8E8E;
+      --slate: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--slate);
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 32px 24px 80px;
+      line-height: 1.6;
+    }
+    h1 { font-size: 1.95rem; line-height: 1.2; margin: 0 0 8px; }
+    h2 { font-size: 1.35rem; margin: 40px 0 12px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+    h3 { font-size: 1.05rem; margin: 24px 0 10px; color: var(--slate); }
+    .caption { font-size: 0.9rem; color: var(--muted); margin: 18px 0 6px; }
+    .caption strong { color: var(--slate); font-weight: 600; margin-right: 4px; }
+    p { margin: 0 0 14px; }
+    p.lede { color: var(--muted); margin: 0 0 24px; font-size: 1rem; }
+    .callout {
+      border: 1px solid #b7d7d7;
+      border-left: 4px solid var(--teal);
+      border-radius: 8px;
+      padding: 12px 14px;
+      background: #f2fbfb;
+      margin: 18px 0 24px;
+    }
+    .callout strong { color: var(--slate); }
+    ul, ol { padding-left: 1.25rem; margin: 0 0 14px; }
+    li { margin: 4px 0; }
+    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 18px 0; }
+    .stat {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 14px 16px;
+      background: #fff;
+    }
+    .stat .num { font-size: 1.6rem; font-weight: 700; color: var(--teal); line-height: 1.1; }
+    .stat .lbl { font-size: 0.82rem; color: var(--muted); margin-top: 4px; }
+    .chart {
+      width: 100%;
+      height: 480px;
+      margin: 18px 0;
+    }
+    .chart > .js-plotly-plot, .chart .plot-container { width: 100% !important; height: 100% !important; }
+    table.tbl { border-collapse: collapse; width: 100%; font-size: 0.9rem; margin: 10px 0 22px; }
+    table.tbl th, table.tbl td { text-align: left; padding: 7px 10px; border-bottom: 1px solid var(--border); }
+    table.tbl th { background: #f9fafb; font-weight: 600; white-space: nowrap; }
+    table.tbl td.num, table.tbl th.num { text-align: right; font-variant-numeric: tabular-nums; }
+    .table-wrap { overflow-x: auto; margin: 10px 0 22px; }
+    .table-wrap table.tbl { margin: 0; }
+    code { background: #f3f4f6; padding: 1px 6px; border-radius: 3px; font-size: 0.86rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .formula { background: #f9fafb; padding: 10px 14px; border-left: 3px solid var(--border); border-radius: 4px; margin: 10px 0; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.92rem; white-space: pre-wrap; }
+    .err { color: #b91c1c; padding: 14px; background: #fee2e2; border-radius: 6px; }
+    details { margin: 32px 0; }
+    details summary {
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 0 0 8px;
+      border-bottom: 1px solid var(--border);
+      font-weight: 600;
+      color: var(--slate);
+      user-select: none;
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::before {
+      content: '';
+      width: 0; height: 0;
+      border-left: 6px solid var(--muted);
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      transition: transform 0.18s ease;
+      flex-shrink: 0;
+    }
+    details[open] summary::before { transform: rotate(90deg); }
+    details summary:hover { color: var(--teal); }
+    details summary:hover::before { border-left-color: var(--teal); }
+    details.h2 summary { font-size: 1.35rem; padding-bottom: 6px; }
+    details.h3 summary { font-size: 1.05rem; padding-bottom: 4px; border-bottom: none; }
+    details.h3 { margin: 24px 0; }
+    details.inline summary { font-size: 0.9rem; font-weight: 500; color: var(--muted); padding: 4px 0; border-bottom: none; }
+    details.inline { margin: 8px 0 18px; }
+    details > *:not(summary) { margin-top: 12px; }
+  </style>
+</head>
+<body>
+
+<h1>Proportional rent reduction in PolicyEngine UK: scope, sizing, and dispersion sensitivity</h1>
+<p class="lede">The main PolicyEngine result is an equal proportional rent reduction across private renters in England; the critical sensitivity is how much random tenancy-level rent-growth dispersion changes the cap bite.</p>
+<p class="callout"><strong>Bottom line.</strong> With no tenancy-level dispersion, the aggregate analogue reduces current rents by only 0.82%. With random annual rent-growth dispersion of 3 percentage points, the same average baseline path produces about a 4.9% rent reduction. This still assumes no moves or turnover.</p>
+
+<h2>1. Introduction</h2>
+
+<h3>1.1 What this analysis does</h3>
+<p>The main analysis explores a narrow question: <em>if private rents in England were uniformly X% lower in 2029-30, how would AHC household net income shift across the income distribution?</em> We apply the same rent multiplier to each in-scope household, then evaluate the after-housing-cost (AHC) net income change in PolicyEngine UK. In-scope means private-renter households in England. The data is the enhanced FRS 2023-24, uprated to 2029-30 with OBR forecasts and the current PolicyEngine private-rent path.</p>
+
+<details class="h3">
+  <summary>1.2 Why a cross-section cannot identify cap incidence</summary>
+  <p>The equal-rent-reduction result is <strong>not</strong> a microsimulation, approximation, or lower bound of a per-tenancy rent-growth cap. A cap operates per tenancy. Tenancy <em>i</em>'s saving in year <em>t</em> equals:</p>
+  <div class="formula">saving<sub>i,t</sub> = rent<sub>i,t-1</sub> · max(g<sup>baseline</sup><sub>i,t</sub> − cap<sub>t</sub>, 0)</div>
+  <p>The saving depends on three unobserved quantities: tenancy-level baseline rent growth absent the cap, tenancy duration and turnover, and the joint distribution of those with rent level and household income. Even if no household moves and no behaviour responds, the data cannot identify the cap's distributional incidence by income decile; the unobserved covariance between rent growth, rent level, tenancy length, and income could push the decile pattern in either direction. Read the Section 5 chart as the pattern of an equal proportional rent reduction, not as the distributional incidence of a cap policy.</p>
+  <p>The toy heterogeneous rent-growth tables in Sections 2 and 3 are diagnostic examples only. Section 6 centers the random-dispersion result: even if heterogeneity is unrelated to income, clipping above-cap growth makes the aggregate effect much larger.</p>
+</details>
+
+<h3>1.3 Note to NEF team</h3>
+<p>We do not draw a bridge from this scenario to the NEF rent-growth cap; the cap's per-household incidence is not identified from this data (see above). If NEF wishes to read an equal-rent-reduction scenario as informative about the cap, the bridge rests on assumptions about the unobserved tenancy-level distribution. We leave that bridge to NEF to draw against the team's own modelling assumptions.</p>
+
+<details class="h2">
+  <summary>2. Why uniform scaling cannot reproduce a per-tenancy cap</summary>
+  <p>This section shows why a uniform aggregate-scaling simulation (the kind we run in Section 5) cannot reproduce a per-tenancy rent-growth cap, even at the aggregate level. The mechanism is dispersion across tenancies: a cap clips each tenancy individually, so the size of the aggregate cap reduction depends on how rent growth is distributed across tenancies, not just on the aggregate.</p>
+  <p>A per-tenancy cap clips each tenancy's annual rise at <code>min(CPI(t-1), 2%)</code>. The saving for tenancy <em>i</em> in year <em>t</em> is:</p>
+  <div class="formula">saving<sub>i,t</sub> = rent<sub>i,t-1</sub> · max(g<sup>baseline</sup><sub>i,t</sub> − cap<sub>t</sub>, 0)</div>
+  <p>This depends on tenancy-level baseline growth the cross-section does not observe. A microsimulation that scales every household's rent by the same aggregate factor implicitly assumes every tenancy faces the same baseline growth. The two tables below show why that assumption matters.</p>
+
+  <p class="caption"><strong>Table 1.</strong> Three rent-growth distributions sharing the same 4% aggregate. Row (a) places every tenancy at 4%; (b) splits 50/50 at 2% and 6%; (c) splits 50/50 at 0% and 8%.</p>
+  <table class="tbl" id="t-dispersion-uniform"></table>
+  <p>The cap clips each tenancy to <code>min(g, 2%)</code>. In (a) and (b) the cap reduces aggregate growth by 2 percentage points. In (c) it reduces aggregate growth by 3 points: half the tenancies were already at or below the cap, so the other half take a larger hit. Same aggregate, three different cap bites.</p>
+
+  <p class="caption"><strong>Table 2.</strong> Per-tenancy cap reduction under increasing dispersion around an illustrative 3.34% aggregate baseline. We draw tenancy-level growth rates from a normal distribution with the indicated standard deviation.</p>
+  <table class="tbl" id="t-dispersion-normal"></table>
+  <p>Uniform-scaling assumes the cap removes 1.34 pp from aggregate growth (3.34% − 2%). The actual per-tenancy cap delivers more reduction, and the gap widens with dispersion: tight dispersion gives 1.38 pp; very wide dispersion gives 3.52 pp. Without observing tenancy-level dispersion, a uniform-scaling simulation cannot land on the right aggregate, let alone the right distribution.</p>
+</details>
+
+<details class="h2">
+  <summary>3. Two-household example</summary>
+  <p>This section pushes the dispersion argument from Section 2 down to the household level. A per-tenancy cap responds to each tenancy's own rent rise, so two households at the same rent level can save very different amounts depending on how the aggregate market rise distributes across them.</p>
+  <p>Two private-renter households show how dispersion plays out at the household level. A lower-rent household (£6,000/yr) and a higher-rent household (£30,000/yr) face the same 4% aggregate market rise, distributed three different ways. We apply the cap <code>min(g, 2%)</code> to each household individually.</p>
+
+  <p class="caption"><strong>Table 3.</strong> Per-household rents and savings under three dispersion scenarios. Both households face the same 4% aggregate rise; only its distribution across the two of them changes between rows.</p>
+  <table class="tbl" id="t-2hh-dispersion"></table>
+  <p>Under uniform 4% growth, the cap takes 2 percentage points off both households' rises, and the saving in pounds scales with the rent level. Under wide dispersion, the household facing 8% growth absorbs all the cap saving while the household at 0% saves nothing. Which household that is reverses between the second and third rows.</p>
+
+  <p class="caption"><strong>Table 4.</strong> Total saving across the two households under each dispersion scenario, and that total as a share of combined rent.</p>
+  <table class="tbl" id="t-2hh-aggregate"></table>
+  <p>Same aggregate market rise across the two households; total savings vary fivefold (£360 to £1,800) depending on how the rise distributes. The cross-section cannot reveal that distribution.</p>
+
+  <p>Two households with the same observable characteristics (rent level, income, tenure) can land on opposite sides of a cap depending on their tenancy-level baseline growth, which we do not observe. The cross-section cannot tell us which households bind, so it cannot tell us how the savings split.</p>
+</details>
+
+<h2>4. Sizing the proportional rent reduction scenario</h2>
+<p>For illustration, X is sized from an aggregate cap analogue using the current PolicyEngine England private-rent path. The 2029-30 gap between the baseline path and that illustrative aggregate path is X%. This is a scenario choice, not a translation of a per-tenancy cap; any other X% would approximately scale Section 5.</p>
+
+<h3>4.1 Baseline rent-growth parameters</h3>
+<p>Four PolicyEngine series in <code>gov.economic_assumptions.yoy_growth</code> feed the baseline:</p>
+<ul>
+  <li><code>obr.rent</code> — blended private + social rent (ONS D7GQ).</li>
+  <li><code>obr.social_rent</code> — social rent only, using observed RSH stock-average growth through 2025 and the social-rent policy cap thereafter.</li>
+  <li><code>ons.private_rental_prices.ENGLAND</code> — England private rent only. Outturn uses ONS PIPR; forecast values back out private-rent growth from OBR aggregate rent after applying social-rent growth.</li>
+  <li><code>obr.consumer_price_index</code> — CPI year-on-year.</li>
+</ul>
+<p>The scenario uses the path shown in the final column of the table below: England private-rent outturn for 2022-24, then PolicyEngine's current England private-rent forecast for 2025-30.</p>
+
+<p class="caption"><strong>Table 5.</strong> PolicyEngine year-on-year rent and CPI series, 2022-2030. Outturn for 2022-24, OBR forecast thereafter.</p>
+<div class="table-wrap"><table class="tbl" id="t-rates"></table></div>
+
+<p>The <em>England private rent YoY (PE)</em> column feeds the rent-path computation in Sections 4.2 and 4.3, and is the only series used to size X.</p>
+
+<h3>4.2 Alternative aggregate growth path</h3>
+<p>For this artifact, the illustrative aggregate path follows the baseline before 2026. From 2026 onwards it grows at the lower of baseline private-rent growth, CPI lagged one year, and 2%:</p>
+<div class="formula">g_scenario(t) = g_baseline(t)            for t &lt; 2026
+g_scenario(t) = min(g_baseline(t), CPI(t-1), 2%)        for t ≥ 2026</div>
+<p>This avoids mechanically raising rents in years where baseline private-rent growth is already below the illustrative cap. It is an aggregate path, not a per-tenancy cap formula (see Section 2).</p>
+
+<p class="caption"><strong>Table 6.</strong> Year-by-year baseline and scenario aggregate growth rates. The right-hand column flags the years from 2026 onwards where the scenario path falls below the baseline.</p>
+<div class="table-wrap"><table class="tbl" id="t-alt-path"></table></div>
+
+<p>The flagged years drive the cumulative gap shown in Section 4.3.</p>
+
+<h3>4.3 Cumulative rent path</h3>
+<p>We compound the year-on-year growth rates from Sections 4.1 and 4.2 with <code>I(2024) = 100</code> and <code>I(t) = I(t-1) &times; (1 + g_t)</code>. By 2029-30 the scenario index sits 0.82% below the baseline index. <strong>This 0.82% gap is the X% Section 5 applies as the uniform scaling factor.</strong> We multiply every in-scope household's rent by the same ratio (114.64 / 115.59 = 0.992) to produce the counterfactual.</p>
+
+<p class="caption"><strong>Figure 1.</strong> Baseline and scenario private-rent indices (2024 = 100). The dashed grey line marks 2026, where the scenario path can diverge from the baseline. Both paths share the 2022-24 outturn and the 2025 forecast.</p>
+<div id="chart-rent-index" class="chart"></div>
+
+<details class="inline">
+  <summary>View underlying values (Table 7)</summary>
+  <div class="table-wrap"><table class="tbl" id="t-rent-index"></table></div>
+</details>
+
+<details class="h3">
+  <summary>4.4 Two-household projection to 2029</summary>
+  <p>To make X% concrete, we apply the same compounded scenario growth path to two households and compare with their baseline trajectories. Both start from a 2024 rent level (£6,000 and £30,000 per year), and we project each to 2029 under both paths.</p>
+
+  <p class="caption"><strong>Table 8.</strong> Baseline and scenario rent in 2029 for two illustrative households starting at £6,000 and £30,000 per year in 2024.</p>
+  <div class="table-wrap"><table class="tbl" id="t-2hh-projection"></table></div>
+
+  <p>By construction both households see the same percentage rent reduction (0.82%); the higher-rent household therefore sees a larger reduction in pounds. This shows the per-household consequence of X%, not the per-household effect of a per-tenancy cap (see Sections 2 and 3).</p>
+</details>
+
+<h2>5. Mechanical simulation: what if private rents were X% lower?</h2>
+<p class="callout"><strong>Interpretation.</strong> This is a mechanical equal proportional rent reduction scenario, not a microsimulation, approximation, or lower bound of a rent-growth cap.</p>
+<p>With X = 0.82% (from Section 4.3), we multiply every in-scope household's gross annual rent by 0.992 and re-run the AHC net income calculation in PolicyEngine UK. We then rank households by gross income to form deciles.</p>
+
+<h3>5.1 Headline figures (2029-30)</h3>
+<p>Aggregate magnitudes for the in-scope population under the X = 0.82% scenario.</p>
+<div class="stats" id="stats"></div>
+<p>The mean per in-scope household (£129) is a household-weighted average across 5.63 million households.</p>
+
+<h3>5.2 Change in AHC household net income, by gross-income decile</h3>
+<p class="callout"><strong>Interpretation.</strong> Figure 2 shows only the equal proportional rent-reduction scenario; it is not cap incidence by income decile.</p>
+<p class="caption"><strong>Figure 2.</strong> Mean change in AHC household net income (£/year) by gross-income decile of the in-scope population, under the X = 0.82% rent reduction.</p>
+<div id="chart-decile" class="chart"></div>
+<p>The pattern rises across deciles because higher-income in-scope households tend to pay more rent in pounds, so a proportional reduction yields a larger reduction in pounds. <strong>This is not the distributional incidence of a cap policy</strong> (see Section 1).</p>
+
+<details class="h2">
+  <summary>6. Random no-moves dispersion sensitivity</summary>
+  <p class="callout"><strong>Critical result.</strong> Random tenancy-level growth dispersion alone changes the aggregate cap bite substantially: the implied current-rent reduction rises from 0.82% with no dispersion to about 4.9% with 3pp annual dispersion, and about 8.0% with 5pp annual dispersion.</p>
+  <p>For each dispersion value, we impute random 2026-29 tenancy-level baseline rent growth, then calibrate the imputed histories so aggregate private rent growth matches the current PolicyEngine path in every year. The cap is then applied tenancy by tenancy with no moves:</p>
+  <div class="formula">rent_scenario<sub>i,t</sub> = rent_baseline<sub>i,t-1</sub> · (1 + min(g<sup>imputed</sup><sub>i,t</sub>, cap<sub>t</sub>))</div>
+  <p>The sweep uses 50 seeded random draws at each dispersion level. The 10th-90th percentile band is narrow relative to the change across dispersion levels, so the key uncertainty is the amount of tenancy-level dispersion, not the random seed.</p>
+  <p>This still does <strong>not</strong> capture moves, turnover, new lets, landlord behaviour, or household responses. Those mechanisms could change both aggregate and distributional effects; this sensitivity only shows the mechanical clipping effect among observed renters who stay put.</p>
+
+  <p class="caption"><strong>Table 9.</strong> Aggregate cap bite under random tenancy-level growth dispersion. Each row is calibrated to the same average baseline private-rent path; only the random dispersion around that average changes.</p>
+  <div class="table-wrap"><table class="tbl" id="t-random-dispersion"></table></div>
+
+  <p class="caption"><strong>Figure 3.</strong> Mean aggregate current-rent reduction by annual random growth dispersion. Error bars show the 10th-90th percentile across 50 random draws.</p>
+  <div id="chart-random-dispersion" class="chart"></div>
+</details>
+
+<script>
+  const fmtGBP = n => '£' + (n ?? 0).toLocaleString('en-GB', {maximumFractionDigits: 0});
+  const fmtBn = n => '£' + Number(n ?? 0).toFixed(2) + 'bn';
+  const fmtM  = n => Number(n ?? 0).toFixed(2) + 'm';
+
+  // Generic table renderer.
+  // Columns: [{key, label, num?: bool, format?: fn}]
+  function renderTable(elId, columns, rows) {
+    const el = document.getElementById(elId);
+    if (!el) return;
+    const thead = '<thead><tr>' +
+      columns.map(c => `<th${c.num ? ' class="num"' : ''}>${c.label}</th>`).join('') +
+      '</tr></thead>';
+    const tbody = '<tbody>' + rows.map(r =>
+      '<tr>' + columns.map(c => {
+        const raw = r[c.key];
+        const v = c.format ? c.format(raw) : raw;
+        return `<td${c.num ? ' class="num"' : ''}>${v ?? ''}</td>`;
+      }).join('') + '</tr>'
+    ).join('') + '</tbody>';
+    el.innerHTML = thead + tbody;
+  }
+
+  function renderStats(h) {
+    document.getElementById('stats').innerHTML = `
+      <div class="stat"><div class="num">${fmtM(h.households_in_scope_m)}</div><div class="lbl">Private-renter households in England (in scope)</div></div>
+      <div class="stat"><div class="num">${fmtBn(h.aggregate_ahc_gain_gbp_bn)}</div><div class="lbl">Aggregate change in AHC net income (£/year)</div></div>
+      <div class="stat"><div class="num">${fmtGBP(h.mean_gain_per_household_gbp)}</div><div class="lbl">Mean change per in-scope household (£/year)</div></div>
+    `;
+  }
+
+  function plot(divId, fig) {
+    const el = document.getElementById(divId);
+    if (!fig || !fig.data) {
+      if (el) el.innerHTML = '<div class="err">Figure missing in results JSON.</div>';
+      return;
+    }
+    const layout = Object.assign({autosize: true}, fig.layout || {});
+    delete layout.height;
+    delete layout.width;
+    const config = {responsive: true, displaylogo: false, modeBarButtonsToRemove: ['lasso2d', 'select2d']};
+    Plotly.newPlot(divId, fig.data, layout, config);
+    setTimeout(() => Plotly.Plots.resize(divId), 50);
+  }
+
+  fetch('data/proportional_rent_reduction.json', {cache: 'no-cache'})
+    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
+    .then(r => {
+      // Section 1
+      renderTable('t-dispersion-uniform', [
+        {key: 'scenario', label: 'Scenario'},
+        {key: 'description', label: 'Description'},
+        {key: 'avg_baseline', label: 'Avg baseline growth', num: true},
+        {key: 'avg_capped', label: 'Avg capped growth', num: true},
+        {key: 'avg_reduction_pp', label: 'Avg reduction', num: true},
+      ], r.tables.dispersion_uniform);
+
+      renderTable('t-dispersion-normal', [
+        {key: 'dispersion', label: 'Dispersion (2026)'},
+        {key: 'avg_baseline', label: 'Avg baseline', num: true},
+        {key: 'avg_capped', label: 'Avg capped', num: true},
+        {key: 'actual_reduction_pp', label: 'Actual reduction', num: true},
+        {key: 'uniform_assumes_pp', label: 'Uniform-scaling assumes', num: true},
+      ], r.tables.dispersion_normal);
+
+      // Section 2
+      renderTable('t-2hh-dispersion', [
+        {key: 'distribution', label: 'Distribution'},
+        {key: 'household', label: 'Household'},
+        {key: 'market_rise', label: 'Market rise', num: true},
+        {key: 'baseline_rent', label: 'Baseline rent (£/yr)', num: true, format: fmtGBP},
+        {key: 'reform_rent', label: 'Cap rent (£/yr)', num: true, format: fmtGBP},
+        {key: 'saving', label: 'Saving (£/yr)', num: true, format: fmtGBP},
+      ], r.tables.two_household_dispersion);
+
+      renderTable('t-2hh-aggregate', [
+        {key: 'distribution', label: 'Distribution'},
+        {key: 'total_saving', label: 'Total saving across 2 HHs (£/yr)', num: true, format: fmtGBP},
+        {key: 'pct_combined_rent', label: '% of combined rent (£36k)', num: true},
+      ], r.tables.two_household_aggregate);
+
+      // Section 3.1
+      renderTable('t-rates', [
+        {key: 'year', label: 'Year'},
+        {key: 'cpi', label: 'CPI YoY', num: true},
+        {key: 'blended', label: 'Blended rent (obr.rent)', num: true},
+        {key: 'social', label: 'Social rent (PE)', num: true},
+        {key: 'iphrp', label: 'England PIPR outturn', num: true},
+        {key: 'private_pe', label: 'England private rent YoY (PE)', num: true},
+      ], r.tables.rent_growth_rates);
+
+      // Section 3.2
+      renderTable('t-alt-path', [
+        {key: 'year', label: 'Year'},
+        {key: 'cpi_lag', label: 'CPI(t-1)', num: true},
+        {key: 'baseline_yoy', label: 'Baseline private YoY', num: true},
+        {key: 'scenario_yoy', label: 'Scenario YoY', num: true},
+        {key: 'below_baseline', label: 'Scenario below baseline?'},
+      ], r.tables.alternative_aggregate_path);
+
+      // Section 3.3
+      renderTable('t-rent-index', [
+        {key: 'year', label: 'Year'},
+        {key: 'baseline_index', label: 'Baseline index', num: true, format: v => Number(v).toFixed(2)},
+        {key: 'scenario_index', label: 'Scenario index', num: true, format: v => Number(v).toFixed(2)},
+        {key: 'gap_vs_baseline', label: 'Gap vs baseline', num: true},
+      ], r.tables.cumulative_rent_index);
+
+      plot('chart-rent-index', r.figures.rent_index);
+
+      // Section 3.4
+      renderTable('t-2hh-projection', [
+        {key: 'household', label: 'Household'},
+        {key: 'rent_2024', label: 'Rent 2024 (£/yr)', num: true, format: fmtGBP},
+        {key: 'baseline_2029', label: 'Baseline rent 2029 (£/yr)', num: true, format: fmtGBP},
+        {key: 'scenario_2029', label: 'Scenario rent 2029 (£/yr)', num: true, format: fmtGBP},
+        {key: 'rent_reduction', label: 'Rent reduction 2029 (£/yr)', num: true, format: fmtGBP},
+        {key: 'reduction_pct', label: 'Reduction (%)', num: true},
+      ], r.tables.two_household_projection);
+
+      // Section 5
+      renderStats(r.headline);
+      plot('chart-decile', r.figures.decile_change_ahc);
+
+      // Section 6
+      renderTable('t-random-dispersion', [
+        {key: 'annual_growth_sd_pp', label: 'Annual random growth SD (pp)', num: true, format: v => Number(v).toFixed(1)},
+        {key: 'mean_current_rent_reduction_pct', label: 'Mean rent reduction (%)', num: true, format: v => Number(v).toFixed(2) + '%'},
+        {key: 'p10_current_rent_reduction_pct', label: 'P10 reduction (%)', num: true, format: v => Number(v).toFixed(2) + '%'},
+        {key: 'p90_current_rent_reduction_pct', label: 'P90 reduction (%)', num: true, format: v => Number(v).toFixed(2) + '%'},
+        {key: 'mean_rent_saving_gbp_bn', label: 'Mean rent saving (£bn/yr)', num: true, format: fmtBn},
+      ], r.tables.random_dispersion_sweep);
+
+      plot('chart-random-dispersion', r.figures.random_dispersion_sweep);
+    })
+    .catch(err => {
+      document.querySelector('h1').textContent = 'Failed to load results';
+      document.querySelector('p.lede').innerHTML = `<span class="err">${err.message}. Expected at <code>data/proportional_rent_reduction.json</code>.</span>`;
+    });
+
+  window.addEventListener('resize', () => {
+    ['chart-rent-index', 'chart-decile', 'chart-random-dispersion'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el && el.data) Plotly.Plots.resize(id);
+    });
+  });
+</script>
+</body>
+</html>
