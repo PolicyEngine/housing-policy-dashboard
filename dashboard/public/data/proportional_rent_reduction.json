@@ -369,346 +369,69 @@
         "reduction_pct": "0.82%"
       }
     ],
-    "heterogeneous_scenarios": [
+    "random_dispersion_sweep": [
       {
-        "id": "uniform",
-        "label": "Uniform aggregate analogue",
-        "aggregate_rent_reduction_pct": 0.819,
-        "aggregate_rent_saving_gbp_bn": 0.746,
-        "aggregate_ahc_gain_gbp_bn": 0.724,
-        "mean_gain_per_household_gbp": 129
-      },
-      {
-        "id": "higher_rent_growth",
-        "label": "Higher growth for higher-rent tenancies",
-        "aggregate_rent_reduction_pct": 4.886,
-        "aggregate_rent_saving_gbp_bn": 4.451,
-        "aggregate_ahc_gain_gbp_bn": 4.405,
-        "mean_gain_per_household_gbp": 782
-      },
-      {
-        "id": "lower_rent_growth",
-        "label": "Higher growth for lower-rent tenancies",
-        "aggregate_rent_reduction_pct": 4.804,
-        "aggregate_rent_saving_gbp_bn": 4.376,
-        "aggregate_ahc_gain_gbp_bn": 3.997,
-        "mean_gain_per_household_gbp": 710
-      },
-      {
-        "id": "higher_income_growth",
-        "label": "Higher growth for higher-income renters",
-        "aggregate_rent_reduction_pct": 4.693,
-        "aggregate_rent_saving_gbp_bn": 4.275,
-        "aggregate_ahc_gain_gbp_bn": 4.256,
-        "mean_gain_per_household_gbp": 756
-      },
-      {
-        "id": "lower_income_growth",
-        "label": "Higher growth for lower-income renters",
-        "aggregate_rent_reduction_pct": 4.547,
-        "aggregate_rent_saving_gbp_bn": 4.142,
-        "aggregate_ahc_gain_gbp_bn": 3.915,
-        "mean_gain_per_household_gbp": 695
-      },
-      {
-        "id": "random_growth",
-        "label": "Random growth draw",
-        "aggregate_rent_reduction_pct": 4.913,
-        "aggregate_rent_saving_gbp_bn": 4.476,
-        "aggregate_ahc_gain_gbp_bn": 4.288,
-        "mean_gain_per_household_gbp": 762
-      }
-    ],
-    "heterogeneous_growth_ranges": [
-      {
-        "id": "uniform",
-        "label": "Uniform aggregate analogue",
+        "annual_growth_sd_pp": 0.0,
         "mean_current_rent_reduction_pct": 0.819,
-        "growth_range_pct": "2026: 2.07% to 2.07%; 2027: 2.78% to 2.78%; 2028: 1.69% to 1.69%; 2029: 1.84% to 1.84%"
+        "p10_current_rent_reduction_pct": 0.819,
+        "p90_current_rent_reduction_pct": 0.819,
+        "mean_rent_saving_gbp_bn": 0.746
       },
       {
-        "id": "higher_rent_growth",
-        "label": "Higher growth for higher-rent tenancies",
-        "mean_current_rent_reduction_pct": 4.886,
-        "growth_range_pct": "2026: -5.09% to 9.91%; 2027: -4.46% to 10.54%; 2028: -5.64% to 9.36%; 2029: -5.57% to 9.43%"
+        "annual_growth_sd_pp": 0.5,
+        "mean_current_rent_reduction_pct": 1.202,
+        "p10_current_rent_reduction_pct": 1.191,
+        "p90_current_rent_reduction_pct": 1.211,
+        "mean_rent_saving_gbp_bn": 1.095
       },
       {
-        "id": "lower_rent_growth",
-        "label": "Higher growth for lower-rent tenancies",
-        "mean_current_rent_reduction_pct": 4.804,
-        "growth_range_pct": "2026: -5.10% to 9.90%; 2027: -4.47% to 10.53%; 2028: -5.64% to 9.36%; 2029: -5.58% to 9.42%"
+        "annual_growth_sd_pp": 1.0,
+        "mean_current_rent_reduction_pct": 1.872,
+        "p10_current_rent_reduction_pct": 1.832,
+        "p90_current_rent_reduction_pct": 1.912,
+        "mean_rent_saving_gbp_bn": 1.706
       },
       {
-        "id": "higher_income_growth",
-        "label": "Higher growth for higher-income renters",
-        "mean_current_rent_reduction_pct": 4.693,
-        "growth_range_pct": "2026: -5.14% to 9.86%; 2027: -4.51% to 10.49%; 2028: -5.68% to 9.32%; 2029: -5.61% to 9.39%"
+        "annual_growth_sd_pp": 1.5,
+        "mean_current_rent_reduction_pct": 2.608,
+        "p10_current_rent_reduction_pct": 2.544,
+        "p90_current_rent_reduction_pct": 2.675,
+        "mean_rent_saving_gbp_bn": 2.376
       },
       {
-        "id": "lower_income_growth",
-        "label": "Higher growth for lower-income renters",
-        "mean_current_rent_reduction_pct": 4.547,
-        "growth_range_pct": "2026: -5.10% to 9.90%; 2027: -4.46% to 10.54%; 2028: -5.63% to 9.37%; 2029: -5.56% to 9.44%"
+        "annual_growth_sd_pp": 2.0,
+        "mean_current_rent_reduction_pct": 3.364,
+        "p10_current_rent_reduction_pct": 3.276,
+        "p90_current_rent_reduction_pct": 3.456,
+        "mean_rent_saving_gbp_bn": 3.065
       },
       {
-        "id": "random_growth",
-        "label": "Random growth draw",
-        "mean_current_rent_reduction_pct": 4.913,
-        "growth_range_pct": "2026: -5.10% to 9.90%; 2027: -4.47% to 10.53%; 2028: -5.65% to 9.35%; 2029: -5.58% to 9.42%"
-      }
-    ]
-  },
-  "heterogeneous_decile_means": {
-    "uniform": [
-      {
-        "decile": 1,
-        "mean_delta_ahc_gbp": 103.73
+        "annual_growth_sd_pp": 2.5,
+        "mean_current_rent_reduction_pct": 4.13,
+        "p10_current_rent_reduction_pct": 4.012,
+        "p90_current_rent_reduction_pct": 4.243,
+        "mean_rent_saving_gbp_bn": 3.763
       },
       {
-        "decile": 2,
-        "mean_delta_ahc_gbp": 96.53
+        "annual_growth_sd_pp": 3.0,
+        "mean_current_rent_reduction_pct": 4.901,
+        "p10_current_rent_reduction_pct": 4.751,
+        "p90_current_rent_reduction_pct": 5.036,
+        "mean_rent_saving_gbp_bn": 4.465
       },
       {
-        "decile": 3,
-        "mean_delta_ahc_gbp": 103.66
+        "annual_growth_sd_pp": 4.0,
+        "mean_current_rent_reduction_pct": 6.452,
+        "p10_current_rent_reduction_pct": 6.233,
+        "p90_current_rent_reduction_pct": 6.635,
+        "mean_rent_saving_gbp_bn": 5.878
       },
       {
-        "decile": 4,
-        "mean_delta_ahc_gbp": 92.42
-      },
-      {
-        "decile": 5,
-        "mean_delta_ahc_gbp": 119.06
-      },
-      {
-        "decile": 6,
-        "mean_delta_ahc_gbp": 96.38
-      },
-      {
-        "decile": 7,
-        "mean_delta_ahc_gbp": 124.53
-      },
-      {
-        "decile": 8,
-        "mean_delta_ahc_gbp": 150.09
-      },
-      {
-        "decile": 9,
-        "mean_delta_ahc_gbp": 182.46
-      },
-      {
-        "decile": 10,
-        "mean_delta_ahc_gbp": 213.19
-      }
-    ],
-    "higher_rent_growth": [
-      {
-        "decile": 1,
-        "mean_delta_ahc_gbp": 420.98
-      },
-      {
-        "decile": 2,
-        "mean_delta_ahc_gbp": 263.22
-      },
-      {
-        "decile": 3,
-        "mean_delta_ahc_gbp": 431.35
-      },
-      {
-        "decile": 4,
-        "mean_delta_ahc_gbp": 184.4
-      },
-      {
-        "decile": 5,
-        "mean_delta_ahc_gbp": 373.88
-      },
-      {
-        "decile": 6,
-        "mean_delta_ahc_gbp": 189.62
-      },
-      {
-        "decile": 7,
-        "mean_delta_ahc_gbp": 442.68
-      },
-      {
-        "decile": 8,
-        "mean_delta_ahc_gbp": 741.09
-      },
-      {
-        "decile": 9,
-        "mean_delta_ahc_gbp": 2074.92
-      },
-      {
-        "decile": 10,
-        "mean_delta_ahc_gbp": 2617.98
-      }
-    ],
-    "lower_rent_growth": [
-      {
-        "decile": 1,
-        "mean_delta_ahc_gbp": 802.29
-      },
-      {
-        "decile": 2,
-        "mean_delta_ahc_gbp": 876.21
-      },
-      {
-        "decile": 3,
-        "mean_delta_ahc_gbp": 987.58
-      },
-      {
-        "decile": 4,
-        "mean_delta_ahc_gbp": 916.48
-      },
-      {
-        "decile": 5,
-        "mean_delta_ahc_gbp": 774.88
-      },
-      {
-        "decile": 6,
-        "mean_delta_ahc_gbp": 933.7
-      },
-      {
-        "decile": 7,
-        "mean_delta_ahc_gbp": 732.11
-      },
-      {
-        "decile": 8,
-        "mean_delta_ahc_gbp": 501.36
-      },
-      {
-        "decile": 9,
-        "mean_delta_ahc_gbp": 492.31
-      },
-      {
-        "decile": 10,
-        "mean_delta_ahc_gbp": 126.79
-      }
-    ],
-    "higher_income_growth": [
-      {
-        "decile": 1,
-        "mean_delta_ahc_gbp": 0.0
-      },
-      {
-        "decile": 2,
-        "mean_delta_ahc_gbp": 0.0
-      },
-      {
-        "decile": 3,
-        "mean_delta_ahc_gbp": 0.0
-      },
-      {
-        "decile": 4,
-        "mean_delta_ahc_gbp": 0.0
-      },
-      {
-        "decile": 5,
-        "mean_delta_ahc_gbp": 36.19
-      },
-      {
-        "decile": 6,
-        "mean_delta_ahc_gbp": 134.48
-      },
-      {
-        "decile": 7,
-        "mean_delta_ahc_gbp": 405.89
-      },
-      {
-        "decile": 8,
-        "mean_delta_ahc_gbp": 1028.12
-      },
-      {
-        "decile": 9,
-        "mean_delta_ahc_gbp": 2013.55
-      },
-      {
-        "decile": 10,
-        "mean_delta_ahc_gbp": 3708.36
-      }
-    ],
-    "lower_income_growth": [
-      {
-        "decile": 1,
-        "mean_delta_ahc_gbp": 2621.45
-      },
-      {
-        "decile": 2,
-        "mean_delta_ahc_gbp": 1573.01
-      },
-      {
-        "decile": 3,
-        "mean_delta_ahc_gbp": 1197.95
-      },
-      {
-        "decile": 4,
-        "mean_delta_ahc_gbp": 709.57
-      },
-      {
-        "decile": 5,
-        "mean_delta_ahc_gbp": 584.53
-      },
-      {
-        "decile": 6,
-        "mean_delta_ahc_gbp": 196.85
-      },
-      {
-        "decile": 7,
-        "mean_delta_ahc_gbp": 100.13
-      },
-      {
-        "decile": 8,
-        "mean_delta_ahc_gbp": 2.8
-      },
-      {
-        "decile": 9,
-        "mean_delta_ahc_gbp": 0.0
-      },
-      {
-        "decile": 10,
-        "mean_delta_ahc_gbp": 0.0
-      }
-    ],
-    "random_growth": [
-      {
-        "decile": 1,
-        "mean_delta_ahc_gbp": 816.46
-      },
-      {
-        "decile": 2,
-        "mean_delta_ahc_gbp": 431.03
-      },
-      {
-        "decile": 3,
-        "mean_delta_ahc_gbp": 418.63
-      },
-      {
-        "decile": 4,
-        "mean_delta_ahc_gbp": 639.4
-      },
-      {
-        "decile": 5,
-        "mean_delta_ahc_gbp": 1100.6
-      },
-      {
-        "decile": 6,
-        "mean_delta_ahc_gbp": 407.73
-      },
-      {
-        "decile": 7,
-        "mean_delta_ahc_gbp": 546.21
-      },
-      {
-        "decile": 8,
-        "mean_delta_ahc_gbp": 988.08
-      },
-      {
-        "decile": 9,
-        "mean_delta_ahc_gbp": 493.94
-      },
-      {
-        "decile": 10,
-        "mean_delta_ahc_gbp": 1635.82
+        "annual_growth_sd_pp": 5.0,
+        "mean_current_rent_reduction_pct": 8.011,
+        "p10_current_rent_reduction_pct": 7.724,
+        "p90_current_rent_reduction_pct": 8.249,
+        "mean_rent_saving_gbp_bn": 7.298
       }
     ]
   },
@@ -1055,240 +778,76 @@
         }
       }
     },
-    "heterogeneous_decile_change_ahc": {
+    "random_dispersion_sweep": {
       "data": [
         {
           "type": "scatter",
           "mode": "lines+markers",
-          "name": "Uniform aggregate analogue",
+          "name": "Mean across 50 random draws",
           "x": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ],
-          "y": [
-            103.73,
-            96.53,
-            103.66,
-            92.42,
-            119.06,
-            96.38,
-            124.53,
-            150.09,
-            182.46,
-            213.19
-          ],
-          "line": {
-            "color": "#1e3a5f",
-            "width": 2.4
-          },
-          "marker": {
-            "size": 6,
-            "color": "#1e3a5f"
-          },
-          "hovertemplate": "%{fullData.name}<br>Decile %{x}<br><b>\u00a3%{y:,.0f}</b> per year<extra></extra>"
-        },
-        {
-          "type": "scatter",
-          "mode": "lines+markers",
-          "name": "Higher growth for higher-rent tenancies",
-          "x": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ],
-          "y": [
-            420.98,
-            263.22,
-            431.35,
-            184.4,
-            373.88,
-            189.62,
-            442.68,
-            741.09,
-            2074.92,
-            2617.98
-          ],
-          "line": {
-            "color": "#d97706",
-            "width": 2.4
-          },
-          "marker": {
-            "size": 6,
-            "color": "#d97706"
-          },
-          "hovertemplate": "%{fullData.name}<br>Decile %{x}<br><b>\u00a3%{y:,.0f}</b> per year<extra></extra>"
-        },
-        {
-          "type": "scatter",
-          "mode": "lines+markers",
-          "name": "Higher growth for lower-rent tenancies",
-          "x": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ],
-          "y": [
-            802.29,
-            876.21,
-            987.58,
-            916.48,
-            774.88,
-            933.7,
-            732.11,
-            501.36,
-            492.31,
-            126.79
-          ],
-          "line": {
-            "color": "#15803d",
-            "width": 2.4
-          },
-          "marker": {
-            "size": 6,
-            "color": "#15803d"
-          },
-          "hovertemplate": "%{fullData.name}<br>Decile %{x}<br><b>\u00a3%{y:,.0f}</b> per year<extra></extra>"
-        },
-        {
-          "type": "scatter",
-          "mode": "lines+markers",
-          "name": "Higher growth for higher-income renters",
-          "x": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ],
-          "y": [
             0.0,
-            0.0,
-            0.0,
-            0.0,
-            36.19,
-            134.48,
-            405.89,
-            1028.12,
-            2013.55,
-            3708.36
-          ],
-          "line": {
-            "color": "#b91c1c",
-            "width": 2.4
-          },
-          "marker": {
-            "size": 6,
-            "color": "#b91c1c"
-          },
-          "hovertemplate": "%{fullData.name}<br>Decile %{x}<br><b>\u00a3%{y:,.0f}</b> per year<extra></extra>"
-        },
-        {
-          "type": "scatter",
-          "mode": "lines+markers",
-          "name": "Higher growth for lower-income renters",
-          "x": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
+            0.5,
+            1.0,
+            1.5,
+            2.0,
+            2.5,
+            3.0,
+            4.0,
+            5.0
           ],
           "y": [
-            2621.45,
-            1573.01,
-            1197.95,
-            709.57,
-            584.53,
-            196.85,
-            100.13,
-            2.8,
-            0.0,
-            0.0
+            0.819,
+            1.202,
+            1.872,
+            2.608,
+            3.364,
+            4.13,
+            4.901,
+            6.452,
+            8.011
           ],
+          "error_y": {
+            "type": "data",
+            "array": [
+              0.0,
+              0.009000000000000119,
+              0.039999999999999813,
+              0.06699999999999973,
+              0.09200000000000008,
+              0.11300000000000043,
+              0.1349999999999998,
+              0.18299999999999983,
+              0.23800000000000132
+            ],
+            "arrayminus": [
+              0.0,
+              0.010999999999999899,
+              0.040000000000000036,
+              0.06400000000000006,
+              0.08800000000000008,
+              0.11800000000000033,
+              0.14999999999999947,
+              0.2190000000000003,
+              0.28699999999999903
+            ],
+            "color": "#1f6e6e",
+            "thickness": 1.3,
+            "width": 4
+          },
           "line": {
-            "color": "#6d28d9",
-            "width": 2.4
+            "color": "#2C8E8E",
+            "width": 2.8
           },
           "marker": {
-            "size": 6,
-            "color": "#6d28d9"
+            "size": 7,
+            "color": "#2C8E8E"
           },
-          "hovertemplate": "%{fullData.name}<br>Decile %{x}<br><b>\u00a3%{y:,.0f}</b> per year<extra></extra>"
-        },
-        {
-          "type": "scatter",
-          "mode": "lines+markers",
-          "name": "Random growth draw",
-          "x": [
-            1,
-            2,
-            3,
-            4,
-            5,
-            6,
-            7,
-            8,
-            9,
-            10
-          ],
-          "y": [
-            816.46,
-            431.03,
-            418.63,
-            639.4,
-            1100.6,
-            407.73,
-            546.21,
-            988.08,
-            493.94,
-            1635.82
-          ],
-          "line": {
-            "color": "#6b7280",
-            "width": 2.4
-          },
-          "marker": {
-            "size": 6,
-            "color": "#6b7280"
-          },
-          "hovertemplate": "%{fullData.name}<br>Decile %{x}<br><b>\u00a3%{y:,.0f}</b> per year<extra></extra>"
+          "hovertemplate": "Annual SD %{x:.1f} pp<br><b>%{y:.2f}%</b> current-rent reduction<extra></extra>"
         }
       ],
       "layout": {
         "title": {
-          "text": "AHC gain by decile under alternative imputed rent-growth allocations",
+          "text": "Aggregate cap bite rises with random rent-growth dispersion",
           "font": {
             "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
             "size": 16,
@@ -1300,7 +859,7 @@
         },
         "xaxis": {
           "title": {
-            "text": "Gross household income decile (1 = lowest)",
+            "text": "Annual random baseline rent-growth SD (pp)",
             "font": {
               "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
               "size": 13,
@@ -1308,9 +867,6 @@
             },
             "standoff": 12
           },
-          "dtick": 1,
-          "tickmode": "linear",
-          "tick0": 1,
           "showgrid": false,
           "showline": true,
           "linecolor": "#e5e7eb",
@@ -1324,7 +880,7 @@
         },
         "yaxis": {
           "title": {
-            "text": "Change in AHC net income (\u00a3/year)",
+            "text": "Aggregate current-rent reduction (%)",
             "font": {
               "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
               "size": 13,
@@ -1337,8 +893,7 @@
           "zeroline": true,
           "zerolinecolor": "#e5e7eb",
           "zerolinewidth": 1,
-          "tickprefix": "\u00a3",
-          "tickformat": ",",
+          "ticksuffix": "%",
           "tickfont": {
             "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
             "size": 12,
@@ -1355,21 +910,9 @@
           "l": 70,
           "r": 30,
           "t": 70,
-          "b": 140
+          "b": 80
         },
-        "legend": {
-          "orientation": "h",
-          "y": -0.28,
-          "x": 0.5,
-          "xanchor": "center",
-          "font": {
-            "family": "Inter, -apple-system, BlinkMacSystemFont, sans-serif",
-            "size": 12,
-            "color": "#1f2937"
-          },
-          "bgcolor": "rgba(0,0,0,0)"
-        },
-        "hovermode": "x unified",
+        "showlegend": false,
         "hoverlabel": {
           "bgcolor": "white",
           "bordercolor": "#e5e7eb",
