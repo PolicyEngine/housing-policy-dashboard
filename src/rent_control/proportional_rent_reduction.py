@@ -1,9 +1,9 @@
 """Generate proportional_rent_reduction.json for the dashboard.
 
-Mechanical equal-proportional private rent reduction scenario, England,
-2029-30. The headline and decile results are linearly rescaled from the
-existing equal-rent-reduction microsimulation to the current PolicyEngine
-private-rent path.
+Mechanical equal-proportional private rent reduction scenario and
+heterogeneous no-moves sensitivity, England, 2029-30. The household-level
+microsimulation outputs are extracted from PolicyEngine UK using the
+enhanced FRS 2023-24 and the current private-rent path.
 
 This is a scenario, not a microsim of a per-tenancy rent-growth cap.
 The cap's per-household incidence depends on tenancy-level baseline rent
@@ -115,22 +115,189 @@ TWO_HH_PROJECTION = [
 # ── Section 4: distributional results ──────────────────────────────────────
 
 HEADLINE = {
-    "households_in_scope_m": 6.11,
-    "aggregate_ahc_gain_gbp_bn": 0.78,
-    "mean_gain_per_household_gbp": 128,
+    "households_in_scope_m": 5.63,
+    "aggregate_ahc_gain_gbp_bn": 0.724,
+    "mean_gain_per_household_gbp": 129,
 }
 
 DECILE_MEANS = [
-    {"decile": 1,  "mean_delta_ahc_gbp": 83.32},
-    {"decile": 2,  "mean_delta_ahc_gbp": 67.60},
-    {"decile": 3,  "mean_delta_ahc_gbp": 127.12},
-    {"decile": 4,  "mean_delta_ahc_gbp": 84.81},
-    {"decile": 5,  "mean_delta_ahc_gbp": 95.66},
-    {"decile": 6,  "mean_delta_ahc_gbp": 102.89},
-    {"decile": 7,  "mean_delta_ahc_gbp": 134.44},
-    {"decile": 8,  "mean_delta_ahc_gbp": 146.83},
-    {"decile": 9,  "mean_delta_ahc_gbp": 180.28},
-    {"decile": 10, "mean_delta_ahc_gbp": 251.55},
+    {"decile": 1,  "mean_delta_ahc_gbp": 103.73},
+    {"decile": 2,  "mean_delta_ahc_gbp": 96.53},
+    {"decile": 3,  "mean_delta_ahc_gbp": 103.66},
+    {"decile": 4,  "mean_delta_ahc_gbp": 92.42},
+    {"decile": 5,  "mean_delta_ahc_gbp": 119.06},
+    {"decile": 6,  "mean_delta_ahc_gbp": 96.38},
+    {"decile": 7,  "mean_delta_ahc_gbp": 124.53},
+    {"decile": 8,  "mean_delta_ahc_gbp": 150.09},
+    {"decile": 9,  "mean_delta_ahc_gbp": 182.46},
+    {"decile": 10, "mean_delta_ahc_gbp": 213.19},
+]
+
+# ── Section 6: heterogeneous no-moves sensitivity ──────────────────────────
+
+HETEROGENEOUS_SCENARIOS = [
+    {
+        "id": "uniform",
+        "label": "Uniform aggregate analogue",
+        "aggregate_rent_reduction_pct": 0.819,
+        "aggregate_rent_saving_gbp_bn": 0.746,
+        "aggregate_ahc_gain_gbp_bn": 0.724,
+        "mean_gain_per_household_gbp": 129,
+    },
+    {
+        "id": "higher_rent_growth",
+        "label": "Higher growth for higher-rent tenancies",
+        "aggregate_rent_reduction_pct": 4.886,
+        "aggregate_rent_saving_gbp_bn": 4.451,
+        "aggregate_ahc_gain_gbp_bn": 4.405,
+        "mean_gain_per_household_gbp": 782,
+    },
+    {
+        "id": "lower_rent_growth",
+        "label": "Higher growth for lower-rent tenancies",
+        "aggregate_rent_reduction_pct": 4.804,
+        "aggregate_rent_saving_gbp_bn": 4.376,
+        "aggregate_ahc_gain_gbp_bn": 3.997,
+        "mean_gain_per_household_gbp": 710,
+    },
+    {
+        "id": "higher_income_growth",
+        "label": "Higher growth for higher-income renters",
+        "aggregate_rent_reduction_pct": 4.693,
+        "aggregate_rent_saving_gbp_bn": 4.275,
+        "aggregate_ahc_gain_gbp_bn": 4.256,
+        "mean_gain_per_household_gbp": 756,
+    },
+    {
+        "id": "lower_income_growth",
+        "label": "Higher growth for lower-income renters",
+        "aggregate_rent_reduction_pct": 4.547,
+        "aggregate_rent_saving_gbp_bn": 4.142,
+        "aggregate_ahc_gain_gbp_bn": 3.915,
+        "mean_gain_per_household_gbp": 695,
+    },
+    {
+        "id": "random_growth",
+        "label": "Random growth draw",
+        "aggregate_rent_reduction_pct": 4.913,
+        "aggregate_rent_saving_gbp_bn": 4.476,
+        "aggregate_ahc_gain_gbp_bn": 4.288,
+        "mean_gain_per_household_gbp": 762,
+    },
+]
+
+HETEROGENEOUS_DECILE_MEANS = {
+    "uniform": [
+        {"decile": 1, "mean_delta_ahc_gbp": 103.73},
+        {"decile": 2, "mean_delta_ahc_gbp": 96.53},
+        {"decile": 3, "mean_delta_ahc_gbp": 103.66},
+        {"decile": 4, "mean_delta_ahc_gbp": 92.42},
+        {"decile": 5, "mean_delta_ahc_gbp": 119.06},
+        {"decile": 6, "mean_delta_ahc_gbp": 96.38},
+        {"decile": 7, "mean_delta_ahc_gbp": 124.53},
+        {"decile": 8, "mean_delta_ahc_gbp": 150.09},
+        {"decile": 9, "mean_delta_ahc_gbp": 182.46},
+        {"decile": 10, "mean_delta_ahc_gbp": 213.19},
+    ],
+    "higher_rent_growth": [
+        {"decile": 1, "mean_delta_ahc_gbp": 420.98},
+        {"decile": 2, "mean_delta_ahc_gbp": 263.22},
+        {"decile": 3, "mean_delta_ahc_gbp": 431.35},
+        {"decile": 4, "mean_delta_ahc_gbp": 184.40},
+        {"decile": 5, "mean_delta_ahc_gbp": 373.88},
+        {"decile": 6, "mean_delta_ahc_gbp": 189.62},
+        {"decile": 7, "mean_delta_ahc_gbp": 442.68},
+        {"decile": 8, "mean_delta_ahc_gbp": 741.09},
+        {"decile": 9, "mean_delta_ahc_gbp": 2074.92},
+        {"decile": 10, "mean_delta_ahc_gbp": 2617.98},
+    ],
+    "lower_rent_growth": [
+        {"decile": 1, "mean_delta_ahc_gbp": 802.29},
+        {"decile": 2, "mean_delta_ahc_gbp": 876.21},
+        {"decile": 3, "mean_delta_ahc_gbp": 987.58},
+        {"decile": 4, "mean_delta_ahc_gbp": 916.48},
+        {"decile": 5, "mean_delta_ahc_gbp": 774.88},
+        {"decile": 6, "mean_delta_ahc_gbp": 933.70},
+        {"decile": 7, "mean_delta_ahc_gbp": 732.11},
+        {"decile": 8, "mean_delta_ahc_gbp": 501.36},
+        {"decile": 9, "mean_delta_ahc_gbp": 492.31},
+        {"decile": 10, "mean_delta_ahc_gbp": 126.79},
+    ],
+    "higher_income_growth": [
+        {"decile": 1, "mean_delta_ahc_gbp": 0.00},
+        {"decile": 2, "mean_delta_ahc_gbp": 0.00},
+        {"decile": 3, "mean_delta_ahc_gbp": 0.00},
+        {"decile": 4, "mean_delta_ahc_gbp": 0.00},
+        {"decile": 5, "mean_delta_ahc_gbp": 36.19},
+        {"decile": 6, "mean_delta_ahc_gbp": 134.48},
+        {"decile": 7, "mean_delta_ahc_gbp": 405.89},
+        {"decile": 8, "mean_delta_ahc_gbp": 1028.12},
+        {"decile": 9, "mean_delta_ahc_gbp": 2013.55},
+        {"decile": 10, "mean_delta_ahc_gbp": 3708.36},
+    ],
+    "lower_income_growth": [
+        {"decile": 1, "mean_delta_ahc_gbp": 2621.45},
+        {"decile": 2, "mean_delta_ahc_gbp": 1573.01},
+        {"decile": 3, "mean_delta_ahc_gbp": 1197.95},
+        {"decile": 4, "mean_delta_ahc_gbp": 709.57},
+        {"decile": 5, "mean_delta_ahc_gbp": 584.53},
+        {"decile": 6, "mean_delta_ahc_gbp": 196.85},
+        {"decile": 7, "mean_delta_ahc_gbp": 100.13},
+        {"decile": 8, "mean_delta_ahc_gbp": 2.80},
+        {"decile": 9, "mean_delta_ahc_gbp": 0.00},
+        {"decile": 10, "mean_delta_ahc_gbp": 0.00},
+    ],
+    "random_growth": [
+        {"decile": 1, "mean_delta_ahc_gbp": 816.46},
+        {"decile": 2, "mean_delta_ahc_gbp": 431.03},
+        {"decile": 3, "mean_delta_ahc_gbp": 418.63},
+        {"decile": 4, "mean_delta_ahc_gbp": 639.40},
+        {"decile": 5, "mean_delta_ahc_gbp": 1100.60},
+        {"decile": 6, "mean_delta_ahc_gbp": 407.73},
+        {"decile": 7, "mean_delta_ahc_gbp": 546.21},
+        {"decile": 8, "mean_delta_ahc_gbp": 988.08},
+        {"decile": 9, "mean_delta_ahc_gbp": 493.94},
+        {"decile": 10, "mean_delta_ahc_gbp": 1635.82},
+    ],
+}
+
+HETEROGENEOUS_GROWTH_RANGES = [
+    {
+        "id": "uniform",
+        "label": "Uniform aggregate analogue",
+        "mean_current_rent_reduction_pct": 0.819,
+        "growth_range_pct": "2026: 2.07% to 2.07%; 2027: 2.78% to 2.78%; 2028: 1.69% to 1.69%; 2029: 1.84% to 1.84%",
+    },
+    {
+        "id": "higher_rent_growth",
+        "label": "Higher growth for higher-rent tenancies",
+        "mean_current_rent_reduction_pct": 4.886,
+        "growth_range_pct": "2026: -5.09% to 9.91%; 2027: -4.46% to 10.54%; 2028: -5.64% to 9.36%; 2029: -5.57% to 9.43%",
+    },
+    {
+        "id": "lower_rent_growth",
+        "label": "Higher growth for lower-rent tenancies",
+        "mean_current_rent_reduction_pct": 4.804,
+        "growth_range_pct": "2026: -5.10% to 9.90%; 2027: -4.47% to 10.53%; 2028: -5.64% to 9.36%; 2029: -5.58% to 9.42%",
+    },
+    {
+        "id": "higher_income_growth",
+        "label": "Higher growth for higher-income renters",
+        "mean_current_rent_reduction_pct": 4.693,
+        "growth_range_pct": "2026: -5.14% to 9.86%; 2027: -4.51% to 10.49%; 2028: -5.68% to 9.32%; 2029: -5.61% to 9.39%",
+    },
+    {
+        "id": "lower_income_growth",
+        "label": "Higher growth for lower-income renters",
+        "mean_current_rent_reduction_pct": 4.547,
+        "growth_range_pct": "2026: -5.10% to 9.90%; 2027: -4.46% to 10.54%; 2028: -5.63% to 9.37%; 2029: -5.56% to 9.44%",
+    },
+    {
+        "id": "random_growth",
+        "label": "Random growth draw",
+        "mean_current_rent_reduction_pct": 4.913,
+        "growth_range_pct": "2026: -5.10% to 9.90%; 2027: -4.47% to 10.53%; 2028: -5.65% to 9.35%; 2029: -5.58% to 9.42%",
+    },
 ]
 
 # ── Plotly figures ─────────────────────────────────────────────────────────
@@ -143,6 +310,11 @@ _AXIS_LINE = "#e5e7eb"
 _TEAL = "#2C8E8E"
 _TEAL_DARK = "#1f6e6e"
 _NAVY = "#1e3a5f"
+_ORANGE = "#d97706"
+_RED = "#b91c1c"
+_GREEN = "#15803d"
+_PURPLE = "#6d28d9"
+_GRAY = "#6b7280"
 
 
 def _axis_title(text: str) -> dict:
@@ -315,6 +487,90 @@ DECILE_CHART_FIGURE = {
     },
 }
 
+_HETEROGENEOUS_COLORS = {
+    "uniform": _NAVY,
+    "higher_rent_growth": _ORANGE,
+    "lower_rent_growth": _GREEN,
+    "higher_income_growth": _RED,
+    "lower_income_growth": _PURPLE,
+    "random_growth": _GRAY,
+}
+
+HETEROGENEOUS_DECILE_CHART_FIGURE = {
+    "data": [
+        {
+            "type": "scatter",
+            "mode": "lines+markers",
+            "name": scenario["label"],
+            "x": [d["decile"] for d in HETEROGENEOUS_DECILE_MEANS[scenario["id"]]],
+            "y": [
+                d["mean_delta_ahc_gbp"]
+                for d in HETEROGENEOUS_DECILE_MEANS[scenario["id"]]
+            ],
+            "line": {
+                "color": _HETEROGENEOUS_COLORS[scenario["id"]],
+                "width": 2.4,
+            },
+            "marker": {"size": 6, "color": _HETEROGENEOUS_COLORS[scenario["id"]]},
+            "hovertemplate": (
+                "%{fullData.name}<br>Decile %{x}<br>"
+                "<b>£%{y:,.0f}</b> per year<extra></extra>"
+            ),
+        }
+        for scenario in HETEROGENEOUS_SCENARIOS
+    ],
+    "layout": {
+        "title": {
+            "text": "AHC gain by decile under alternative imputed rent-growth allocations",
+            "font": {"family": _FONT_FAMILY, "size": 16, "color": _FONT_DARK},
+            "x": 0.5,
+            "xanchor": "center",
+            "y": 0.96,
+        },
+        "xaxis": {
+            "title": _axis_title("Gross household income decile (1 = lowest)"),
+            "dtick": 1,
+            "tickmode": "linear",
+            "tick0": 1,
+            "showgrid": False,
+            "showline": True,
+            "linecolor": _AXIS_LINE,
+            "ticks": "outside",
+            "tickcolor": _AXIS_LINE,
+            "tickfont": _tickfont(),
+        },
+        "yaxis": {
+            "title": _axis_title("Change in AHC net income (£/year)"),
+            "showgrid": True,
+            "gridcolor": _GRID,
+            "zeroline": True,
+            "zerolinecolor": _AXIS_LINE,
+            "zerolinewidth": 1,
+            "tickprefix": "£",
+            "tickformat": ",",
+            "tickfont": _tickfont(),
+        },
+        "paper_bgcolor": "white",
+        "plot_bgcolor": "white",
+        "font": {"family": _FONT_FAMILY, "color": _FONT_DARK},
+        "margin": {"l": 70, "r": 30, "t": 70, "b": 140},
+        "legend": {
+            "orientation": "h",
+            "y": -0.28,
+            "x": 0.5,
+            "xanchor": "center",
+            "font": {"family": _FONT_FAMILY, "size": 12, "color": _FONT_DARK},
+            "bgcolor": "rgba(0,0,0,0)",
+        },
+        "hovermode": "x unified",
+        "hoverlabel": {
+            "bgcolor": "white",
+            "bordercolor": _AXIS_LINE,
+            "font": {"family": _FONT_FAMILY, "size": 12, "color": _FONT_DARK},
+        },
+    },
+}
+
 # ── Assembled results ──────────────────────────────────────────────────────
 
 RESULTS = {
@@ -330,10 +586,14 @@ RESULTS = {
         "alternative_aggregate_path": ALTERNATIVE_AGGREGATE_PATH,
         "cumulative_rent_index": CUMULATIVE_RENT_INDEX,
         "two_household_projection": TWO_HH_PROJECTION,
+        "heterogeneous_scenarios": HETEROGENEOUS_SCENARIOS,
+        "heterogeneous_growth_ranges": HETEROGENEOUS_GROWTH_RANGES,
     },
+    "heterogeneous_decile_means": HETEROGENEOUS_DECILE_MEANS,
     "figures": {
         "rent_index": RENT_INDEX_FIGURE,
         "decile_change_ahc": DECILE_CHART_FIGURE,
+        "heterogeneous_decile_change_ahc": HETEROGENEOUS_DECILE_CHART_FIGURE,
     },
 }
 
